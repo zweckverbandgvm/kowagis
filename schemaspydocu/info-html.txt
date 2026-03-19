@@ -1,0 +1,5 @@
+date=2026-03-18 15:06:54+0100
+os=Windows 10 10.0
+schemaspy-version=6.2.4
+schemaspy-build=6.2.4.41 2023-07-21 11:15:12
+renderer=Graphviz dot 10.0.1 

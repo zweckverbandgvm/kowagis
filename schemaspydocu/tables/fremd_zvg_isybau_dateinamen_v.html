@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>fremd_zvg_isybau_dateinamen_v - gis.verundentsorgung</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>gis</b></a><span class="navbar-brand" style="padding-left: 0">.verundentsorgung</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>fremd_zvg_isybau_dateinamen_v</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Fremddaten ZVG Isybau Dateinamen (VIEW)</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="false"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span id="id">id</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="dateiname">dateiname</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_projekt">id_st_vw_projekt</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number">name_number</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="protokolltyp">protokolltyp</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="befahrungsdatum">befahrungsdatum</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="befahrungsjahr">befahrungsjahr</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="befahrungsmonat">befahrungsmonat</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="befahrungstag">befahrungstag</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="schadensklasse">schadensklasse</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_oben">knoten_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_unten">knoten_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="eigentuemer_kurztext">eigentuemer_kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="betreiber_kurztext">betreiber_kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="betriebsstatus_kurztext">betriebsstatus_kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="medium_kurztext">medium_kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="medium_langtext">medium_langtext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="material_kurztext">material_kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="material_langtext">material_langtext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aussendurchmesser">aussendurchmesser</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nennweite">nennweite</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="baujahr">baujahr</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geometry">geometry</span></td>
+                                    <td>geometry</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="anzeige">anzeige</span></td>
+                                    <td>varchar</td>
+                                    <td>100</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="twsz_status">twsz_status</span></td>
+                                    <td>numeric</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="quelle">quelle</span></td>
+                                    <td>varchar</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="twsz_statusl">twsz_statusl</span></td>
+                                    <td>varchar</td>
+                                    <td>30</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="twsz">twsz</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_suche">id_suche</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="projekt_kurztext">projekt_kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="projekt_langtext">projekt_langtext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="amt">amt</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gemeinde">gemeinde</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ort">ort</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="strasse">strasse</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="fremd_zvg_isybau_dateinamen_v.html" target="_top" title="fremd_zvg_isybau_dateinamen_v" alt="" coords="5,5,471,1077">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/fremd_zvg_isybau_dateinamen_v.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-code-o"></i>
+                            <h3 id="ViewDefinition" class="box-title">View Definition</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <textarea id="sql-script-codemirror" name="sql-script-codemirror" rows="" style="display: none;">SELECT z.id,&#10;    z.dateiname,&#10;    z.id_st_vw_projekt,&#10;    z.name_number,&#10;    z.protokolltyp,&#10;    z.befahrungsdatum,&#10;    z.befahrungsjahr,&#10;    z.befahrungsmonat,&#10;    z.befahrungstag,&#10;    z.schadensklasse,&#10;    z.knoten_oben,&#10;    z.knoten_unten,&#10;    z.eigentuemer_kurztext,&#10;    z.betreiber_kurztext,&#10;    z.betriebsstatus_kurztext,&#10;    z.medium_kurztext,&#10;    z.medium_langtext,&#10;    z.material_kurztext,&#10;    z.material_langtext,&#10;    z.aussendurchmesser,&#10;    z.nennweite,&#10;    z.baujahr,&#10;    z.geometry,&#10;    twsz.anzeige,&#10;    twsz.twsz_status,&#10;    twsz.quelle,&#10;    twsz.twsz_statusl,&#10;        CASE&#10;            WHEN (&quot;position&quot;((twsz.quelle)::text, &#39;_I_&#39;::text) &gt; 0) THEN &#39;1&#39;::text&#10;            WHEN (&quot;position&quot;((twsz.quelle)::text, &#39;_II_&#39;::text) &gt; 0) THEN &#39;2&#39;::text&#10;            WHEN (&quot;position&quot;((twsz.quelle)::text, &#39;_III_&#39;::text) &gt; 0) THEN &#39;3&#39;::text&#10;            ELSE NULL::text&#10;        END AS twsz,&#10;    z.id_suche,&#10;    z.projekt_kurztext,&#10;    z.projekt_langtext,&#10;    z.amt,&#10;    z.gemeinde,&#10;    z.ort,&#10;    z.strasse&#10;   FROM (( SELECT d.id,&#10;            d.dateiname,&#10;            d.id_st_vw_projekt,&#10;            d.name_number,&#10;            d.protokolltyp,&#10;            d.befahrungsdatum,&#10;            d.befahrungsjahr,&#10;            d.befahrungsmonat,&#10;            d.befahrungstag,&#10;            d.schadensklasse,&#10;            h.knoten_oben,&#10;            h.knoten_unten,&#10;            h.eigentuemer_kurztext,&#10;            h.betreiber_kurztext,&#10;            h.betriebsstatus_kurztext,&#10;            h.medium_kurztext,&#10;            h.medium_langtext,&#10;            h.material_kurztext,&#10;            h.material_langtext,&#10;            h.aussendurchmesser,&#10;            h.nennweite,&#10;            h.baujahr,&#10;            h.geometry,&#10;            h.id_suche,&#10;            h.projekt_kurztext,&#10;            h.projekt_langtext,&#10;            h.amt,&#10;            h.gemeinde,&#10;            h.ort,&#10;            h.strasse&#10;           FROM ( SELECT fremd_zvg_isybau_dateinamen.id,&#10;                    fremd_zvg_isybau_dateinamen.dateiname,&#10;                    ( SELECT st_vw_projekt.id&#10;                           FROM verundentsorgung.st_vw_projekt&#10;                          WHERE (st_vw_projekt.kurztext &#61; &#39;ZVG&#39;::text)) AS id_st_vw_projekt,&#10;                    btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, 1, &quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text)), &#39;_&#39;::text) AS name_number,&#10;                    btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, &quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text), 3), &#39;_&#39;::text) AS protokolltyp,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 1, 6) AS befahrungsdatum,&#10;                    concat(&#39;20&#39;, &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 1, 2)) AS befahrungsjahr,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 3, 2) AS befahrungsmonat,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 5, 2) AS befahrungstag,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 8, 1) AS schadensklasse&#10;                   FROM verundentsorgung.fremd_zvg_isybau_dateinamen) d,&#10;            verundentsorgung.aw_lin_haltung_v h&#10;          WHERE ((d.name_number &#61; h.name_number) AND (d.id_st_vw_projekt &#61; h.id_st_vw_projekt) AND (d.protokolltyp &#61; ANY (ARRAY[&#39;H&#39;::text, &#39;A&#39;::text])) AND (d.befahrungsjahr &#61; ANY (ARRAY[&#39;2000&#39;::text, &#39;2001&#39;::text, &#39;2002&#39;::text, &#39;2003&#39;::text, &#39;2004&#39;::text, &#39;2005&#39;::text, &#39;2006&#39;::text, &#39;2007&#39;::text, &#39;2008&#39;::text, &#39;2009&#39;::text, &#39;2010&#39;::text, &#39;2011&#39;::text, &#39;2012&#39;::text, &#39;2013&#39;::text, &#39;2014&#39;::text, &#39;2015&#39;::text, &#39;2016&#39;::text, &#39;2017&#39;::text, &#39;2018&#39;::text, &#39;2019&#39;::text, &#39;2020&#39;::text, &#39;2011&#39;::text, &#39;2022&#39;::text, &#39;2023&#39;::text, &#39;2024&#39;::text, &#39;2025&#39;::text, &#39;2026&#39;::text, &#39;2027&#39;::text, &#39;2028&#39;::text, &#39;2029&#39;::text, &#39;2030&#39;::text])) AND (d.befahrungsmonat &#61; ANY (ARRAY[&#39;01&#39;::text, &#39;02&#39;::text, &#39;03&#39;::text, &#39;04&#39;::text, &#39;05&#39;::text, &#39;06&#39;::text, &#39;07&#39;::text, &#39;08&#39;::text, &#39;09&#39;::text, &#39;10&#39;::text, &#39;11&#39;::text, &#39;12&#39;::text])) AND (d.befahrungsmonat &#61; ANY (ARRAY[&#39;01&#39;::text, &#39;02&#39;::text, &#39;03&#39;::text, &#39;04&#39;::text, &#39;05&#39;::text, &#39;06&#39;::text, &#39;07&#39;::text, &#39;08&#39;::text, &#39;09&#39;::text, &#39;10&#39;::text, &#39;11&#39;::text, &#39;12&#39;::text, &#39;13&#39;::text, &#39;14&#39;::text, &#39;15&#39;::text, &#39;16&#39;::text, &#39;17&#39;::text, &#39;18&#39;::text, &#39;19&#39;::text, &#39;20&#39;::text, &#39;21&#39;::text, &#39;22&#39;::text, &#39;23&#39;::text, &#39;24&#39;::text, &#39;25&#39;::text, &#39;26&#39;::text, &#39;27&#39;::text, &#39;28&#39;::text, &#39;29&#39;::text, &#39;30&#39;::text, &#39;31&#39;::text])))&#10;        UNION ALL&#10;         SELECT d.id,&#10;            d.dateiname,&#10;            d.id_st_vw_projekt,&#10;            d.name_number,&#10;            d.protokolltyp,&#10;            d.befahrungsdatum,&#10;            d.befahrungsjahr,&#10;            d.befahrungsmonat,&#10;            d.befahrungstag,&#10;            d.schadensklasse,&#10;            NULL::text AS knoten_oben,&#10;            NULL::text AS knoten_unten,&#10;            h.eigentuemer_kurztext,&#10;            h.betreiber_kurztext,&#10;            h.betriebsstatus_kurztext,&#10;            h.medium_kurztext,&#10;            h.medium_langtext,&#10;            h.material_kurztext,&#10;            h.material_langtext,&#10;            NULL::text AS aussendurchmesser,&#10;            NULL::text AS nennweite,&#10;            h.baujahr,&#10;            h.geometry,&#10;            h.id_suche,&#10;            h.projekt_kurztext,&#10;            h.projekt_langtext,&#10;            h.amt,&#10;            h.gemeinde,&#10;            h.ort,&#10;            h.strasse&#10;           FROM ( SELECT fremd_zvg_isybau_dateinamen.id,&#10;                    fremd_zvg_isybau_dateinamen.dateiname,&#10;                    ( SELECT st_vw_projekt.id&#10;                           FROM verundentsorgung.st_vw_projekt&#10;                          WHERE (st_vw_projekt.kurztext &#61; &#39;ZVG&#39;::text)) AS id_st_vw_projekt,&#10;                    btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, 1, &quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text)), &#39;_&#39;::text) AS name_number,&#10;                    btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, &quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text), 3), &#39;_&#39;::text) AS protokolltyp,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 1, 6) AS befahrungsdatum,&#10;                    concat(&#39;20&#39;, &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 1, 2)) AS befahrungsjahr,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 3, 2) AS befahrungsmonat,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 5, 2) AS befahrungstag,&#10;                    &quot;substring&quot;(btrim(&quot;substring&quot;(fremd_zvg_isybau_dateinamen.dateiname, (&quot;position&quot;(fremd_zvg_isybau_dateinamen.dateiname, &#39;_&#39;::text) + 3)), &#39;_&#39;::text), 8, 1) AS schadensklasse&#10;                   FROM verundentsorgung.fremd_zvg_isybau_dateinamen) d,&#10;            verundentsorgung.aw_pkt_schacht_v h&#10;          WHERE ((d.name_number &#61; h.name_number) AND (d.id_st_vw_projekt &#61; h.id_st_vw_projekt) AND (d.protokolltyp &#61; &#39;S&#39;::text) AND (d.befahrungsjahr &#61; ANY (ARRAY[&#39;2000&#39;::text, &#39;2001&#39;::text, &#39;2002&#39;::text, &#39;2003&#39;::text, &#39;2004&#39;::text, &#39;2005&#39;::text, &#39;2006&#39;::text, &#39;2007&#39;::text, &#39;2008&#39;::text, &#39;2009&#39;::text, &#39;2010&#39;::text, &#39;2011&#39;::text, &#39;2012&#39;::text, &#39;2013&#39;::text, &#39;2014&#39;::text, &#39;2015&#39;::text, &#39;2016&#39;::text, &#39;2017&#39;::text, &#39;2018&#39;::text, &#39;2019&#39;::text, &#39;2020&#39;::text, &#39;2011&#39;::text, &#39;2022&#39;::text, &#39;2023&#39;::text, &#39;2024&#39;::text, &#39;2025&#39;::text, &#39;2026&#39;::text, &#39;2027&#39;::text, &#39;2028&#39;::text, &#39;2029&#39;::text, &#39;2030&#39;::text])) AND (d.befahrungsmonat &#61; ANY (ARRAY[&#39;01&#39;::text, &#39;02&#39;::text, &#39;03&#39;::text, &#39;04&#39;::text, &#39;05&#39;::text, &#39;06&#39;::text, &#39;07&#39;::text, &#39;08&#39;::text, &#39;09&#39;::text, &#39;10&#39;::text, &#39;11&#39;::text, &#39;12&#39;::text])) AND (d.befahrungsmonat &#61; ANY (ARRAY[&#39;01&#39;::text, &#39;02&#39;::text, &#39;03&#39;::text, &#39;04&#39;::text, &#39;05&#39;::text, &#39;06&#39;::text, &#39;07&#39;::text, &#39;08&#39;::text, &#39;09&#39;::text, &#39;10&#39;::text, &#39;11&#39;::text, &#39;12&#39;::text, &#39;13&#39;::text, &#39;14&#39;::text, &#39;15&#39;::text, &#39;16&#39;::text, &#39;17&#39;::text, &#39;18&#39;::text, &#39;19&#39;::text, &#39;20&#39;::text, &#39;21&#39;::text, &#39;22&#39;::text, &#39;23&#39;::text, &#39;24&#39;::text, &#39;25&#39;::text, &#39;26&#39;::text, &#39;27&#39;::text, &#39;28&#39;::text, &#39;29&#39;::text, &#39;30&#39;::text, &#39;31&#39;::text])))) z&#10;     LEFT JOIN bereitschaftsauskunft.twsz_union_all twsz ON (st_intersects(z.geometry, twsz.wkb_geometry)));</textarea>
+                            <div style="padding-top: 5px;"><hr></div>
+                            <div class="box box-solid">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-puzzle-piece"></i>
+                                    <h3 class="box-title">Possibly Referenced Tables/Views</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="fremd_zvg_isybau_dateinamen.html">fremd_zvg_isybau_dateinamen</a></li>
+                                        <li><a href="st_vw_projekt.html">st_vw_projekt</a></li>
+                                    </ul>
+                                </div><!-- /.box-body -->
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

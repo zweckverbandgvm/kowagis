@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 1024 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-linecap="butt" stroke-linejoin="crop" fill-rule="evenodd" xml:space="preserve" >
+<defs >
+<clipPath id="clipId0" >
+<path d="M0,768 1024,768 1024,0 0,0 z" />
+</clipPath>
+</defs>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"   stroke-width="10">
+<polyline points ="515,460 436,392 473,314 551,314 592,392 510,460 " />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"   stroke-width="6">
+<polyline points ="532,339 532,412" />
+<polyline points ="514,342 549,342" />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="1" >
+<circle cx="512" cy="384" r="3" />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"   stroke-width="6">
+<polyline points ="504,352 499,346 492,343 487,343 481,346 477,350 476,354 475,357 475,361 476,363
+478,366 481,369 484,371  493,377 499,382 502,385 504,388 505,391 505,395 505,397  504,401  503,403
+501,405 499,407 497,408, 495,409 493,410 489,410  485,409 480,405 477,402 475,399 " />
+</g>
+</svg>

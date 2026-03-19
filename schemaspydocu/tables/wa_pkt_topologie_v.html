@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>wa_pkt_topologie_v - gis.verundentsorgung</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>gis</b></a><span class="navbar-brand" style="padding-left: 0">.verundentsorgung</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>wa_pkt_topologie_v</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Wasser Pkt Topologie(View)</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="false"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span id="id">id</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="fid_hist">fid_hist</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hist ID</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number">name_number</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gueltig_von">gueltig_von</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>gueltig von</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gueltig_bis">gueltig_bis</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>gueltig_bis</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="angelegt_am">angelegt_am</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Erfassungsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="angelegt_von">angelegt_von</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Erfasser</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geaendert_am">geaendert_am</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aenderungsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geaendert_von">geaendert_von</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Änderungsnutzer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="leistungsobjekt">leistungsobjekt</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Leistungsobjekt (LEO)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="bemerkung">bemerkung</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Bemerkung</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_strasse">id_st_strasse</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st Strasse</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hausnummer">hausnummer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hausnummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hausnummerzusatz">hausnummerzusatz</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hausnummerzusatz</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="lagezusatz">lagezusatz</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Lagezusatz</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="herkunftsplan">herkunftsplan</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Herkunftsplan</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_projekt">id_st_vw_projekt</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Projekt</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_betriebsstatus">id_st_vw_betriebsstatus</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Betriebsstatus</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_eigentuemer">id_st_vw_eigentuemer</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Eigentuemer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_betreiber">id_st_vw_betreiber</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Betreiber</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_material">id_st_vw_material</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Material</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_medium">id_st_vw_medium</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Medium</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id_st_vw_lagestatus">id_st_vw_lagestatus</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Lagestatus</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geometry">geometry</span></td>
+                                    <td>geometry</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Geometry</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="baujahr">baujahr</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Baujahr</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="migrationsdatum">migrationsdatum</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Migrationsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="table_name">table_name</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Table Name</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="layout">layout</span></td>
+                                    <td>jsonb</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Layout</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="wa_pkt_topologie_v.html" target="_top" title="wa_pkt_topologie_v" alt="" coords="5,5,401,872">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/wa_pkt_topologie_v.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-code-o"></i>
+                            <h3 id="ViewDefinition" class="box-title">View Definition</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <textarea id="sql-script-codemirror" name="sql-script-codemirror" rows="" style="display: none;">SELECT wa_pkt_armatur.id,&#10;    wa_pkt_armatur.fid_hist,&#10;    wa_pkt_armatur.name_number,&#10;    wa_pkt_armatur.gueltig_von,&#10;    wa_pkt_armatur.gueltig_bis,&#10;    wa_pkt_armatur.angelegt_am,&#10;    wa_pkt_armatur.angelegt_von,&#10;    wa_pkt_armatur.geaendert_am,&#10;    wa_pkt_armatur.geaendert_von,&#10;    wa_pkt_armatur.leistungsobjekt,&#10;    wa_pkt_armatur.bemerkung,&#10;    wa_pkt_armatur.id_st_strasse,&#10;    wa_pkt_armatur.hausnummer,&#10;    wa_pkt_armatur.hausnummerzusatz,&#10;    wa_pkt_armatur.lagezusatz,&#10;    wa_pkt_armatur.herkunftsplan,&#10;    wa_pkt_armatur.id_st_vw_projekt,&#10;    wa_pkt_armatur.id_st_vw_betriebsstatus,&#10;    wa_pkt_armatur.id_st_vw_eigentuemer,&#10;    wa_pkt_armatur.id_st_vw_betreiber,&#10;    wa_pkt_armatur.id_st_vw_material,&#10;    wa_pkt_armatur.id_st_vw_medium,&#10;    wa_pkt_armatur.id_st_vw_lagestatus,&#10;    wa_pkt_armatur.geometry,&#10;    wa_pkt_armatur.baujahr,&#10;    wa_pkt_armatur.migrationsdatum,&#10;    &#39;wa_pkt_armatur&#39;::text AS table_name,&#10;    wa_pkt_armatur.layout&#10;   FROM verundentsorgung.wa_pkt_armatur&#10;UNION ALL&#10; SELECT wa_pkt_behaelter.id,&#10;    wa_pkt_behaelter.fid_hist,&#10;    wa_pkt_behaelter.name_number,&#10;    wa_pkt_behaelter.gueltig_von,&#10;    wa_pkt_behaelter.gueltig_bis,&#10;    wa_pkt_behaelter.angelegt_am,&#10;    wa_pkt_behaelter.angelegt_von,&#10;    wa_pkt_behaelter.geaendert_am,&#10;    wa_pkt_behaelter.geaendert_von,&#10;    wa_pkt_behaelter.leistungsobjekt,&#10;    wa_pkt_behaelter.bemerkung,&#10;    wa_pkt_behaelter.id_st_strasse,&#10;    wa_pkt_behaelter.hausnummer,&#10;    wa_pkt_behaelter.hausnummerzusatz,&#10;    wa_pkt_behaelter.lagezusatz,&#10;    wa_pkt_behaelter.herkunftsplan,&#10;    wa_pkt_behaelter.id_st_vw_projekt,&#10;    wa_pkt_behaelter.id_st_vw_betriebsstatus,&#10;    wa_pkt_behaelter.id_st_vw_eigentuemer,&#10;    wa_pkt_behaelter.id_st_vw_betreiber,&#10;    wa_pkt_behaelter.id_st_vw_material,&#10;    wa_pkt_behaelter.id_st_vw_medium,&#10;    wa_pkt_behaelter.id_st_vw_lagestatus,&#10;    wa_pkt_behaelter.geometry,&#10;    wa_pkt_behaelter.baujahr,&#10;    wa_pkt_behaelter.migrationsdatum,&#10;    &#39;wa_pkt_behaelter&#39;::text AS table_name,&#10;    wa_pkt_behaelter.layout&#10;   FROM verundentsorgung.wa_pkt_behaelter&#10;UNION ALL&#10; SELECT wa_pkt_beprobungspunkt.id,&#10;    wa_pkt_beprobungspunkt.fid_hist,&#10;    wa_pkt_beprobungspunkt.name_number,&#10;    wa_pkt_beprobungspunkt.gueltig_von,&#10;    wa_pkt_beprobungspunkt.gueltig_bis,&#10;    wa_pkt_beprobungspunkt.angelegt_am,&#10;    wa_pkt_beprobungspunkt.angelegt_von,&#10;    wa_pkt_beprobungspunkt.geaendert_am,&#10;    wa_pkt_beprobungspunkt.geaendert_von,&#10;    wa_pkt_beprobungspunkt.leistungsobjekt,&#10;    wa_pkt_beprobungspunkt.bemerkung,&#10;    wa_pkt_beprobungspunkt.id_st_strasse,&#10;    wa_pkt_beprobungspunkt.hausnummer,&#10;    wa_pkt_beprobungspunkt.hausnummerzusatz,&#10;    wa_pkt_beprobungspunkt.lagezusatz,&#10;    wa_pkt_beprobungspunkt.herkunftsplan,&#10;    wa_pkt_beprobungspunkt.id_st_vw_projekt,&#10;    wa_pkt_beprobungspunkt.id_st_vw_betriebsstatus,&#10;    wa_pkt_beprobungspunkt.id_st_vw_eigentuemer,&#10;    wa_pkt_beprobungspunkt.id_st_vw_betreiber,&#10;    wa_pkt_beprobungspunkt.id_st_vw_material,&#10;    wa_pkt_beprobungspunkt.id_st_vw_medium,&#10;    wa_pkt_beprobungspunkt.id_st_vw_lagestatus,&#10;    wa_pkt_beprobungspunkt.geometry,&#10;    wa_pkt_beprobungspunkt.baujahr,&#10;    wa_pkt_beprobungspunkt.migrationsdatum,&#10;    &#39;wa_pkt_beprobungspunkt&#39;::text AS table_name,&#10;    wa_pkt_beprobungspunkt.layout&#10;   FROM verundentsorgung.wa_pkt_beprobungspunkt&#10;UNION ALL&#10; SELECT wa_pkt_brunnen.id,&#10;    wa_pkt_brunnen.fid_hist,&#10;    wa_pkt_brunnen.name_number,&#10;    wa_pkt_brunnen.gueltig_von,&#10;    wa_pkt_brunnen.gueltig_bis,&#10;    wa_pkt_brunnen.angelegt_am,&#10;    wa_pkt_brunnen.angelegt_von,&#10;    wa_pkt_brunnen.geaendert_am,&#10;    wa_pkt_brunnen.geaendert_von,&#10;    wa_pkt_brunnen.leistungsobjekt,&#10;    wa_pkt_brunnen.bemerkung,&#10;    wa_pkt_brunnen.id_st_strasse,&#10;    wa_pkt_brunnen.hausnummer,&#10;    wa_pkt_brunnen.hausnummerzusatz,&#10;    wa_pkt_brunnen.lagezusatz,&#10;    wa_pkt_brunnen.herkunftsplan,&#10;    wa_pkt_brunnen.id_st_vw_projekt,&#10;    wa_pkt_brunnen.id_st_vw_betriebsstatus,&#10;    wa_pkt_brunnen.id_st_vw_eigentuemer,&#10;    wa_pkt_brunnen.id_st_vw_betreiber,&#10;    wa_pkt_brunnen.id_st_vw_material,&#10;    wa_pkt_brunnen.id_st_vw_medium,&#10;    wa_pkt_brunnen.id_st_vw_lagestatus,&#10;    wa_pkt_brunnen.geometry,&#10;    wa_pkt_brunnen.baujahr,&#10;    wa_pkt_brunnen.migrationsdatum,&#10;    &#39;wa_pkt_brunnen&#39;::text AS table_name,&#10;    wa_pkt_brunnen.layout&#10;   FROM verundentsorgung.wa_pkt_brunnen&#10;UNION ALL&#10; SELECT wa_pkt_druckminderer.id,&#10;    wa_pkt_druckminderer.fid_hist,&#10;    wa_pkt_druckminderer.name_number,&#10;    wa_pkt_druckminderer.gueltig_von,&#10;    wa_pkt_druckminderer.gueltig_bis,&#10;    wa_pkt_druckminderer.angelegt_am,&#10;    wa_pkt_druckminderer.angelegt_von,&#10;    wa_pkt_druckminderer.geaendert_am,&#10;    wa_pkt_druckminderer.geaendert_von,&#10;    wa_pkt_druckminderer.leistungsobjekt,&#10;    wa_pkt_druckminderer.bemerkung,&#10;    wa_pkt_druckminderer.id_st_strasse,&#10;    wa_pkt_druckminderer.hausnummer,&#10;    wa_pkt_druckminderer.hausnummerzusatz,&#10;    wa_pkt_druckminderer.lagezusatz,&#10;    wa_pkt_druckminderer.herkunftsplan,&#10;    wa_pkt_druckminderer.id_st_vw_projekt,&#10;    wa_pkt_druckminderer.id_st_vw_betriebsstatus,&#10;    wa_pkt_druckminderer.id_st_vw_eigentuemer,&#10;    wa_pkt_druckminderer.id_st_vw_betreiber,&#10;    wa_pkt_druckminderer.id_st_vw_material,&#10;    wa_pkt_druckminderer.id_st_vw_medium,&#10;    wa_pkt_druckminderer.id_st_vw_lagestatus,&#10;    wa_pkt_druckminderer.geometry,&#10;    wa_pkt_druckminderer.baujahr,&#10;    wa_pkt_druckminderer.migrationsdatum,&#10;    &#39;wa_pkt_druckminderer&#39;::text AS table_name,&#10;    wa_pkt_druckminderer.layout&#10;   FROM verundentsorgung.wa_pkt_druckminderer&#10;UNION ALL&#10; SELECT wa_pkt_druckstation.id,&#10;    wa_pkt_druckstation.fid_hist,&#10;    wa_pkt_druckstation.name_number,&#10;    wa_pkt_druckstation.gueltig_von,&#10;    wa_pkt_druckstation.gueltig_bis,&#10;    wa_pkt_druckstation.angelegt_am,&#10;    wa_pkt_druckstation.angelegt_von,&#10;    wa_pkt_druckstation.geaendert_am,&#10;    wa_pkt_druckstation.geaendert_von,&#10;    wa_pkt_druckstation.leistungsobjekt,&#10;    wa_pkt_druckstation.bemerkung,&#10;    wa_pkt_druckstation.id_st_strasse,&#10;    wa_pkt_druckstation.hausnummer,&#10;    wa_pkt_druckstation.hausnummerzusatz,&#10;    wa_pkt_druckstation.lagezusatz,&#10;    wa_pkt_druckstation.herkunftsplan,&#10;    wa_pkt_druckstation.id_st_vw_projekt,&#10;    wa_pkt_druckstation.id_st_vw_betriebsstatus,&#10;    wa_pkt_druckstation.id_st_vw_eigentuemer,&#10;    wa_pkt_druckstation.id_st_vw_betreiber,&#10;    wa_pkt_druckstation.id_st_vw_material,&#10;    wa_pkt_druckstation.id_st_vw_medium,&#10;    wa_pkt_druckstation.id_st_vw_lagestatus,&#10;    wa_pkt_druckstation.geometry,&#10;    wa_pkt_druckstation.baujahr,&#10;    wa_pkt_druckstation.migrationsdatum,&#10;    &#39;wa_pkt_druckstation&#39;::text AS table_name,&#10;    wa_pkt_druckstation.layout&#10;   FROM verundentsorgung.wa_pkt_druckstation&#10;UNION ALL&#10; SELECT wa_pkt_entlueftung.id,&#10;    wa_pkt_entlueftung.fid_hist,&#10;    wa_pkt_entlueftung.name_number,&#10;    wa_pkt_entlueftung.gueltig_von,&#10;    wa_pkt_entlueftung.gueltig_bis,&#10;    wa_pkt_entlueftung.angelegt_am,&#10;    wa_pkt_entlueftung.angelegt_von,&#10;    wa_pkt_entlueftung.geaendert_am,&#10;    wa_pkt_entlueftung.geaendert_von,&#10;    wa_pkt_entlueftung.leistungsobjekt,&#10;    wa_pkt_entlueftung.bemerkung,&#10;    wa_pkt_entlueftung.id_st_strasse,&#10;    wa_pkt_entlueftung.hausnummer,&#10;    wa_pkt_entlueftung.hausnummerzusatz,&#10;    wa_pkt_entlueftung.lagezusatz,&#10;    wa_pkt_entlueftung.herkunftsplan,&#10;    wa_pkt_entlueftung.id_st_vw_projekt,&#10;    wa_pkt_entlueftung.id_st_vw_betriebsstatus,&#10;    wa_pkt_entlueftung.id_st_vw_eigentuemer,&#10;    wa_pkt_entlueftung.id_st_vw_betreiber,&#10;    wa_pkt_entlueftung.id_st_vw_material,&#10;    wa_pkt_entlueftung.id_st_vw_medium,&#10;    wa_pkt_entlueftung.id_st_vw_lagestatus,&#10;    wa_pkt_entlueftung.geometry,&#10;    wa_pkt_entlueftung.baujahr,&#10;    wa_pkt_entlueftung.migrationsdatum,&#10;    &#39;wa_pkt_entlueftung&#39;::text AS table_name,&#10;    wa_pkt_entlueftung.layout&#10;   FROM verundentsorgung.wa_pkt_entlueftung&#10;UNION ALL&#10; SELECT wa_pkt_hausanschlusspunkt.id,&#10;    wa_pkt_hausanschlusspunkt.fid_hist,&#10;    wa_pkt_hausanschlusspunkt.name_number,&#10;    wa_pkt_hausanschlusspunkt.gueltig_von,&#10;    wa_pkt_hausanschlusspunkt.gueltig_bis,&#10;    wa_pkt_hausanschlusspunkt.angelegt_am,&#10;    wa_pkt_hausanschlusspunkt.angelegt_von,&#10;    wa_pkt_hausanschlusspunkt.geaendert_am,&#10;    wa_pkt_hausanschlusspunkt.geaendert_von,&#10;    wa_pkt_hausanschlusspunkt.leistungsobjekt,&#10;    wa_pkt_hausanschlusspunkt.bemerkung,&#10;    wa_pkt_hausanschlusspunkt.id_st_strasse,&#10;    wa_pkt_hausanschlusspunkt.hausnummer,&#10;    wa_pkt_hausanschlusspunkt.hausnummerzusatz,&#10;    wa_pkt_hausanschlusspunkt.lagezusatz,&#10;    wa_pkt_hausanschlusspunkt.herkunftsplan,&#10;    wa_pkt_hausanschlusspunkt.id_st_vw_projekt,&#10;    wa_pkt_hausanschlusspunkt.id_st_vw_betriebsstatus,&#10;    wa_pkt_hausanschlusspunkt.id_st_vw_eigentuemer,&#10;    wa_pkt_hausanschlusspunkt.id_st_vw_betreiber,&#10;    wa_pkt_hausanschlusspunkt.id_st_vw_material,&#10;    wa_pkt_hausanschlusspunkt.id_st_vw_medium,&#10;    wa_pkt_hausanschlusspunkt.id_st_vw_lagestatus,&#10;    wa_pkt_hausanschlusspunkt.geometry,&#10;    wa_pkt_hausanschlusspunkt.baujahr,&#10;    wa_pkt_hausanschlusspunkt.migrationsdatum,&#10;    &#39;wa_pkt_hausanschlusspunkt&#39;::text AS table_name,&#10;    wa_pkt_hausanschlusspunkt.layout&#10;   FROM verundentsorgung.wa_pkt_hausanschlusspunkt&#10;UNION ALL&#10; SELECT wa_pkt_hydrant.id,&#10;    wa_pkt_hydrant.fid_hist,&#10;    wa_pkt_hydrant.name_number,&#10;    wa_pkt_hydrant.gueltig_von,&#10;    wa_pkt_hydrant.gueltig_bis,&#10;    wa_pkt_hydrant.angelegt_am,&#10;    wa_pkt_hydrant.angelegt_von,&#10;    wa_pkt_hydrant.geaendert_am,&#10;    wa_pkt_hydrant.geaendert_von,&#10;    wa_pkt_hydrant.leistungsobjekt,&#10;    wa_pkt_hydrant.bemerkung,&#10;    wa_pkt_hydrant.id_st_strasse,&#10;    wa_pkt_hydrant.hausnummer,&#10;    wa_pkt_hydrant.hausnummerzusatz,&#10;    wa_pkt_hydrant.lagezusatz,&#10;    wa_pkt_hydrant.herkunftsplan,&#10;    wa_pkt_hydrant.id_st_vw_projekt,&#10;    wa_pkt_hydrant.id_st_vw_betriebsstatus,&#10;    wa_pkt_hydrant.id_st_vw_eigentuemer,&#10;    wa_pkt_hydrant.id_st_vw_betreiber,&#10;    wa_pkt_hydrant.id_st_vw_material,&#10;    wa_pkt_hydrant.id_st_vw_medium,&#10;    wa_pkt_hydrant.id_st_vw_lagestatus,&#10;    wa_pkt_hydrant.geometry,&#10;    wa_pkt_hydrant.baujahr,&#10;    wa_pkt_hydrant.migrationsdatum,&#10;    &#39;wa_pkt_hydrant&#39;::text AS table_name,&#10;    wa_pkt_hydrant.layout&#10;   FROM verundentsorgung.wa_pkt_hydrant&#10;UNION ALL&#10; SELECT wa_pkt_pumpwerk.id,&#10;    wa_pkt_pumpwerk.fid_hist,&#10;    wa_pkt_pumpwerk.name_number,&#10;    wa_pkt_pumpwerk.gueltig_von,&#10;    wa_pkt_pumpwerk.gueltig_bis,&#10;    wa_pkt_pumpwerk.angelegt_am,&#10;    wa_pkt_pumpwerk.angelegt_von,&#10;    wa_pkt_pumpwerk.geaendert_am,&#10;    wa_pkt_pumpwerk.geaendert_von,&#10;    wa_pkt_pumpwerk.leistungsobjekt,&#10;    wa_pkt_pumpwerk.bemerkung,&#10;    wa_pkt_pumpwerk.id_st_strasse,&#10;    wa_pkt_pumpwerk.hausnummer,&#10;    wa_pkt_pumpwerk.hausnummerzusatz,&#10;    wa_pkt_pumpwerk.lagezusatz,&#10;    wa_pkt_pumpwerk.herkunftsplan,&#10;    wa_pkt_pumpwerk.id_st_vw_projekt,&#10;    wa_pkt_pumpwerk.id_st_vw_betriebsstatus,&#10;    wa_pkt_pumpwerk.id_st_vw_eigentuemer,&#10;    wa_pkt_pumpwerk.id_st_vw_betreiber,&#10;    wa_pkt_pumpwerk.id_st_vw_material,&#10;    wa_pkt_pumpwerk.id_st_vw_medium,&#10;    wa_pkt_pumpwerk.id_st_vw_lagestatus,&#10;    wa_pkt_pumpwerk.geometry,&#10;    wa_pkt_pumpwerk.baujahr,&#10;    wa_pkt_pumpwerk.migrationsdatum,&#10;    &#39;wa_pkt_pumpwerk&#39;::text AS table_name,&#10;    wa_pkt_pumpwerk.layout&#10;   FROM verundentsorgung.wa_pkt_pumpwerk&#10;UNION ALL&#10; SELECT wa_pkt_schacht.id,&#10;    wa_pkt_schacht.fid_hist,&#10;    wa_pkt_schacht.name_number,&#10;    wa_pkt_schacht.gueltig_von,&#10;    wa_pkt_schacht.gueltig_bis,&#10;    wa_pkt_schacht.angelegt_am,&#10;    wa_pkt_schacht.angelegt_von,&#10;    wa_pkt_schacht.geaendert_am,&#10;    wa_pkt_schacht.geaendert_von,&#10;    wa_pkt_schacht.leistungsobjekt,&#10;    wa_pkt_schacht.bemerkung,&#10;    wa_pkt_schacht.id_st_strasse,&#10;    wa_pkt_schacht.hausnummer,&#10;    wa_pkt_schacht.hausnummerzusatz,&#10;    wa_pkt_schacht.lagezusatz,&#10;    wa_pkt_schacht.herkunftsplan,&#10;    wa_pkt_schacht.id_st_vw_projekt,&#10;    wa_pkt_schacht.id_st_vw_betriebsstatus,&#10;    wa_pkt_schacht.id_st_vw_eigentuemer,&#10;    wa_pkt_schacht.id_st_vw_betreiber,&#10;    wa_pkt_schacht.id_st_vw_material,&#10;    wa_pkt_schacht.id_st_vw_medium,&#10;    wa_pkt_schacht.id_st_vw_lagestatus,&#10;    wa_pkt_schacht.geometry,&#10;    wa_pkt_schacht.baujahr,&#10;    wa_pkt_schacht.migrationsdatum,&#10;    &#39;wa_pkt_schacht&#39;::text AS table_name,&#10;    wa_pkt_schacht.layout&#10;   FROM verundentsorgung.wa_pkt_schacht&#10;UNION ALL&#10; SELECT wa_pkt_schachtdeckel.id,&#10;    wa_pkt_schachtdeckel.fid_hist,&#10;    wa_pkt_schachtdeckel.name_number,&#10;    wa_pkt_schachtdeckel.gueltig_von,&#10;    wa_pkt_schachtdeckel.gueltig_bis,&#10;    wa_pkt_schachtdeckel.angelegt_am,&#10;    wa_pkt_schachtdeckel.angelegt_von,&#10;    wa_pkt_schachtdeckel.geaendert_am,&#10;    wa_pkt_schachtdeckel.geaendert_von,&#10;    wa_pkt_schachtdeckel.leistungsobjekt,&#10;    wa_pkt_schachtdeckel.bemerkung,&#10;    wa_pkt_schachtdeckel.id_st_strasse,&#10;    wa_pkt_schachtdeckel.hausnummer,&#10;    wa_pkt_schachtdeckel.hausnummerzusatz,&#10;    wa_pkt_schachtdeckel.lagezusatz,&#10;    wa_pkt_schachtdeckel.herkunftsplan,&#10;    wa_pkt_schachtdeckel.id_st_vw_projekt,&#10;    wa_pkt_schachtdeckel.id_st_vw_betriebsstatus,&#10;    wa_pkt_schachtdeckel.id_st_vw_eigentuemer,&#10;    wa_pkt_schachtdeckel.id_st_vw_betreiber,&#10;    wa_pkt_schachtdeckel.id_st_vw_material,&#10;    wa_pkt_schachtdeckel.id_st_vw_medium,&#10;    wa_pkt_schachtdeckel.id_st_vw_lagestatus,&#10;    wa_pkt_schachtdeckel.geometry,&#10;    wa_pkt_schachtdeckel.baujahr,&#10;    wa_pkt_schachtdeckel.migrationsdatum,&#10;    &#39;wa_pkt_schachtdeckel&#39;::text AS table_name,&#10;    wa_pkt_schachtdeckel.layout&#10;   FROM verundentsorgung.wa_pkt_schachtdeckel&#10;UNION ALL&#10; SELECT wa_pkt_schieber.id,&#10;    wa_pkt_schieber.fid_hist,&#10;    wa_pkt_schieber.name_number,&#10;    wa_pkt_schieber.gueltig_von,&#10;    wa_pkt_schieber.gueltig_bis,&#10;    wa_pkt_schieber.angelegt_am,&#10;    wa_pkt_schieber.angelegt_von,&#10;    wa_pkt_schieber.geaendert_am,&#10;    wa_pkt_schieber.geaendert_von,&#10;    wa_pkt_schieber.leistungsobjekt,&#10;    wa_pkt_schieber.bemerkung,&#10;    wa_pkt_schieber.id_st_strasse,&#10;    wa_pkt_schieber.hausnummer,&#10;    wa_pkt_schieber.hausnummerzusatz,&#10;    wa_pkt_schieber.lagezusatz,&#10;    wa_pkt_schieber.herkunftsplan,&#10;    wa_pkt_schieber.id_st_vw_projekt,&#10;    wa_pkt_schieber.id_st_vw_betriebsstatus,&#10;    wa_pkt_schieber.id_st_vw_eigentuemer,&#10;    wa_pkt_schieber.id_st_vw_betreiber,&#10;    wa_pkt_schieber.id_st_vw_material,&#10;    wa_pkt_schieber.id_st_vw_medium,&#10;    wa_pkt_schieber.id_st_vw_lagestatus,&#10;    wa_pkt_schieber.geometry,&#10;    wa_pkt_schieber.baujahr,&#10;    wa_pkt_schieber.migrationsdatum,&#10;    &#39;wa_pkt_schieber&#39;::text AS table_name,&#10;    wa_pkt_schieber.layout&#10;   FROM verundentsorgung.wa_pkt_schieber&#10;UNION ALL&#10; SELECT wa_pkt_verbindungen.id,&#10;    wa_pkt_verbindungen.fid_hist,&#10;    wa_pkt_verbindungen.name_number,&#10;    wa_pkt_verbindungen.gueltig_von,&#10;    wa_pkt_verbindungen.gueltig_bis,&#10;    wa_pkt_verbindungen.angelegt_am,&#10;    wa_pkt_verbindungen.angelegt_von,&#10;    wa_pkt_verbindungen.geaendert_am,&#10;    wa_pkt_verbindungen.geaendert_von,&#10;    wa_pkt_verbindungen.leistungsobjekt,&#10;    wa_pkt_verbindungen.bemerkung,&#10;    wa_pkt_verbindungen.id_st_strasse,&#10;    wa_pkt_verbindungen.hausnummer,&#10;    wa_pkt_verbindungen.hausnummerzusatz,&#10;    wa_pkt_verbindungen.lagezusatz,&#10;    wa_pkt_verbindungen.herkunftsplan,&#10;    wa_pkt_verbindungen.id_st_vw_projekt,&#10;    wa_pkt_verbindungen.id_st_vw_betriebsstatus,&#10;    wa_pkt_verbindungen.id_st_vw_eigentuemer,&#10;    wa_pkt_verbindungen.id_st_vw_betreiber,&#10;    wa_pkt_verbindungen.id_st_vw_material,&#10;    wa_pkt_verbindungen.id_st_vw_medium,&#10;    wa_pkt_verbindungen.id_st_vw_lagestatus,&#10;    wa_pkt_verbindungen.geometry,&#10;    wa_pkt_verbindungen.baujahr,&#10;    wa_pkt_verbindungen.migrationsdatum,&#10;    &#39;wa_pkt_verbindungen&#39;::text AS table_name,&#10;    wa_pkt_verbindungen.layout&#10;   FROM verundentsorgung.wa_pkt_verbindungen&#10;UNION ALL&#10; SELECT wa_pkt_verschiedenes.id,&#10;    wa_pkt_verschiedenes.fid_hist,&#10;    wa_pkt_verschiedenes.name_number,&#10;    wa_pkt_verschiedenes.gueltig_von,&#10;    wa_pkt_verschiedenes.gueltig_bis,&#10;    wa_pkt_verschiedenes.angelegt_am,&#10;    wa_pkt_verschiedenes.angelegt_von,&#10;    wa_pkt_verschiedenes.geaendert_am,&#10;    wa_pkt_verschiedenes.geaendert_von,&#10;    wa_pkt_verschiedenes.leistungsobjekt,&#10;    wa_pkt_verschiedenes.bemerkung,&#10;    wa_pkt_verschiedenes.id_st_strasse,&#10;    wa_pkt_verschiedenes.hausnummer,&#10;    wa_pkt_verschiedenes.hausnummerzusatz,&#10;    wa_pkt_verschiedenes.lagezusatz,&#10;    wa_pkt_verschiedenes.herkunftsplan,&#10;    wa_pkt_verschiedenes.id_st_vw_projekt,&#10;    wa_pkt_verschiedenes.id_st_vw_betriebsstatus,&#10;    wa_pkt_verschiedenes.id_st_vw_eigentuemer,&#10;    wa_pkt_verschiedenes.id_st_vw_betreiber,&#10;    wa_pkt_verschiedenes.id_st_vw_material,&#10;    wa_pkt_verschiedenes.id_st_vw_medium,&#10;    wa_pkt_verschiedenes.id_st_vw_lagestatus,&#10;    wa_pkt_verschiedenes.geometry,&#10;    wa_pkt_verschiedenes.baujahr,&#10;    wa_pkt_verschiedenes.migrationsdatum,&#10;    &#39;wa_pkt_verschiedenes&#39;::text AS table_name,&#10;    wa_pkt_verschiedenes.layout&#10;   FROM verundentsorgung.wa_pkt_verschiedenes&#10;UNION ALL&#10; SELECT wa_pkt_wasserschaden.id,&#10;    wa_pkt_wasserschaden.fid_hist,&#10;    wa_pkt_wasserschaden.name_number,&#10;    wa_pkt_wasserschaden.gueltig_von,&#10;    wa_pkt_wasserschaden.gueltig_bis,&#10;    wa_pkt_wasserschaden.angelegt_am,&#10;    wa_pkt_wasserschaden.angelegt_von,&#10;    wa_pkt_wasserschaden.geaendert_am,&#10;    wa_pkt_wasserschaden.geaendert_von,&#10;    wa_pkt_wasserschaden.leistungsobjekt,&#10;    wa_pkt_wasserschaden.bemerkung,&#10;    wa_pkt_wasserschaden.id_st_strasse,&#10;    wa_pkt_wasserschaden.hausnummer,&#10;    wa_pkt_wasserschaden.hausnummerzusatz,&#10;    wa_pkt_wasserschaden.lagezusatz,&#10;    wa_pkt_wasserschaden.herkunftsplan,&#10;    wa_pkt_wasserschaden.id_st_vw_projekt,&#10;    wa_pkt_wasserschaden.id_st_vw_betriebsstatus,&#10;    wa_pkt_wasserschaden.id_st_vw_eigentuemer,&#10;    wa_pkt_wasserschaden.id_st_vw_betreiber,&#10;    wa_pkt_wasserschaden.id_st_vw_material,&#10;    wa_pkt_wasserschaden.id_st_vw_medium,&#10;    wa_pkt_wasserschaden.id_st_vw_lagestatus,&#10;    wa_pkt_wasserschaden.geometry,&#10;    wa_pkt_wasserschaden.baujahr,&#10;    wa_pkt_wasserschaden.migrationsdatum,&#10;    &#39;wa_pkt_wasserschaden&#39;::text AS table_name,&#10;    wa_pkt_wasserschaden.layout&#10;   FROM verundentsorgung.wa_pkt_wasserschaden&#10;UNION ALL&#10; SELECT wa_pkt_wasserwerk.id,&#10;    wa_pkt_wasserwerk.fid_hist,&#10;    wa_pkt_wasserwerk.name_number,&#10;    wa_pkt_wasserwerk.gueltig_von,&#10;    wa_pkt_wasserwerk.gueltig_bis,&#10;    wa_pkt_wasserwerk.angelegt_am,&#10;    wa_pkt_wasserwerk.angelegt_von,&#10;    wa_pkt_wasserwerk.geaendert_am,&#10;    wa_pkt_wasserwerk.geaendert_von,&#10;    wa_pkt_wasserwerk.leistungsobjekt,&#10;    wa_pkt_wasserwerk.bemerkung,&#10;    wa_pkt_wasserwerk.id_st_strasse,&#10;    wa_pkt_wasserwerk.hausnummer,&#10;    wa_pkt_wasserwerk.hausnummerzusatz,&#10;    wa_pkt_wasserwerk.lagezusatz,&#10;    wa_pkt_wasserwerk.herkunftsplan,&#10;    wa_pkt_wasserwerk.id_st_vw_projekt,&#10;    wa_pkt_wasserwerk.id_st_vw_betriebsstatus,&#10;    wa_pkt_wasserwerk.id_st_vw_eigentuemer,&#10;    wa_pkt_wasserwerk.id_st_vw_betreiber,&#10;    wa_pkt_wasserwerk.id_st_vw_material,&#10;    wa_pkt_wasserwerk.id_st_vw_medium,&#10;    wa_pkt_wasserwerk.id_st_vw_lagestatus,&#10;    wa_pkt_wasserwerk.geometry,&#10;    wa_pkt_wasserwerk.baujahr,&#10;    wa_pkt_wasserwerk.migrationsdatum,&#10;    &#39;wa_pkt_wasserwerk&#39;::text AS table_name,&#10;    wa_pkt_wasserwerk.layout&#10;   FROM verundentsorgung.wa_pkt_wasserwerk&#10;UNION ALL&#10; SELECT wa_pkt_wasserzaehler.id,&#10;    wa_pkt_wasserzaehler.fid_hist,&#10;    wa_pkt_wasserzaehler.name_number,&#10;    wa_pkt_wasserzaehler.gueltig_von,&#10;    wa_pkt_wasserzaehler.gueltig_bis,&#10;    wa_pkt_wasserzaehler.angelegt_am,&#10;    wa_pkt_wasserzaehler.angelegt_von,&#10;    wa_pkt_wasserzaehler.geaendert_am,&#10;    wa_pkt_wasserzaehler.geaendert_von,&#10;    wa_pkt_wasserzaehler.leistungsobjekt,&#10;    wa_pkt_wasserzaehler.bemerkung,&#10;    wa_pkt_wasserzaehler.id_st_strasse,&#10;    wa_pkt_wasserzaehler.hausnummer,&#10;    wa_pkt_wasserzaehler.hausnummerzusatz,&#10;    wa_pkt_wasserzaehler.lagezusatz,&#10;    wa_pkt_wasserzaehler.herkunftsplan,&#10;    wa_pkt_wasserzaehler.id_st_vw_projekt,&#10;    wa_pkt_wasserzaehler.id_st_vw_betriebsstatus,&#10;    wa_pkt_wasserzaehler.id_st_vw_eigentuemer,&#10;    wa_pkt_wasserzaehler.id_st_vw_betreiber,&#10;    wa_pkt_wasserzaehler.id_st_vw_material,&#10;    wa_pkt_wasserzaehler.id_st_vw_medium,&#10;    wa_pkt_wasserzaehler.id_st_vw_lagestatus,&#10;    wa_pkt_wasserzaehler.geometry,&#10;    wa_pkt_wasserzaehler.baujahr,&#10;    wa_pkt_wasserzaehler.migrationsdatum,&#10;    &#39;wa_pkt_wasserzaehler&#39;::text AS table_name,&#10;    wa_pkt_wasserzaehler.layout&#10;   FROM verundentsorgung.wa_pkt_wasserzaehler;</textarea>
+                            <div style="padding-top: 5px;"><hr></div>
+                            <div class="box box-solid">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-puzzle-piece"></i>
+                                    <h3 class="box-title">Possibly Referenced Tables/Views</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="wa_pkt_armatur.html">wa_pkt_armatur</a></li>
+                                        <li><a href="wa_pkt_behaelter.html">wa_pkt_behaelter</a></li>
+                                        <li><a href="wa_pkt_beprobungspunkt.html">wa_pkt_beprobungspunkt</a></li>
+                                        <li><a href="wa_pkt_brunnen.html">wa_pkt_brunnen</a></li>
+                                        <li><a href="wa_pkt_druckminderer.html">wa_pkt_druckminderer</a></li>
+                                        <li><a href="wa_pkt_druckstation.html">wa_pkt_druckstation</a></li>
+                                        <li><a href="wa_pkt_entlueftung.html">wa_pkt_entlueftung</a></li>
+                                        <li><a href="wa_pkt_hausanschlusspunkt.html">wa_pkt_hausanschlusspunkt</a></li>
+                                        <li><a href="wa_pkt_hydrant.html">wa_pkt_hydrant</a></li>
+                                        <li><a href="wa_pkt_pumpwerk.html">wa_pkt_pumpwerk</a></li>
+                                        <li><a href="wa_pkt_schacht.html">wa_pkt_schacht</a></li>
+                                        <li><a href="wa_pkt_schachtdeckel.html">wa_pkt_schachtdeckel</a></li>
+                                        <li><a href="wa_pkt_schieber.html">wa_pkt_schieber</a></li>
+                                        <li><a href="wa_pkt_verbindungen.html">wa_pkt_verbindungen</a></li>
+                                        <li><a href="wa_pkt_verschiedenes.html">wa_pkt_verschiedenes</a></li>
+                                        <li><a href="wa_pkt_wasserschaden.html">wa_pkt_wasserschaden</a></li>
+                                        <li><a href="wa_pkt_wasserwerk.html">wa_pkt_wasserwerk</a></li>
+                                        <li><a href="wa_pkt_wasserzaehler.html">wa_pkt_wasserzaehler</a></li>
+                                    </ul>
+                                </div><!-- /.box-body -->
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

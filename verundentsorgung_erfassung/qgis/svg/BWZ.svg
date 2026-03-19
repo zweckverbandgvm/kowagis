@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-linecap="butt" stroke-linejoin="crop" fill-rule="evenodd" xml:space="preserve" >
+<defs >
+<clipPath id="clipId0" >
+<path d="M0,2000 2000,2000 2000,0 0,0 z" />
+</clipPath>
+</defs>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="2" >
+<polyline points="995,1005 995,995 1005,995 1005,1005 995,1005 " />
+<polyline points="990,1000 1010,1000 " />
+<polyline points="1000,1010 1000,990 " />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="rgb(0,0,0)" stroke-width="10" >
+<polyline points="901.301,1075.25 931.217,1075.25 " />
+<polyline points="930.217,1000.417 901.301,1000.417 " />
+<polyline points="919.217,940.751 906.301,940.751 906.301,1075.25 " />
+<path d="M930.117,1075.25  A32.9161,32.9161 -90 0,0 919.217,1000.417 " />
+<path d="M919.217,1000.417  A22.3328,26.3328 90 0,0 919.217,940.751 " />
+<polyline points="991.633,940.751 1017.97,1059.25 1044.3,980.25 1070.63,1059.25 1096.96,940.751 " />
+<polyline points="863.336,1098.75 1131.66,1098.75 1131.66,901.252 868.336,901.252 868.336,1098.75 " />
+</g>
+</svg>

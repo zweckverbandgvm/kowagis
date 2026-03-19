@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>st_vw_kurztext_langtext_alle - gis.verundentsorgung</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>gis</b></a><span class="navbar-brand" style="padding-left: 0">.verundentsorgung</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>st_vw_kurztext_langtext_alle</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Stammdaten Kurztext Langtext Alle (View)</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="false"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span id="kurztext">kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Kurztext</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="langtext">langtext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Langtext</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="id">id</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="tabellenname">tabellenname</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Tabellenname</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="symbolname">symbolname</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Symbolname</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="st_vw_kurztext_langtext_alle.html" target="_top" title="st_vw_kurztext_langtext_alle" alt="" coords="5,5,424,197">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/st_vw_kurztext_langtext_alle.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-code-o"></i>
+                            <h3 id="ViewDefinition" class="box-title">View Definition</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <textarea id="sql-script-codemirror" name="sql-script-codemirror" rows="" style="display: none;">SELECT DISTINCT a.kurztext,&#10;    a.langtext,&#10;    a.id,&#10;    a.tabellenname,&#10;    b.symbolname&#10;   FROM (( SELECT st_vw_abscheidertyp.id,&#10;            st_vw_abscheidertyp.kurztext,&#10;            st_vw_abscheidertyp.langtext,&#10;            &#39;st_vw_abscheidertyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_abscheidertyp&#10;        UNION ALL&#10;         SELECT st_vw_abwassereinleittyp.id,&#10;            st_vw_abwassereinleittyp.kurztext,&#10;            st_vw_abwassereinleittyp.langtext,&#10;            &#39;st_vw_abwassereinleittyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_abwassereinleittyp&#10;        UNION ALL&#10;         SELECT st_vw_auslauftyp.id,&#10;            st_vw_auslauftyp.kurztext,&#10;            st_vw_auslauftyp.langtext,&#10;            &#39;st_vw_auslauftyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_auslauftyp&#10;        UNION ALL&#10;         SELECT st_vw_beckentyp.id,&#10;            st_vw_beckentyp.kurztext,&#10;            st_vw_beckentyp.langtext,&#10;            &#39;st_vw_beckentyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_beckentyp&#10;        UNION ALL&#10;         SELECT st_vw_verwendung.id,&#10;            st_vw_verwendung.kurztext,&#10;            st_vw_verwendung.langtext,&#10;            &#39;st_vw_verwendung&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_verwendung&#10;        UNION ALL&#10;         SELECT st_vw_brunnentyp.id,&#10;            st_vw_brunnentyp.kurztext,&#10;            st_vw_brunnentyp.langtext,&#10;            &#39;st_vw_brunnentyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_brunnentyp&#10;        UNION ALL&#10;         SELECT st_vw_deckel_herst_typ.id,&#10;            st_vw_deckel_herst_typ.kurztext,&#10;            st_vw_deckel_herst_typ.langtext,&#10;            &#39;st_vw_deckel_herst_typ&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_deckel_herst_typ&#10;        UNION ALL&#10;         SELECT st_vw_dokumenttyp.id,&#10;            st_vw_dokumenttyp.kurztext,&#10;            st_vw_dokumenttyp.langtext,&#10;            &#39;st_vw_dokumenttyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_dokumenttyp&#10;        UNION ALL&#10;         SELECT st_vw_druckminderertyp.id,&#10;            st_vw_druckminderertyp.kurztext,&#10;            st_vw_druckminderertyp.langtext,&#10;            &#39;st_vw_druckminderertyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_druckminderertyp&#10;        UNION ALL&#10;         SELECT st_vw_druckstationtyp.id,&#10;            st_vw_druckstationtyp.kurztext,&#10;            st_vw_druckstationtyp.langtext,&#10;            &#39;st_vw_druckstationtyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_druckstationtyp&#10;        UNION ALL&#10;         SELECT st_vw_entlueftungstyp.id,&#10;            st_vw_entlueftungstyp.kurztext,&#10;            st_vw_entlueftungstyp.langtext,&#10;            &#39;st_vw_entlueftungstyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_entlueftungstyp&#10;        UNION ALL&#10;         SELECT st_vw_hausanschluss_typ.id,&#10;            st_vw_hausanschluss_typ.kurztext,&#10;            st_vw_hausanschluss_typ.langtext,&#10;            &#39;st_vw_hausanschluss_typ&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_hausanschluss_typ&#10;        UNION ALL&#10;         SELECT st_vw_hydranttyp.id,&#10;            st_vw_hydranttyp.kurztext,&#10;            st_vw_hydranttyp.langtext,&#10;            &#39;st_vw_hydranttyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_hydranttyp&#10;        UNION ALL&#10;         SELECT st_vw_klaeranlagen_typ.id,&#10;            st_vw_klaeranlagen_typ.kurztext,&#10;            st_vw_klaeranlagen_typ.langtext,&#10;            &#39;st_vw_klaeranlagen_typ&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_klaeranlagen_typ&#10;        UNION ALL&#10;         SELECT st_vw_labeltyp.id,&#10;            st_vw_labeltyp.kurztext,&#10;            st_vw_labeltyp.langtext,&#10;            &#39;st_vw_labeltyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_labeltyp&#10;        UNION ALL&#10;         SELECT st_vw_pumpwerkstyp.id,&#10;            st_vw_pumpwerkstyp.kurztext,&#10;            st_vw_pumpwerkstyp.langtext,&#10;            &#39;st_vw_pumpwerkstyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_pumpwerkstyp&#10;        UNION ALL&#10;         SELECT st_vw_schacht_typ.id,&#10;            st_vw_schacht_typ.kurztext,&#10;            st_vw_schacht_typ.langtext,&#10;            &#39;st_vw_schacht_typ&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_schacht_typ&#10;        UNION ALL&#10;         SELECT st_vw_schachtdeckeltyp.id,&#10;            st_vw_schachtdeckeltyp.kurztext,&#10;            st_vw_schachtdeckeltyp.langtext,&#10;            &#39;st_vw_schachtdeckeltyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_schachtdeckeltyp&#10;        UNION ALL&#10;         SELECT st_vw_schadenstyp.id,&#10;            st_vw_schadenstyp.kurztext,&#10;            st_vw_schadenstyp.langtext,&#10;            &#39;st_vw_schadenstyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_schadenstyp&#10;        UNION ALL&#10;         SELECT st_vw_schiebertyp.id,&#10;            st_vw_schiebertyp.kurztext,&#10;            st_vw_schiebertyp.langtext,&#10;            &#39;st_vw_schiebertyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_schiebertyp&#10;        UNION ALL&#10;         SELECT st_vw_sonstige_anlage_typ.id,&#10;            st_vw_sonstige_anlage_typ.kurztext,&#10;            st_vw_sonstige_anlage_typ.langtext,&#10;            &#39;st_vw_sonstige_anlage_typ&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_sonstige_anlage_typ&#10;        UNION ALL&#10;         SELECT st_vw_speichereinrichtungstyp.id,&#10;            st_vw_speichereinrichtungstyp.kurztext,&#10;            st_vw_speichereinrichtungstyp.langtext,&#10;            &#39;st_vw_speichereinrichtungstyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_speichereinrichtungstyp&#10;        UNION ALL&#10;         SELECT st_vw_verbindungstyp.id,&#10;            st_vw_verbindungstyp.kurztext,&#10;            st_vw_verbindungstyp.langtext,&#10;            &#39;st_vw_verbindungstyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_verbindungstyp&#10;        UNION ALL&#10;         SELECT st_vw_bauteil.id,&#10;            st_vw_bauteil.kurztext,&#10;            st_vw_bauteil.langtext,&#10;            &#39;st_vw_bauteil&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_bauteil&#10;        UNION ALL&#10;         SELECT st_vw_verlegetyp.id,&#10;            st_vw_verlegetyp.kurztext,&#10;            st_vw_verlegetyp.langtext,&#10;            &#39;st_vw_verlegetyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_verlegetyp&#10;        UNION ALL&#10;         SELECT st_vw_zaehlertyp.id,&#10;            st_vw_zaehlertyp.kurztext,&#10;            st_vw_zaehlertyp.langtext,&#10;            &#39;st_vw_zaehlertyp&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_zaehlertyp&#10;        UNION ALL&#10;         SELECT st_vw_armatur.id,&#10;            st_vw_armatur.kurztext,&#10;            st_vw_armatur.langtext,&#10;            &#39;st_vw_armatur&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_armatur&#10;        UNION ALL&#10;         SELECT st_vw_verschiedenes.id,&#10;            st_vw_verschiedenes.kurztext,&#10;            st_vw_verschiedenes.langtext,&#10;            &#39;st_vw_verschiedenes&#39;::text AS tabellenname&#10;           FROM verundentsorgung.st_vw_verschiedenes) a&#10;     LEFT JOIN verundentsorgung.admin_symbole b ON ((a.kurztext &#61; (b.symbolname_alt)::text)));</textarea>
+                            <div style="padding-top: 5px;"><hr></div>
+                            <div class="box box-solid">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-puzzle-piece"></i>
+                                    <h3 class="box-title">Possibly Referenced Tables/Views</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="st_vw_abscheidertyp.html">st_vw_abscheidertyp</a></li>
+                                        <li><a href="st_vw_abwassereinleittyp.html">st_vw_abwassereinleittyp</a></li>
+                                        <li><a href="st_vw_auslauftyp.html">st_vw_auslauftyp</a></li>
+                                        <li><a href="st_vw_beckentyp.html">st_vw_beckentyp</a></li>
+                                        <li><a href="st_vw_verwendung.html">st_vw_verwendung</a></li>
+                                        <li><a href="st_vw_brunnentyp.html">st_vw_brunnentyp</a></li>
+                                        <li><a href="st_vw_deckel_herst_typ.html">st_vw_deckel_herst_typ</a></li>
+                                        <li><a href="st_vw_dokumenttyp.html">st_vw_dokumenttyp</a></li>
+                                        <li><a href="st_vw_druckminderertyp.html">st_vw_druckminderertyp</a></li>
+                                        <li><a href="st_vw_druckstationtyp.html">st_vw_druckstationtyp</a></li>
+                                        <li><a href="st_vw_entlueftungstyp.html">st_vw_entlueftungstyp</a></li>
+                                        <li><a href="st_vw_hausanschluss_typ.html">st_vw_hausanschluss_typ</a></li>
+                                        <li><a href="st_vw_hydranttyp.html">st_vw_hydranttyp</a></li>
+                                        <li><a href="st_vw_klaeranlagen_typ.html">st_vw_klaeranlagen_typ</a></li>
+                                        <li><a href="st_vw_labeltyp.html">st_vw_labeltyp</a></li>
+                                        <li><a href="st_vw_pumpwerkstyp.html">st_vw_pumpwerkstyp</a></li>
+                                        <li><a href="st_vw_schacht_typ.html">st_vw_schacht_typ</a></li>
+                                        <li><a href="st_vw_schachtdeckeltyp.html">st_vw_schachtdeckeltyp</a></li>
+                                        <li><a href="st_vw_schadenstyp.html">st_vw_schadenstyp</a></li>
+                                        <li><a href="st_vw_schiebertyp.html">st_vw_schiebertyp</a></li>
+                                        <li><a href="st_vw_sonstige_anlage_typ.html">st_vw_sonstige_anlage_typ</a></li>
+                                        <li><a href="st_vw_speichereinrichtungstyp.html">st_vw_speichereinrichtungstyp</a></li>
+                                        <li><a href="st_vw_verbindungstyp.html">st_vw_verbindungstyp</a></li>
+                                        <li><a href="st_vw_bauteil.html">st_vw_bauteil</a></li>
+                                        <li><a href="st_vw_verlegetyp.html">st_vw_verlegetyp</a></li>
+                                        <li><a href="st_vw_zaehlertyp.html">st_vw_zaehlertyp</a></li>
+                                        <li><a href="st_vw_armatur.html">st_vw_armatur</a></li>
+                                        <li><a href="st_vw_verschiedenes.html">st_vw_verschiedenes</a></li>
+                                    </ul>
+                                </div><!-- /.box-body -->
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

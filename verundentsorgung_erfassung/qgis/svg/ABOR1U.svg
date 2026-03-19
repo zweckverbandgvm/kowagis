@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-linecap="butt" stroke-linejoin="crop" fill-rule="evenodd" xml:space="preserve" >
+<defs >
+<clipPath id="clipId0" >
+<path d="M0,2000 2000,2000 2000,0 0,0 z" />
+</clipPath>
+</defs>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="2" />
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="10" >
+<polyline points="1111.01,1000 1000,1000 1000,1111.01 1111.01,1000 " />
+<polyline points="1004.78,1000 1057.9,1053.12 " />
+<polyline points="1010.6,1000 1060.8,1050.21 " />
+<polyline points="1016.42,1000 1063.71,1047.3 " />
+<polyline points="1022.24,1000 1066.62,1044.39 " />
+<polyline points="1028.05,1000 1069.53,1041.48 " />
+<polyline points="1033.87,1000 1072.44,1038.57 " />
+<polyline points="1039.69,1000 1075.35,1035.66 " />
+<polyline points="1045.51,1000 1078.26,1032.75 " />
+<polyline points="1051.33,1000 1081.17,1029.84 " />
+<polyline points="1057.15,1000 1084.08,1026.93 " />
+<polyline points="1062.97,1000 1086.99,1024.02 " />
+<polyline points="1068.79,1000 1089.9,1021.11 " />
+<polyline points="1074.6,1000 1092.81,1018.2 " />
+<polyline points="1080.42,1000 1095.72,1015.29 " />
+<polyline points="1086.24,1000 1098.63,1012.38 " />
+<polyline points="1092.06,1000 1101.54,1009.48 " />
+<polyline points="1097.88,1000 1104.45,1006.57 " />
+<polyline points="1103.7,1000 1107.36,1003.66 " />
+<polyline points="1109.52,1000 1110.26,1000.75 " />
+<polyline points="1000,1001.04 1054.99,1056.03 " />
+<polyline points="1000,1006.86 1052.08,1058.94 " />
+<polyline points="1000,1012.68 1049.17,1061.84 " />
+<polyline points="1000,1018.5 1046.26,1064.75 " />
+<polyline points="1000,1024.31 1043.35,1067.66 " />
+<polyline points="1000,1030.13 1040.44,1070.57 " />
+<polyline points="1000,1035.95 1037.53,1073.48 " />
+<polyline points="1000,1041.77 1034.62,1076.39 " />
+<polyline points="1000,1047.59 1031.71,1079.3 " />
+<polyline points="1000,1053.41 1028.8,1082.21 " />
+<polyline points="1000,1059.23 1025.89,1085.12 " />
+<polyline points="1000,1065.05 1022.98,1088.03 " />
+<polyline points="1000,1070.87 1020.07,1090.94 " />
+<polyline points="1000,1076.68 1017.16,1093.85 " />
+<polyline points="1000,1082.5 1014.25,1096.76 " />
+<polyline points="1000,1088.32 1011.35,1099.67 " />
+<polyline points="1000,1094.14 1008.44,1102.58 " />
+<polyline points="1000,1099.96 1005.53,1105.49 " />
+<polyline points="1000,1105.78 1002.62,1108.39 " />
+<polyline points="1000,1111.01 1000,1221.2 " stroke-dasharray="32.916053,16.458027" />
+</g>
+</svg>

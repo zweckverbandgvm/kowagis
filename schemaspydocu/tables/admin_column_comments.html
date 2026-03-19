@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>admin_column_comments - gis.verundentsorgung</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>gis</b></a><span class="navbar-brand" style="padding-left: 0">.verundentsorgung</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>admin_column_comments</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Admin Column Comments (View)</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="false"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span id="table_schema">table_schema</span></td>
+                                    <td>&quot;information_schema&quot;.&quot;sql_identifier&quot;</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Table Schema</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="table_name">table_name</span></td>
+                                    <td>&quot;information_schema&quot;.&quot;sql_identifier&quot;</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Table Name</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="column_name">column_name</span></td>
+                                    <td>&quot;information_schema&quot;.&quot;sql_identifier&quot;</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Spalten Bezeichnung</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ordinal_position">ordinal_position</span></td>
+                                    <td>&quot;information_schema&quot;.&quot;cardinal_number&quot;</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ordinal Position</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="column_default">column_default</span></td>
+                                    <td>&quot;information_schema&quot;.&quot;character_data&quot;</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Standard Spalte</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="data_type">data_type</span></td>
+                                    <td>&quot;information_schema&quot;.&quot;character_data&quot;</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Daten Typ</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="description">description</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Beschreibung</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="websuite_column_aliasname">websuite_column_aliasname</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>websuite_column_aliasname</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="websuite_column_sichtbarkeit">websuite_column_sichtbarkeit</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>websuite_column_sichtbarkeit</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="websuite_column_suchfeld">websuite_column_suchfeld</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>websuite_column_suchfeld</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="websuite_column_position">websuite_column_position</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>websuite_column_position</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="websuite_column_editierbarkeit">websuite_column_editierbarkeit</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>websuite_column_editierbarkeit</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="websuite_column_edit_config">websuite_column_edit_config</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>websuite_column_edit_config</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="admin_column_comments.html" target="_top" title="admin_column_comments" alt="" coords="5,5,653,432">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/admin_column_comments.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-code-o"></i>
+                            <h3 id="ViewDefinition" class="box-title">View Definition</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <textarea id="sql-script-codemirror" name="sql-script-codemirror" rows="" style="display: none;">SELECT c.table_schema,&#10;    c.table_name,&#10;    c.column_name,&#10;    c.ordinal_position,&#10;    c.column_default,&#10;    c.data_type,&#10;    d.description&#10;   FROM (((information_schema.columns c&#10;     JOIN pg_class c1 ON (((c.table_name)::name &#61; c1.relname)))&#10;     JOIN pg_namespace n ON ((((c.table_schema)::name &#61; n.nspname) AND (c1.relnamespace &#61; n.oid))))&#10;     LEFT JOIN pg_description d ON (((d.objsubid &#61; (c.ordinal_position)::integer) AND (d.objoid &#61; c1.oid))))&#10;  WHERE ((c.table_schema)::name &#61; &#39;infrastruktur&#39;::name)&#10;  ORDER BY c.table_schema, c.table_name, c.column_name; SELECT d.table_schema,&#10;    d.table_name,&#10;    d.column_name,&#10;    d.ordinal_position,&#10;    d.column_default,&#10;    d.data_type,&#10;    d.description,&#10;    wsd.aliasname AS websuite_column_aliasname,&#10;    wsd.sichtbarkeit AS websuite_column_sichtbarkeit,&#10;    wsd.suchfeld AS websuite_column_suchfeld,&#10;    wsd.ordinal_position AS websuite_column_position,&#10;    wsd.editierbarkeit AS websuite_column_editierbarkeit,&#10;    wsd.edit_config AS websuite_column_edit_config&#10;   FROM (( SELECT c.table_schema,&#10;            c.table_name,&#10;            c.column_name,&#10;            c.ordinal_position,&#10;            c.column_default,&#10;            c.data_type,&#10;            pgd.description&#10;           FROM (((information_schema.columns c&#10;             JOIN pg_class cls ON ((cls.relname &#61; (c.table_name)::name)))&#10;             JOIN pg_namespace nsp ON (((nsp.oid &#61; cls.relnamespace) AND (nsp.nspname &#61; (c.table_schema)::name))))&#10;             LEFT JOIN pg_description pgd ON (((pgd.objoid &#61; cls.oid) AND (pgd.objsubid &#61; (c.ordinal_position)::integer))))&#10;          WHERE ((c.table_schema)::name &#61; &#39;verundentsorgung&#39;::name)) d&#10;     LEFT JOIN ( SELECT admin_column_dictionary.id,&#10;            admin_column_dictionary.angelegt_am,&#10;            admin_column_dictionary.bemerkung,&#10;            admin_column_dictionary.aliasname,&#10;            admin_column_dictionary.sichtbarkeit,&#10;            admin_column_dictionary.suchfeld,&#10;            admin_column_dictionary.quelle,&#10;            admin_column_dictionary.table_catalog,&#10;            admin_column_dictionary.table_schema,&#10;            admin_column_dictionary.table_name,&#10;            admin_column_dictionary.column_name,&#10;            admin_column_dictionary.ordinal_position,&#10;            admin_column_dictionary.column_default,&#10;            admin_column_dictionary.is_nullable,&#10;            admin_column_dictionary.data_type,&#10;            admin_column_dictionary.character_maximum_length,&#10;            admin_column_dictionary.character_octet_length,&#10;            admin_column_dictionary.numeric_precision,&#10;            admin_column_dictionary.numeric_precision_radix,&#10;            admin_column_dictionary.numeric_scale,&#10;            admin_column_dictionary.datetime_precision,&#10;            admin_column_dictionary.interval_type,&#10;            admin_column_dictionary.interval_precision,&#10;            admin_column_dictionary.character_set_catalog,&#10;            admin_column_dictionary.character_set_schema,&#10;            admin_column_dictionary.character_set_name,&#10;            admin_column_dictionary.collation_catalog,&#10;            admin_column_dictionary.collation_schema,&#10;            admin_column_dictionary.collation_name,&#10;            admin_column_dictionary.domain_catalog,&#10;            admin_column_dictionary.domain_schema,&#10;            admin_column_dictionary.domain_name,&#10;            admin_column_dictionary.udt_catalog,&#10;            admin_column_dictionary.udt_schema,&#10;            admin_column_dictionary.udt_name,&#10;            admin_column_dictionary.scope_catalog,&#10;            admin_column_dictionary.scope_schema,&#10;            admin_column_dictionary.scope_name,&#10;            admin_column_dictionary.maximum_cardinality,&#10;            admin_column_dictionary.dtd_identifier,&#10;            admin_column_dictionary.is_self_referencing,&#10;            admin_column_dictionary.is_identity,&#10;            admin_column_dictionary.identity_generation,&#10;            admin_column_dictionary.identity_start,&#10;            admin_column_dictionary.identity_increment,&#10;            admin_column_dictionary.identity_maximum,&#10;            admin_column_dictionary.identity_minimum,&#10;            admin_column_dictionary.identity_cycle,&#10;            admin_column_dictionary.is_generated,&#10;            admin_column_dictionary.generation_expression,&#10;            admin_column_dictionary.is_updatable,&#10;            admin_column_dictionary.gueltig_von,&#10;            admin_column_dictionary.gueltig_bis,&#10;            admin_column_dictionary.editierbarkeit,&#10;            admin_column_dictionary.edit_config&#10;           FROM admin.admin_column_dictionary&#10;          WHERE ((admin_column_dictionary.table_schema)::text ~~ &#39;verundentsorgung_viewer_zvg&#39;::text)) wsd ON ((((d.table_name)::text &#61; (wsd.table_name)::text) AND ((d.column_name)::text &#61; (wsd.column_name)::text))))&#10;  ORDER BY d.table_schema, d.table_name, d.column_name;</textarea>
+                            <div style="padding-top: 5px;"><hr></div>
+                            <div class="box box-solid">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-puzzle-piece"></i>
+                                    <h3 class="box-title">Possibly Referenced Tables/Views</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul class="list-unstyled">
+                                    </ul>
+                                </div><!-- /.box-body -->
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

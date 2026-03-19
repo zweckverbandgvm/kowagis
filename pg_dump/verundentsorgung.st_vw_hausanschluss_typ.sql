@@ -1,0 +1,360 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.1 (Debian 13.1-1.pgdg100+1)
+-- Dumped by pg_dump version 15.2
+
+-- Started on 2026-03-18 15:14:23
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 12188 (class 1259 OID 39685297)
+-- Name: st_vw_hausanschluss_typ; Type: TABLE; Schema: verundentsorgung; Owner: -
+--
+
+CREATE TABLE verundentsorgung.st_vw_hausanschluss_typ (
+    id uuid DEFAULT gen_random_uuid() NOT NULL,
+    ident_hist text DEFAULT 'unbekannt'::text NOT NULL,
+    kurztext text DEFAULT 'unbekannt'::text NOT NULL,
+    langtext text DEFAULT 'unbekannt'::text NOT NULL,
+    bemerkung text,
+    sortierreihenfolge text DEFAULT '001'::text NOT NULL,
+    gueltig_von timestamp with time zone DEFAULT now() NOT NULL,
+    gueltig_bis timestamp with time zone DEFAULT '2100-01-01 00:00:00+01'::timestamp with time zone NOT NULL,
+    angelegt_am timestamp with time zone DEFAULT now() NOT NULL,
+    angelegt_von text DEFAULT 'unbekannt'::text NOT NULL,
+    geaendert_am timestamp with time zone DEFAULT now() NOT NULL,
+    geaendert_von text DEFAULT 'unbekannt'::text NOT NULL,
+    id_st_vw_projekt uuid DEFAULT '00000000-0000-0000-0000-000000000000'::uuid NOT NULL
+);
+
+
+--
+-- TOC entry 83802 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: TABLE st_vw_hausanschluss_typ; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON TABLE verundentsorgung.st_vw_hausanschluss_typ IS 'Stammdaten Hausanschluss Typ';
+
+
+--
+-- TOC entry 83803 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.id; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.id IS '  ';
+
+
+--
+-- TOC entry 83804 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.ident_hist; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.ident_hist IS 'historische ID';
+
+
+--
+-- TOC entry 83805 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.kurztext; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.kurztext IS 'Kurztext ';
+
+
+--
+-- TOC entry 83806 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.langtext; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.langtext IS 'Langtext ';
+
+
+--
+-- TOC entry 83807 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.bemerkung; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.bemerkung IS 'Bemerkung ';
+
+
+--
+-- TOC entry 83808 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.sortierreihenfolge; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.sortierreihenfolge IS 'Sortierreihenfolge ';
+
+
+--
+-- TOC entry 83809 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.gueltig_von; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.gueltig_von IS 'gueltig von ';
+
+
+--
+-- TOC entry 83810 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.gueltig_bis; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.gueltig_bis IS 'gueltig_bis ';
+
+
+--
+-- TOC entry 83811 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.angelegt_am; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.angelegt_am IS 'Erfassungsdatum ';
+
+
+--
+-- TOC entry 83812 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.angelegt_von; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.angelegt_von IS 'Erfasser ';
+
+
+--
+-- TOC entry 83813 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.geaendert_am; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.geaendert_am IS 'Aenderungsdatum ';
+
+
+--
+-- TOC entry 83814 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.geaendert_von; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.geaendert_von IS 'Änderungsnutzer ';
+
+
+--
+-- TOC entry 83815 (class 0 OID 0)
+-- Dependencies: 12188
+-- Name: COLUMN st_vw_hausanschluss_typ.id_st_vw_projekt; Type: COMMENT; Schema: verundentsorgung; Owner: -
+--
+
+COMMENT ON COLUMN verundentsorgung.st_vw_hausanschluss_typ.id_st_vw_projekt IS 'ID st vw Projekt';
+
+
+--
+-- TOC entry 83796 (class 0 OID 39685297)
+-- Dependencies: 12188
+-- Data for Name: st_vw_hausanschluss_typ; Type: TABLE DATA; Schema: verundentsorgung; Owner: -
+--
+
+COPY verundentsorgung.st_vw_hausanschluss_typ (id, ident_hist, kurztext, langtext, bemerkung, sortierreihenfolge, gueltig_von, gueltig_bis, angelegt_am, angelegt_von, geaendert_am, geaendert_von, id_st_vw_projekt) FROM stdin;
+00000000-0000-0000-0000-000000000000	unbekannt	unbekannt	unbekannt	\N	001	2024-08-06 12:03:48.325002+02	2100-01-01 00:00:00+01	2024-08-06 12:03:48.325002+02	unbekannt	2024-08-06 12:03:48.325002+02	unbekannt	00000000-0000-0000-0000-000000000001
+ca6a17e1-3d27-4042-a2ac-f61db69c5c41	unbekannt	BAHNHOF	Bahnhof	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+0ce217f6-97fb-4881-9716-71beade5ef76	unbekannt	BANK	Bankinstitut	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+681c2608-f9c5-4bbd-80d8-31cb55420057	unbekannt	BUNGALOW	Bungalowanlage	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+da44736f-c5b6-43f8-b3c5-1b96c1be3914	unbekannt	CAMPING	Campingplatz	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+417df4a7-e120-4c27-90ef-d91649780f26	unbekannt	DIAKONIE	Diakoniewerk 	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+e2627d04-1208-4004-b188-fd8c31005154	unbekannt	FERIEN	Ferienhaus	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+00c0ecac-4cf4-40eb-8f69-e6e29bdf746c	unbekannt	FEUER	Feuerwehr	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+2ac41609-f432-4b40-9cc5-e0b2a6d80a3a	unbekannt	FRIED	Friedhof	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+a00e88bd-fa61-4e81-9b9a-c0b938c50952	unbekannt	GARAGE	Garage	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+13508f4a-3a17-4f97-84ed-a5097546ec91	unbekannt	GARTENANL	Gartenanlage	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+d88227f8-7b37-4265-8496-8f7c4389ec01	unbekannt	GAST	Gaststätte	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+f41ffe88-9e60-4cd8-a3bf-e0b08b93bd09	unbekannt	GESUNDHEIT	Gesundheitseinrichtung	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+ff8aaf5b-2f2a-4f9c-8e28-d85b1c50e4be	unbekannt	GEWERBE	Gewerbeeinrichtung	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+d5b11ea3-f267-4232-b96e-0ead85b255c7	unbekannt	GUTSHAUS	Gutshaus	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+dda34698-7de5-4e50-ab90-542086fcf3b6	unbekannt	HANDEL	Handel	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+00627dc1-38a3-40dc-89e6-a570c09d4e11	unbekannt	HOSPITZ	Hospiz	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+57c1a4b7-0ceb-49e1-8fff-8483e4fa3d8c	unbekannt	HOTEL	Hotel	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+e7a619bb-599c-46ec-b179-032e16cd7a1f	unbekannt	I	Industrie	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+c8be8e32-e5e0-48b7-ac82-2b726db38ad6	unbekannt	JUGENDEINRICHTUNG	Jugendeinrichtung	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+12f6e8ad-b768-4939-8597-65a9302d30e0	unbekannt	KIND	Kindergarten	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+6a87546b-5afc-48e1-97ec-e59bf89433c5	unbekannt	KINO	Kino	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+09c74d11-ee59-4991-8d45-145e28ad419d	unbekannt	KIRCHE	Kirche	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+bcdb91a2-245b-4c01-8c35-63dd1a54e39c	unbekannt	KRANK	Krankenhaus	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+fca9baf8-f701-4fdc-a653-52f8e4e69c57	unbekannt	KULTUR	Kultureinrichtung	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+b0a8deb3-8aed-4cd4-b990-59777dd5a495	unbekannt	LAGERHALLE	Lagerhalle	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+5bbd7c1c-b49a-4b97-98d5-3dbc7e91c4dd	unbekannt	LAND	Landwirtschaft	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+76ea53a3-6155-4e66-afbe-46478bde18cc	unbekannt	MUSEEUM	Museeum	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+331a880a-c239-4b73-bb75-bdd40f506cc2	unbekannt	o	andere	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+004053b5-004e-46f6-a2ac-3af921c51e26	unbekannt	PARK	Park	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+6be0ace7-c94a-40da-a834-46558e0049fc	unbekannt	PFLEGEHEIM	Alten- und Pflegeheim	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+7004c694-24c5-46aa-b68d-553b77adf8fa	unbekannt	POL	Polizei	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+6ec64161-43af-4dbc-a5af-ad16863316cb	unbekannt	POST	Post	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+34bafdb7-a096-4c10-8b02-9aa886c4cc7c	unbekannt	RAST	Raststätte	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+023943a8-d35d-48f4-8989-a6f17ffe8b4a	unbekannt	RATHAUS	Rathaus	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+a3a0e0b2-c108-48a4-81b3-05ba831c2b93	unbekannt	SCHEUNE	Scheune	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+d17c302c-ac58-4d3a-ba93-55d43730fa3d	unbekannt	SCHLOSS	Schloß	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+f42007cc-6e2a-4e2b-b7d6-95c40159011c	unbekannt	SCHULE	Schule	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+b3a2deda-203c-42f5-bc03-ab07e87b9ed2	unbekannt	SCHUPPEN	Schuppen	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+7af34499-a8f2-4133-92d2-4c17face498b	unbekannt	SOZIAL	Sozialeinrichtung	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+504faa77-d9ba-40a2-8115-748997f1cdfa	unbekannt	SPARKASSE	Sparkasse	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+3d566ca6-f87d-4226-b39f-919769ab9ed7	unbekannt	SPORT	Sport	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+7842e879-79f1-455c-859c-05c5594a1132	unbekannt	STALL	Stall	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+7aaa1ab0-25d4-4ea2-94d5-ff7ec2cadd60	unbekannt	TANKEN	Tankstelle	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+6fa92c79-1fdb-4fc4-9d88-bd8bea7eadbe	unbekannt	tbd	noch festzulegen	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+0be38b9b-c111-40aa-83e8-8901ec6eadbc	unbekannt	TOIL	Toilette	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+4b51c431-889c-446f-a195-d3b9dae6ffd8	unbekannt	UMFORMER	Umformer	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+463d835a-28ea-48cb-9867-cb438a1d0a2d	unbekannt	VERWALTUNG	Verwaltungsgebäude	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+551ddf9b-71e7-4045-8eb1-4ec924340f76	unbekannt	WASSER	Wasserentnahmestelle	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+da4368c7-5f56-43f9-95d5-2673bf935439	unbekannt	WERKSTATT	Werkstatt	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+6de37a87-4f99-4238-885f-3f02f2aa8f79	unbekannt	WHS	Wohngebäude	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+92912d8a-3ecb-4f71-bb30-57f24998f538	unbekannt	WOCHENENDHAUS	Wochenendhaus	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+0c11a7bd-bf1b-42fd-b697-db3cea903807	unbekannt	ZELTPLATZ	Zeltplatz	\N	001	2024-08-06 13:15:57.678422+02	2100-01-01 00:00:00+01	2024-08-06 13:15:57.678422+02	unbekannt	2024-08-06 13:15:57.678422+02	unbekannt	00000000-0000-0000-0000-000000000001
+ef19d9c0-5ed6-41d7-a515-0e2be2e80b4f	unbekannt	PFLEGEHEIM	Alten- und Pflegeheim	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+24a50b9e-e2a3-4f56-8ae8-0fdccdd03da7	unbekannt	o	andere	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+ebd967bd-5cef-4576-8795-9ada82dbc6bf	unbekannt	BAHNHOF	Bahnhof	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+b4ca16cd-c496-49e6-bc03-3d1e3d6731b1	unbekannt	BANK	Bankinstitut	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+ebf2d570-861a-439a-aa9e-aa519e66ddf6	unbekannt	BUNGALOW	Bungalowanlage	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+679d3b11-e1a2-4e25-94af-5062fcd3daba	unbekannt	CAMPING	Campingplatz	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+f7825b8c-4e9c-43d4-8d4c-4bd8f315d6d4	unbekannt	DIAKONIE	Diakoniewerk 	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+60acd1c7-fd0c-436a-b118-097bf5fde96c	unbekannt	FERIEN	Ferienhaus	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+b9dded2d-0986-44e4-a3e9-2385d8029409	unbekannt	FEUER	Feuerwehr	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+5c242236-0d9a-4cc0-9b89-28a8d837bfad	unbekannt	FRIED	Friedhof	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+0dd9d358-c58e-4a8b-aeb8-bf1d39876325	unbekannt	GARAGE	Garage	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+193d59af-dfb5-4b0e-8076-a6553884061c	unbekannt	GARTENANL	Gartenanlage	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+6514d43d-8e42-42d7-b9ab-d4b6b56b0b6d	unbekannt	GAST	Gaststätte	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+2d5f3d3a-dfd7-49e1-abdc-c3b4373f6eff	unbekannt	GESUNDHEIT	Gesundheitseinrichtung	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+fb095ebc-57f9-4bd2-910c-9c0bcdb1d500	unbekannt	GEWERBE	Gewerbeeinrichtung	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+1bae438a-374e-4654-81c7-60304111b527	unbekannt	GUTSHAUS	Gutshaus	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+f4f525e5-6c3f-48d5-9259-a1db893be000	unbekannt	HANDEL	Handel	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+fb4ac31f-bee1-482a-aec1-a7fcaa67389d	unbekannt	HOSPITZ	Hospiz	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+f4260abe-6304-4c1b-be4a-b83721ca3dab	unbekannt	HOTEL	Hotel	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+779e6cc8-e957-4a4d-8e56-bae6bec8e991	unbekannt	I	Industrie	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+81537f51-f0b2-49f7-9d8d-3a999f07480c	unbekannt	JUGENDEINRICHTUNG	Jugendeinrichtung	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+c43acfd5-1949-4f8d-9359-3860b0f377ef	unbekannt	KIND	Kindergarten	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+181a77fd-a4e0-44a7-89f9-80898ecd78d6	unbekannt	KINO	Kino	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+e5e4f449-4857-4135-b310-c90f6905a076	unbekannt	KIRCHE	Kirche	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+57969361-7354-4d51-b2c9-c68b01514b6c	unbekannt	KRANK	Krankenhaus	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+162095ef-2bfb-4834-a3ee-928e5890478f	unbekannt	KULTUR	Kultureinrichtung	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+bf3a3d88-5410-47cb-ae25-ed6302c4d0cf	unbekannt	LAGERHALLE	Lagerhalle	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+83ec80f8-6f1c-4a68-9ad2-8ba246488844	unbekannt	LAND	Landwirtschaft	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+f46a7ba6-30fe-477f-ae3d-7b4e64671f43	unbekannt	MUSEEUM	Museeum	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+1c80c30e-0bf9-45ed-8f2d-6439796c7565	unbekannt	tbd	noch festzulegen	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+82c52a6a-5537-4f94-a1c3-710cd2abe72d	unbekannt	PARK	Park	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+f7cee78e-8fff-46ce-af15-a040cec95a49	unbekannt	POL	Polizei	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+fa4f7239-a83b-4105-ae12-fe3a4bc54238	unbekannt	POST	Post	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+b90e7d44-ef1d-4774-b9e6-8f64c5d51059	unbekannt	RAST	Raststätte	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+2d56a465-9043-4e6f-b008-59d8aaf1493a	unbekannt	RATHAUS	Rathaus	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+82595983-d9d5-4b16-8d93-99752f7f62c9	unbekannt	SCHEUNE	Scheune	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+b5fe08af-b8ce-47d4-bf68-0dafa67aa77b	unbekannt	SCHLOSS	Schloß	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+3c4baae6-5e21-4e6f-b0dd-4d064dfea04c	unbekannt	SCHULE	Schule	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+2a24eb08-974f-4be2-9e4f-179fa28c962a	unbekannt	SCHUPPEN	Schuppen	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+61c15df3-51c8-45cb-ba3e-c859247257ed	unbekannt	SOZIAL	Sozialeinrichtung	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+a6a96615-eea9-4675-980c-9c0a867a075f	unbekannt	SPARKASSE	Sparkasse	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+22dccb92-4544-41a9-aa61-48876681de29	unbekannt	SPORT	Sport	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+b7a966ba-4545-4ae4-a3a0-cc90c3353e61	unbekannt	STALL	Stall	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+f7411c11-83dd-494c-a76e-e353853e5b58	unbekannt	TANKEN	Tankstelle	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+74d3f0f2-5d86-4085-be70-d9f44c22ae2b	unbekannt	TOIL	Toilette	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+97ae6156-cc48-4be2-b2fb-d063938e6d63	unbekannt	UMFORMER	Umformer	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+00252aa2-d99c-4aeb-927f-bb6221a2d667	unbekannt	unbekannt	unbekannt	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+1d6dfc9c-3664-46fd-9de6-dfda888d33f7	unbekannt	VERWALTUNG	Verwaltungsgebäude	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+059e5177-ec87-4ca0-bb9b-32a7dceb553b	unbekannt	WASSER	Wasserentnahmestelle	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+c833470f-08e6-480b-adb3-c92d92276407	unbekannt	WERKSTATT	Werkstatt	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+95f4066f-434e-4f45-a3d6-d766616b133c	unbekannt	WOCHENENDHAUS	Wochenendhaus	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+c8252c5c-baae-4840-b152-433f27bf4c2c	unbekannt	WHS	Wohngebäude	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+45c54a47-0751-41c3-bb81-e322e4af99a2	unbekannt	ZELTPLATZ	Zeltplatz	\N	001	2025-09-23 15:35:53.417656+02	2100-01-01 00:00:00+01	2025-09-23 15:35:53.417656+02	unbekannt	2025-09-23 15:35:53.417656+02	unbekannt	00000000-0000-0000-0000-000000000003
+\.
+
+
+--
+-- TOC entry 81946 (class 2606 OID 39687397)
+-- Name: st_vw_hausanschluss_typ pk_st_vw_hausanschluss_typ; Type: CONSTRAINT; Schema: verundentsorgung; Owner: -
+--
+
+ALTER TABLE ONLY verundentsorgung.st_vw_hausanschluss_typ
+    ADD CONSTRAINT pk_st_vw_hausanschluss_typ PRIMARY KEY (id);
+
+
+--
+-- TOC entry 81948 (class 2606 OID 52189849)
+-- Name: st_vw_hausanschluss_typ uk3_st_vw_hausanschluss_typ_kurztext; Type: CONSTRAINT; Schema: verundentsorgung; Owner: -
+--
+
+ALTER TABLE ONLY verundentsorgung.st_vw_hausanschluss_typ
+    ADD CONSTRAINT uk3_st_vw_hausanschluss_typ_kurztext UNIQUE (id_st_vw_projekt, kurztext);
+
+
+--
+-- TOC entry 81950 (class 2606 OID 52189998)
+-- Name: st_vw_hausanschluss_typ uk4_st_vw_hausanschluss_typ_langtext; Type: CONSTRAINT; Schema: verundentsorgung; Owner: -
+--
+
+ALTER TABLE ONLY verundentsorgung.st_vw_hausanschluss_typ
+    ADD CONSTRAINT uk4_st_vw_hausanschluss_typ_langtext UNIQUE (id_st_vw_projekt, langtext);
+
+
+--
+-- TOC entry 81952 (class 2620 OID 39687982)
+-- Name: st_vw_hausanschluss_typ tr_a_d__st_vw_hausanschluss_typ__tf_history_after; Type: TRIGGER; Schema: verundentsorgung; Owner: -
+--
+
+CREATE TRIGGER tr_a_d__st_vw_hausanschluss_typ__tf_history_after AFTER DELETE ON verundentsorgung.st_vw_hausanschluss_typ REFERENCING OLD TABLE AS old_table FOR EACH STATEMENT EXECUTE FUNCTION verundentsorgung.tf_history_after();
+
+
+--
+-- TOC entry 81953 (class 2620 OID 39688118)
+-- Name: st_vw_hausanschluss_typ tr_a_i_or_u_or_d__st_vw_hausanschluss_typ__tf_standard_after; Type: TRIGGER; Schema: verundentsorgung; Owner: -
+--
+
+CREATE TRIGGER tr_a_i_or_u_or_d__st_vw_hausanschluss_typ__tf_standard_after AFTER INSERT OR DELETE OR UPDATE ON verundentsorgung.st_vw_hausanschluss_typ FOR EACH ROW EXECUTE FUNCTION verundentsorgung.tf_standard_after();
+
+
+--
+-- TOC entry 81954 (class 2620 OID 39688254)
+-- Name: st_vw_hausanschluss_typ tr_a_u__st_vw_hausanschluss_typ__tf_history_after; Type: TRIGGER; Schema: verundentsorgung; Owner: -
+--
+
+CREATE TRIGGER tr_a_u__st_vw_hausanschluss_typ__tf_history_after AFTER UPDATE ON verundentsorgung.st_vw_hausanschluss_typ REFERENCING OLD TABLE AS old_table FOR EACH STATEMENT EXECUTE FUNCTION verundentsorgung.tf_history_after();
+
+
+--
+-- TOC entry 81955 (class 2620 OID 39688392)
+-- Name: st_vw_hausanschluss_typ tr_b_i_or_u_or_d__st_vw_hausanschluss_typ__tf_standard_before; Type: TRIGGER; Schema: verundentsorgung; Owner: -
+--
+
+CREATE TRIGGER tr_b_i_or_u_or_d__st_vw_hausanschluss_typ__tf_standard_before BEFORE INSERT OR DELETE OR UPDATE ON verundentsorgung.st_vw_hausanschluss_typ FOR EACH ROW EXECUTE FUNCTION verundentsorgung.tf_standard_before();
+
+
+--
+-- TOC entry 81951 (class 2606 OID 39690193)
+-- Name: st_vw_hausanschluss_typ fk_st_vw_hausanschluss_typ_st_vw_projekt; Type: FK CONSTRAINT; Schema: verundentsorgung; Owner: -
+--
+
+ALTER TABLE ONLY verundentsorgung.st_vw_hausanschluss_typ
+    ADD CONSTRAINT fk_st_vw_hausanschluss_typ_st_vw_projekt FOREIGN KEY (id_st_vw_projekt) REFERENCES verundentsorgung.st_vw_projekt(id);
+
+
+-- Completed on 2026-03-18 15:14:25
+
+--
+-- PostgreSQL database dump complete
+--
+

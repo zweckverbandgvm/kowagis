@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>isybau_export - gis.verundentsorgung</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>gis</b></a><span class="navbar-brand" style="padding-left: 0">.verundentsorgung</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>isybau_export</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Bau Export (View)</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="false"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span id="name_number">name_number</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="kanalart">kanalart</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Kanalart</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="rauhigkeit">rauhigkeit</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Rauhigkeit</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="funktion">funktion</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Funktion</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="bemerkung">bemerkung</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Bemerkung</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="amt">amt</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Amt</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gemeinde">gemeinde</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Gemeinde</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ort">ort</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ort</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="strasse">strasse</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Strasse</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hausnummer">hausnummer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hausnummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="baujahr">baujahr</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Baujahr</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="material">material</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Material</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="eigentuemer">eigentuemer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Eigentuemer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="betreiber">betreiber</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Betreiber</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="material_isybaukonform">material_isybaukonform</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Material Isybaukonform</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nennweite">nennweite</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nennweite</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="betriebsstatus">betriebsstatus</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Betriebsstatus</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="medium">medium</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Medium</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_oben_name_number">knoten_oben_name_number</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten Oben Name Number</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sohlhoehe_oben">sohlhoehe_oben</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Sohlhoehe oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="deckelhoehe_oben">deckelhoehe_oben</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Deckelhoehe Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="schachttyp_oben">schachttyp_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Schachttyp oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_oben_x">knoten_oben_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten oben X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_oben_y">knoten_oben_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten Oben Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="schacht_oben_x">schacht_oben_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Schacht oben X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="schacht_oben_y">schacht_oben_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Schacht oben Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_oben_geometry">knoten_oben_geometry</span></td>
+                                    <td>geometry</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten Oben Geometry</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ablaufhoehe">ablaufhoehe</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ablaufhoehe_Knoten_oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_unten_name_number">knoten_unten_name_number</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten unten Name Number</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sohlhoehe_unten">sohlhoehe_unten</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Sohlhoehe unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="deckelhoehe_unten">deckelhoehe_unten</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Deckelhoehe Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="schachttyp_unten">schachttyp_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Schachttyp unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_unten_x">knoten_unten_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten unten X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_unten_y">knoten_unten_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten unten Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="schacht_unten_x">schacht_unten_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Schacht unten X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="schacht_unten_y">schacht_unten_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Schacht unten Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_unten_geometry">knoten_unten_geometry</span></td>
+                                    <td>geometry</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten unten Geometry</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="einlaufhoehe">einlaufhoehe</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Einlaufhoehe_Knoten_unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="einlaufnummer">einlaufnummer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Einlaufnummer_Knoten_unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="material_schacht_unten">material_schacht_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Material Schacht unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="medium_schacht_unten">medium_schacht_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Medium Schacht unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="baujahr_schacht_unten">baujahr_schacht_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Baujahr Schacht Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="material_schacht_oben">material_schacht_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Material Schacht oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="medium_schacht_oben">medium_schacht_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Medium Schacht oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="baujahr_schacht_oben">baujahr_schacht_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Baujahr Schacht Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number_oben">name_number_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Name Number oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number_unten">name_number_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Name Number unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_strasse_oben">ver_strasse_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Strasse Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_strasse_unten">ver_strasse_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Strasse Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_sohlhoehe_oben">ver_sohlhoehe_oben</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Sohlhoehe Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_sohlhoehe_unten">ver_sohlhoehe_unten</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Sohlhoehe Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="verbindung_oben_x">verbindung_oben_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Verbindung Oben X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="verbindung_oben_y">verbindung_oben_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Verbindung Oben Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="verbindung_unten_x">verbindung_unten_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Verbindung Unten X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="verbindung_unten_y">verbindung_unten_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Verbindung Unten Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_medium_unten">ver_medium_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Medium Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_medium_oben">ver_medium_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Medium Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_baujahr_unten">ver_baujahr_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Baujahr Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ver_baujahr_oben">ver_baujahr_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ver Baujahr Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="verbindung_unten">verbindung_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Verbindung Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="verbindung_oben">verbindung_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Verbindung Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number_oben_aus">name_number_oben_aus</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Name Number oben Auslauf</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number_unten_aus">name_number_unten_aus</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Name Number unten Auslauf</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aus_strasse_oben">aus_strasse_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aus Strasse Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aus_strasse_unten">aus_strasse_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aus Strasse Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="auslauf_oben_x">auslauf_oben_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Auslauf Oben X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="auslauf_oben_y">auslauf_oben_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Auslauf Oben Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="auslauf_unten_x">auslauf_unten_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Auslauf Unten X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="auslauf_unten_y">auslauf_unten_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Auslauf Unten Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aus_medium_unten">aus_medium_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aus Medium Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aus_medium_oben">aus_medium_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aus Medium Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aus_baujahr_unten">aus_baujahr_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aus Baujahr Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aus_baujahr_oben">aus_baujahr_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aus Baujahr Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geometry">geometry</span></td>
+                                    <td>geometry</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Geometry</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number_oben_ein">name_number_oben_ein</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Name Number oben Einlauf</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number_unten_ein">name_number_unten_ein</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Name Number unten Einlauf</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_strasse_oben">ein_strasse_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Strasse Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_strasse_unten">ein_strasse_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Strasse Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_oben_x">ein_oben_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Oben X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_oben_y">ein_oben_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Oben Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_unten_x">ein_unten_x</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Unten X</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_unten_y">ein_unten_y</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Unten Y</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_medium_unten">ein_medium_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Medium Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_medium_oben">ein_medium_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Medium Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_baujahr_unten">ein_baujahr_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Baujahr Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ein_baujahr_oben">ein_baujahr_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ein Baujahr Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="profilhoehe">profilhoehe</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Profilhoehe</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="profilbreite">profilbreite</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Profilbreite</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="isybau_export.html" target="_top" title="isybau_export" alt="" coords="5,5,439,2632">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/isybau_export.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-code-o"></i>
+                            <h3 id="ViewDefinition" class="box-title">View Definition</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <textarea id="sql-script-codemirror" name="sql-script-codemirror" rows="" style="display: none;">SELECT h.name_number,&#10;        CASE&#10;            WHEN (h.medium_langtext ~~ &#39;Schmutz%&#39;::text) THEN &#39;KS&#39;::text&#10;            WHEN (h.medium_langtext ~~ &#39;Regen%&#39;::text) THEN &#39;KR&#39;::text&#10;            ELSE NULL::text&#10;        END AS kanalart,&#10;        CASE&#10;            WHEN (h.material_langtext &#61; &#39;Kunststoff/Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Stahlbeton&#39;::text) THEN &#39;0.5&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen 80&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;doppelwandiges Kunststoffrohr&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;unterschiedliche Werkstoffe&#39;::text) THEN &#39;0.3&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;FLEX&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Beton/Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;0.5&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Grauguss&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Asbestzement&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Stahl&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Steinzeug/Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Duktiles Gusseisen&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Edelstahl&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen hoher Dichte&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Ton&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen 100&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Wandverstärkter Schwerlastbeton&#39;::text) THEN &#39;0.5&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN ((h.material_langtext IS NULL) OR (h.material_langtext &#61; &#39;&#39;::text) OR (h.material_langtext &#61; &#39; &#39;::text)) THEN &#39;0.3&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polypropylen&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;unbekannt&#39;::text) THEN &#39;0.3&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyvinylchlorid hart&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Steinzeug&#39;::text) THEN &#39;0.1&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Beton&#39;::text) THEN &#39;0.5&#39;::text&#10;            ELSE NULL::text&#10;        END AS rauhigkeit,&#10;    &#39;Normalschacht&#39;::text AS funktion,&#10;    h.bemerkung,&#10;    h.amt,&#10;    h.gemeinde,&#10;    h.ort,&#10;    h.strasse,&#10;    h.hausnummer,&#10;    h.baujahr,&#10;    h.material_langtext AS material,&#10;    h.eigentuemer_langtext AS eigentuemer,&#10;    h.betreiber_langtext AS betreiber,&#10;        CASE&#10;            WHEN (h.material_langtext &#61; &#39;Kunststoff/Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;GfK&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Stahlbeton&#39;::text) THEN &#39;B&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen 80&#39;::text) THEN &#39;PE&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;doppelwandiges Kunststoffrohr&#39;::text) THEN &#39;BKU&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;unterschiedliche Werkstoffe&#39;::text) THEN &#39;MIX&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;FLEX&#39;::text) THEN &#39;KST&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Beton/Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;BKU&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;GfK&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Grauguss&#39;::text) THEN &#39;GG&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Asbestzement&#39;::text) THEN &#39;Az&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Stahl&#39;::text) THEN &#39;St&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Steinzeug/Glasfaserverstärkter Kunststoff&#39;::text) THEN &#39;GfK&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Duktiles Gusseisen&#39;::text) THEN &#39;GGG&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Edelstahl&#39;::text) THEN &#39;CNS&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen hoher Dichte&#39;::text) THEN &#39;PEHD&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Ton&#39;::text) THEN &#39;Stz&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen 100&#39;::text) THEN &#39;PE&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Wandverstärkter Schwerlastbeton&#39;::text) THEN &#39;B&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyethylen&#39;::text) THEN &#39;PE&#39;::text&#10;            WHEN ((h.material_langtext IS NULL) OR (h.material_langtext &#61; &#39;&#39;::text) OR (h.material_langtext &#61; &#39; &#39;::text)) THEN &#39;MIX&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polypropylen&#39;::text) THEN &#39;PP&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;unbekannt&#39;::text) THEN &#39;MIX&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Polyvinylchlorid hart&#39;::text) THEN &#39;PVC&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Steinzeug&#39;::text) THEN &#39;Stz&#39;::text&#10;            WHEN (h.material_langtext &#61; &#39;Beton&#39;::text) THEN &#39;B&#39;::text&#10;            ELSE NULL::text&#10;        END AS material_isybaukonform,&#10;    h.nennweite,&#10;    h.betriebsstatus_langtext AS betriebsstatus,&#10;    h.medium_langtext AS medium,&#10;    h.knoten_oben AS knoten_oben_name_number,&#10;    so.sohlhoehe AS sohlhoehe_oben,&#10;    so.deckelhoehe AS deckelhoehe_oben,&#10;    so.schacht_typ_langtext AS schachttyp_oben,&#10;    round((st_x(st_startpoint(h.geometry)))::numeric, 2) AS knoten_oben_x,&#10;    round((st_y(st_startpoint(h.geometry)))::numeric, 2) AS knoten_oben_y,&#10;    round((st_x(so.geometry))::numeric, 2) AS schacht_oben_x,&#10;    round((st_y(so.geometry))::numeric, 2) AS schacht_oben_y,&#10;    st_geomfromtext(concat(&#39;POINT(&#39;, (round((st_x(st_startpoint(h.geometry)))::numeric, 2))::text, &#39; &#39;, (round((st_y(st_startpoint(h.geometry)))::numeric, 2))::text, &#39;)&#39;), 25833) AS knoten_oben_geometry,&#10;    h.ablaufhoehe,&#10;    h.knoten_unten AS knoten_unten_name_number,&#10;    su.sohlhoehe AS sohlhoehe_unten,&#10;    su.deckelhoehe AS deckelhoehe_unten,&#10;    su.schacht_typ_langtext AS schachttyp_unten,&#10;    round((st_x(st_endpoint(h.geometry)))::numeric, 2) AS knoten_unten_x,&#10;    round((st_y(st_endpoint(h.geometry)))::numeric, 2) AS knoten_unten_y,&#10;    round((st_x(su.geometry))::numeric, 2) AS schacht_unten_x,&#10;    round((st_y(su.geometry))::numeric, 2) AS schacht_unten_y,&#10;    st_geomfromtext(concat(&#39;POINT(&#39;, (round((st_x(st_endpoint(h.geometry)))::numeric, 2))::text, &#39; &#39;, (round((st_y(st_endpoint(h.geometry)))::numeric, 2))::text, &#39;)&#39;), 25833) AS knoten_unten_geometry,&#10;    h.einlaufhoehe,&#10;    h.einlaufnummer,&#10;    su.material_langtext AS material_schacht_unten,&#10;    su.medium_langtext AS medium_schacht_unten,&#10;    su.baujahr AS baujahr_schacht_unten,&#10;    so.material_langtext AS material_schacht_oben,&#10;    so.medium_langtext AS medium_schacht_oben,&#10;    so.baujahr AS baujahr_schacht_oben,&#10;    fo.name_number AS name_number_oben,&#10;    fu.name_number AS name_number_unten,&#10;    fo.strasse AS ver_strasse_oben,&#10;    fu.strasse AS ver_strasse_unten,&#10;    fo.sohlhoehe AS ver_sohlhoehe_oben,&#10;    fu.sohlhoehe AS ver_sohlhoehe_unten,&#10;    round((st_x(fo.geometry))::numeric, 2) AS verbindung_oben_x,&#10;    round((st_y(fo.geometry))::numeric, 2) AS verbindung_oben_y,&#10;    round((st_x(fu.geometry))::numeric, 2) AS verbindung_unten_x,&#10;    round((st_y(fu.geometry))::numeric, 2) AS verbindung_unten_y,&#10;    fu.medium_langtext AS ver_medium_unten,&#10;    fo.medium_langtext AS ver_medium_oben,&#10;    fu.baujahr AS ver_baujahr_unten,&#10;    fo.baujahr AS ver_baujahr_oben,&#10;    fu.verbindungstyp_langtext AS verbindung_unten,&#10;    fo.verbindungstyp_langtext AS verbindung_oben,&#10;    oo.name_number AS name_number_oben_aus,&#10;    ou.name_number AS name_number_unten_aus,&#10;    oo.strasse AS aus_strasse_oben,&#10;    ou.strasse AS aus_strasse_unten,&#10;    round((st_x(oo.geometry))::numeric, 2) AS auslauf_oben_x,&#10;    round((st_y(oo.geometry))::numeric, 2) AS auslauf_oben_y,&#10;    round((st_x(ou.geometry))::numeric, 2) AS auslauf_unten_x,&#10;    round((st_y(ou.geometry))::numeric, 2) AS auslauf_unten_y,&#10;    ou.medium_langtext AS aus_medium_unten,&#10;    oo.medium_langtext AS aus_medium_oben,&#10;    ou.baujahr AS aus_baujahr_unten,&#10;    oo.baujahr AS aus_baujahr_oben,&#10;    h.geometry,&#10;    dio.name_number AS name_number_oben_ein,&#10;    diu.name_number AS name_number_unten_ein,&#10;    dio.strasse AS ein_strasse_oben,&#10;    diu.strasse AS ein_strasse_unten,&#10;    round((st_x(dio.geometry))::numeric, 2) AS ein_oben_x,&#10;    round((st_y(dio.geometry))::numeric, 2) AS ein_oben_y,&#10;    round((st_x(diu.geometry))::numeric, 2) AS ein_unten_x,&#10;    round((st_y(diu.geometry))::numeric, 2) AS ein_unten_y,&#10;    diu.medium_langtext AS ein_medium_unten,&#10;    dio.medium_langtext AS ein_medium_oben,&#10;    diu.baujahr AS ein_baujahr_unten,&#10;    dio.baujahr AS ein_baujahr_oben,&#10;    h.nennweite AS profilhoehe,&#10;    h.nennweite AS profilbreite&#10;   FROM ((((((((((verundentsorgung.aw_lin_haltung_v h&#10;     LEFT JOIN verundentsorgung.aw_pkt_schacht_v so ON ((h.knoten_oben &#61; so.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_schacht_v su ON ((h.knoten_unten &#61; su.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_verbindungen_v fo ON ((h.knoten_oben &#61; fo.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_verbindungen_v fu ON ((h.knoten_unten &#61; fu.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_auslauf_v oo ON ((h.knoten_oben &#61; oo.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_auslauf_v ou ON ((h.knoten_unten &#61; ou.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_becken_v bo ON ((h.knoten_oben &#61; bo.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_becken_v bu ON ((h.knoten_unten &#61; bu.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_einleitungsstellen_v dio ON ((h.knoten_oben &#61; dio.name_number)))&#10;     LEFT JOIN verundentsorgung.aw_pkt_einleitungsstellen_v diu ON ((h.knoten_unten &#61; diu.name_number)))&#10;  WHERE (h.betriebsstatus_langtext &#61; &#39;inbetrieb&#39;::text);</textarea>
+                            <div style="padding-top: 5px;"><hr></div>
+                            <div class="box box-solid">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-puzzle-piece"></i>
+                                    <h3 class="box-title">Possibly Referenced Tables/Views</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul class="list-unstyled">
+                                    </ul>
+                                </div><!-- /.box-body -->
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-linecap="butt" stroke-linejoin="crop" fill-rule="evenodd" xml:space="preserve" >
+<defs >
+<clipPath id="clipId0" >
+<path d="M0,2000 2000,2000 2000,0 0,0 z" />
+</clipPath>
+</defs>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"    stroke-width="4" >
+<circle cx="1000" cy="1000" r="10" />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"  stroke-width="16" >
+<circle cx="1000" cy="1000" r="110" />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"  stroke-width="12" >
+<polyline points =" 1070,950 1060,940 1025,940 1015,950 1015,990 1025,1000 
+1060,1000 1070,1010 1070,1050 1060,1060 1025,1060 1015,1050 " />
+<polyline points ="932,1060 932,940 970,940  980,945 990,960 990,1040 985,1050  970,1060 926,1060" />
+</g>
+</svg>
