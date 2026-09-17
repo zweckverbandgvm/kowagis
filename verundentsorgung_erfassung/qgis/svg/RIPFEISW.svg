@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 2000 2000"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <circle
+      cx="1000"
+      cy="1000"
+      r="2"
+      fill="none"
+      stroke="none"/>
+
+  <polyline
+      points="
+        1110,1240
+        1000,1002
+        890,1240
+        1110,1240
+      "
+      fill="param(outline)"
+      stroke="param(outline)"
+      stroke-width="2"/>
+
+</svg>

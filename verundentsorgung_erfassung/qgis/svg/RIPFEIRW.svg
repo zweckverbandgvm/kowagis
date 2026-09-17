@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 2000 2000"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <path
+      d="M 1091.6189 1225.6092
+L 1000 1027
+L 907 1229
+Z"
+      fill="none"
+      stroke="param(outline)"
+      stroke-width="20"/>
+
+</svg>

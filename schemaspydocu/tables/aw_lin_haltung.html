@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>aw_lin_haltung - gis.verundentsorgung</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>gis</b></a><span class="navbar-brand" style="padding-left: 0">.verundentsorgung</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>aw_lin_haltung</h1><p><span id="recordNumber">83333</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Abwasser Lin Haltung</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>gen_random_uuid()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="fid_hist">fid_hist</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hist ID</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="name_number">name_number</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gueltig_von">gueltig_von</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>gueltig von</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="gueltig_bis">gueltig_bis</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;2100-01-01 00:00:00+01&#39;::timestamp with time zone</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>gueltig_bis</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="angelegt_am">angelegt_am</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Erfassungsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="angelegt_von">angelegt_von</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Erfasser</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geaendert_am">geaendert_am</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aenderungsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geaendert_von">geaendert_von</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Änderungsnutzer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="leistungsobjekt">leistungsobjekt</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Leistungsobjekt (LEO)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="bemerkung">bemerkung</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Bemerkung</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_strasse">id_st_strasse</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_strasse references st_strasse.id via fk_aw_lin_haltung_st_strasse"><a href='st_strasse.html'>st_strasse</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_strasse</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st Strasse</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hausnummer">hausnummer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hausnummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="hausnummerzusatz">hausnummerzusatz</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Hausnummerzusatz</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="lagezusatz">lagezusatz</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Lagezusatz</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="herkunftsplan">herkunftsplan</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Herkunftsplan</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_projekt">id_st_vw_projekt</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_projekt references st_vw_projekt.id via fk_aw_lin_haltung_st_vw_projekt"><a href='st_vw_projekt.html'>st_vw_projekt</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_projekt</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Projekt</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_betriebsstatus">id_st_vw_betriebsstatus</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_betriebsstatus references st_vw_betriebsstatus.id via fk_aw_lin_haltung_st_vw_betriebsstatus"><a href='st_vw_betriebsstatus.html'>st_vw_betriebsstatus</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_betriebsstatus</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Betriebsstatus</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_eigentuemer">id_st_vw_eigentuemer</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_eigentuemer references st_vw_eigentuemer.id via fk_aw_lin_haltung_st_vw_eigentuemer"><a href='st_vw_eigentuemer.html'>st_vw_eigentuemer</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_eigentuemer</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Eigentuemer</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_betreiber">id_st_vw_betreiber</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_betreiber references st_vw_betreiber.id via fk_aw_lin_haltung_st_vw_betreiber"><a href='st_vw_betreiber.html'>st_vw_betreiber</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_betreiber</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Betreiber</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_material">id_st_vw_material</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_material references st_vw_material.id via fk_aw_lin_haltung_st_vw_material"><a href='st_vw_material.html'>st_vw_material</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_material</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Material</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_medium">id_st_vw_medium</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_medium references st_vw_medium.id via fk_aw_lin_haltung_st_vw_medium"><a href='st_vw_medium.html'>st_vw_medium</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Medium</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_lagestatus">id_st_vw_lagestatus</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_lagestatus references st_vw_lagestatus.id via fk_aw_lin_haltung_st_vw_lagestatus"><a href='st_vw_lagestatus.html'>st_vw_lagestatus</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_lagestatus</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Lagestatus</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="geometry">geometry</span></td>
+                                    <td>geometry</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Geometry</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="id_knoten_oben">id_knoten_oben</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Id Knoten Oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="id_knoten_unten">id_knoten_unten</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Id Knoten Unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="baujahr">baujahr</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Baujahr</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="migrationsdatum">migrationsdatum</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Migrationsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="nennweite">nennweite</span></td>
+                                    <td>numeric</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Nennweite</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aussendurchmesser">aussendurchmesser</span></td>
+                                    <td>numeric</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aussendurchmesser</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sohle_einlaufschacht">sohle_einlaufschacht</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Sohle Einlaufschacht Knoten unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="fallhoehe_einlaufschacht">fallhoehe_einlaufschacht</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Fallhoehe_Einlaufschacht_Knoten_unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="einlaufnummer">einlaufnummer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;E1&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Einlaufnummer_Knoten_unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ablaufhoehe">ablaufhoehe</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Ablaufhoehe_Knoten_oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="auslaufnummer">auslaufnummer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Auslaufnummer_Knoten_oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="einlaufhoehe">einlaufhoehe</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Einlaufhoehe_Knoten_unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sohle_ablaufschacht">sohle_ablaufschacht</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Sohle Ablaufschacht Knoten oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="haltungsgefaelle">haltungsgefaelle</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Haltungsgefaelle</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="wandstaerke">wandstaerke</span></td>
+                                    <td>numeric</td>
+                                    <td>10,2</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Wandstaerke</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="plannummer">plannummer</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Plannummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_oben">knoten_oben</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten oben</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="knoten_unten">knoten_unten</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Knoten unten</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="laenge">laenge</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_verlegetyp">id_st_vw_verlegetyp</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_verlegetyp references st_vw_verlegetyp.id via fk_aw_lin_haltung_st_vw_verlegetyp"><a href='st_vw_verlegetyp.html'>st_vw_verlegetyp</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_verlegetyp</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Verlegetyp</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_einlaufnummer">id_st_vw_einlaufnummer</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_einlaufnummer references st_vw_einlaufnummer.id via fk_aw_lin_haltung_st_vw_einlaufnummer"><a href='st_vw_einlaufnummer.html'>st_vw_einlaufnummer</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_einlaufnummer</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Einlaufnummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="farbwert">farbwert</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;#e304d0&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Farbwert</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="id_aw_lin_haltung_connector">id_aw_lin_haltung_connector</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>ID aw lin Haltung Konnektor</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="layout">layout</span></td>
+                                    <td>jsonb</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Layout</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="haltung_connector">haltung_connector</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Haltung Konnektor</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_auslaufnummer">id_st_vw_auslaufnummer</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_auslaufnummer references st_vw_auslaufnummer.id via fk_aw_lin_haltung_st_vw_auslaufnummer"><a href='st_vw_auslaufnummer.html'>st_vw_auslaufnummer</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_auslaufnummer</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Auslaufnummer</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="farbe">farbe</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="autopfeilupdate">autopfeilupdate</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="tiefbau_durch">tiefbau_durch</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="vermessung_durch">vermessung_durch</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_aw_lin_haltung</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>aw_lin_haltung_geom_gist</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>geometry</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>aw_lin_haltung_name_number_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>name_number</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>aw_lin_haltung_perf01_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>id_st_strasse + id_st_vw_betreiber + id_st_vw_betriebsstatus + id_st_vw_eigentuemer + id_st_vw_lagestatus + id_st_vw_material + id_st_vw_medium + id_st_vw_projekt</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_aw_lin_haltung_connector</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_aw_lin_haltung_connector</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_knoten_oben</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_knoten_oben</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_knoten_unten</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_knoten_unten</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_strasse</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_strasse</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_betreiber</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_betreiber</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_betriebsstatus</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_betriebsstatus</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_eigentuemer</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_eigentuemer</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_einlaufnummer</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_einlaufnummer</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_lagestatus</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_lagestatus</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_material</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_material</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_medium</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_medium</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_projekt</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_projekt</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>fkidx_aw_lin_haltung_id_st_vw_verlegetyp</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_verlegetyp</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_aw_lin_haltung_gueltig</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>gueltig_bis</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_aw_lin_haltung_medium_kurztext</td>
+                                    <td>Performance</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uk1_aw_lin_haltung</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_projekt + name_number</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 class="box-title">Check Constraints</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="check_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Constraint</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>ck_aw_lin_haltung_baujahr</td>
+                                    <td>(((baujahr &gt;&#61; 1800) AND (baujahr &lt;&#61; 2050)))</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="aw_lin_haltung.html" target="_top" title="aw_lin_haltung" alt="" coords="524,453,959,2107">
+<area shape="rect" id="node2" href="st_strasse.html" target="_top" title="st_strasse" alt="" coords="268,5,447,240">
+<area shape="rect" id="node3" href="st_vw_auslaufnummer.html" target="_top" title="st_vw_auslaufnummer" alt="" coords="235,2163,480,2368">
+<area shape="rect" id="node4" href="st_vw_betreiber.html" target="_top" title="st_vw_betreiber" alt="" coords="260,797,455,1032">
+<area shape="rect" id="node5" href="st_vw_betriebsstatus.html" target="_top" title="st_vw_betriebsstatus" alt="" coords="239,293,475,528">
+<area shape="rect" id="node6" href="st_vw_eigentuemer.html" target="_top" title="st_vw_eigentuemer" alt="" coords="247,545,468,780">
+<area shape="rect" id="node7" href="st_vw_einlaufnummer.html" target="_top" title="st_vw_einlaufnummer" alt="" coords="237,1940,478,2145">
+<area shape="rect" id="node8" href="st_vw_lagestatus.html" target="_top" title="st_vw_lagestatus" alt="" coords="255,1495,460,1700">
+<area shape="rect" id="node9" href="st_vw_material.html" target="_top" title="st_vw_material" alt="" coords="263,1049,451,1255">
+<area shape="rect" id="node10" href="st_vw_medium.html" target="_top" title="st_vw_medium" alt="" coords="241,1272,474,1477">
+<area shape="rect" id="node11" href="st_vw_projekt.html" target="_top" title="st_vw_projekt" alt="" coords="5,1137,191,1313">
+<area shape="rect" id="node12" href="st_vw_verlegetyp.html" target="_top" title="st_vw_verlegetyp" alt="" coords="254,1717,461,1923">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/aw_lin_haltung.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="admin_benutzer.html" target="_top" title="admin_benutzer" alt="" coords="289,863,485,951">
+<area shape="rect" id="node2" href="st_vw_projekt.html" target="_top" title="st_vw_projekt" alt="" coords="5,5395,185,5483">
+<area shape="rect" id="node3" href="admin_benutzer2admin_benutzergruppe.html" target="_top" title="admin_benutzer2admin_benutzergruppe" alt="" coords="589,931,971,1019">
+<area shape="rect" id="node4" href="admin_benutzergruppe.html" target="_top" title="admin_benutzergruppe" alt="" coords="263,1004,512,1092">
+<area shape="rect" id="node5" href="admin_projekt_parameter.html" target="_top" title="admin_projekt_parameter" alt="" coords="253,1109,521,1197">
+<area shape="rect" id="node6" href="al_fla_koordinatenraster.html" target="_top" title="al_fla_koordinatenraster" alt="" coords="1824,2519,2083,2607">
+<area shape="rect" id="node7" href="st_strasse.html" target="_top" title="st_strasse" alt="" coords="1449,4733,1614,4821">
+<area shape="rect" id="node8" href="st_vw_betreiber.html" target="_top" title="st_vw_betreiber" alt="" coords="1434,4944,1629,5032">
+<area shape="rect" id="node9" href="st_vw_betriebsstatus.html" target="_top" title="st_vw_betriebsstatus" alt="" coords="1413,4839,1649,4927">
+<area shape="rect" id="node10" href="st_vw_eigentuemer.html" target="_top" title="st_vw_eigentuemer" alt="" coords="1421,5049,1642,5137">
+<area shape="rect" id="node11" href="st_vw_lagestatus.html" target="_top" title="st_vw_lagestatus" alt="" coords="1429,5365,1634,5453">
+<area shape="rect" id="node12" href="st_vw_material.html" target="_top" title="st_vw_material" alt="" coords="1437,5155,1625,5243">
+<area shape="rect" id="node13" href="st_vw_medium.html" target="_top" title="st_vw_medium" alt="" coords="1437,5260,1625,5348">
+<area shape="rect" id="node117" href="st_ort.html" target="_top" title="st_ort" alt="" coords="1098,4595,1243,4683">
+<area shape="rect" id="node14" href="aw_fla_beitragflaechen.html" target="_top" title="aw_fla_beitragflaechen" alt="" coords="1829,2624,2078,2712">
+<area shape="rect" id="node15" href="aw_fla_umlageflaeche.html" target="_top" title="aw_fla_umlageflaeche" alt="" coords="1833,2729,2074,2817">
+<area shape="rect" id="node16" href="aw_lin_haltung.html" target="_top" title="aw_lin_haltung" alt="" coords="1736,111,2171,1764">
+<area shape="rect" id="node17" href="st_vw_auslaufnummer.html" target="_top" title="st_vw_auslaufnummer" alt="" coords="1409,1677,1654,1765">
+<area shape="rect" id="node18" href="st_vw_einlaufnummer.html" target="_top" title="st_vw_einlaufnummer" alt="" coords="1411,1572,1652,1660">
+<area shape="rect" id="node19" href="st_vw_verlegetyp.html" target="_top" title="st_vw_verlegetyp" alt="" coords="1428,1819,1635,1907">
+<area shape="rect" id="node20" href="aw_lin_schutzrohr.html" target="_top" title="aw_lin_schutzrohr" alt="" coords="1847,1781,2060,1869">
+<area shape="rect" id="node21" href="aw_lin_topologie.html" target="_top" title="aw_lin_topologie" alt="" coords="286,2023,489,2111">
+<area shape="rect" id="node22" href="aw_pkt_abscheider.html" target="_top" title="aw_pkt_abscheider" alt="" coords="1843,2203,2063,2291">
+<area shape="rect" id="node23" href="st_vw_abscheidertyp.html" target="_top" title="st_vw_abscheidertyp" alt="" coords="1053,2200,1288,2288">
+<area shape="rect" id="node24" href="aw_pkt_abwasserschaden.html" target="_top" title="aw_pkt_abwasserschaden" alt="" coords="1817,2308,2090,2396">
+<area shape="rect" id="node25" href="st_vw_schadenreparatur.html" target="_top" title="st_vw_schadenreparatur" alt="" coords="649,2272,911,2360">
+<area shape="rect" id="node26" href="aw_pkt_auslauf.html" target="_top" title="aw_pkt_auslauf" alt="" coords="1857,1992,2049,2080">
+<area shape="rect" id="node27" href="st_vw_auslauftyp.html" target="_top" title="st_vw_auslauftyp" alt="" coords="677,1987,883,2075">
+<area shape="rect" id="node28" href="aw_pkt_becken.html" target="_top" title="aw_pkt_becken" alt="" coords="1858,5,2049,93">
+<area shape="rect" id="node29" href="st_vw_beckenform.html" target="_top" title="st_vw_beckenform" alt="" coords="671,1500,889,1588">
+<area shape="rect" id="node30" href="st_vw_beckenfunktion.html" target="_top" title="st_vw_beckenfunktion" alt="" coords="658,1037,902,1125">
+<area shape="rect" id="node31" href="st_vw_beckenkonstruktion.html" target="_top" title="st_vw_beckenkonstruktion" alt="" coords="1031,597,1310,685">
+<area shape="rect" id="node32" href="st_vw_beckentyp.html" target="_top" title="st_vw_beckentyp" alt="" coords="677,1217,883,1305">
+<area shape="rect" id="node33" href="st_vw_bepflanzung.html" target="_top" title="st_vw_bepflanzung" alt="" coords="1061,753,1281,841">
+<area shape="rect" id="node34" href="st_vw_filtermaterial.html" target="_top" title="st_vw_filtermaterial" alt="" coords="669,1359,891,1447">
+<area shape="rect" id="node35" href="aw_pkt_benzinabscheider.html" target="_top" title="aw_pkt_benzinabscheider" alt="" coords="1818,2835,2089,2923">
+<area shape="rect" id="node36" href="aw_pkt_beobachtungspunkt.html" target="_top" title="aw_pkt_beobachtungspunkt" alt="" coords="1809,2940,2098,3028">
+<area shape="rect" id="node37" href="aw_pkt_dueker.html" target="_top" title="aw_pkt_dueker" alt="" coords="1859,3045,2047,3133">
+<area shape="rect" id="node38" href="aw_pkt_einleit_auslauf_stellen.html" target="_top" title="aw_pkt_einleit_auslauf_stellen" alt="" coords="1800,3151,2107,3239">
+<area shape="rect" id="node39" href="aw_pkt_einleitungsstellen.html" target="_top" title="aw_pkt_einleitungsstellen" alt="" coords="1818,2097,2089,2185">
+<area shape="rect" id="node40" href="st_vw_abwassereinleittyp.html" target="_top" title="st_vw_abwassereinleittyp" alt="" coords="1036,2095,1305,2183">
+<area shape="rect" id="node41" href="aw_pkt_fettabscheider.html" target="_top" title="aw_pkt_fettabscheider" alt="" coords="1831,3256,2076,3344">
+<area shape="rect" id="node42" href="aw_pkt_fliessrichtungspfeil.html" target="_top" title="aw_pkt_fliessrichtungspfeil" alt="" coords="1812,2413,2095,2501">
+<area shape="rect" id="node43" href="st_vw_fliessrichtungspfeil_typ.html" target="_top" title="st_vw_fliessrichtungspfeil_typ" alt="" coords="627,2413,933,2501">
+<area shape="rect" id="node44" href="aw_pkt_klaeranlage.html" target="_top" title="aw_pkt_klaeranlage" alt="" coords="1841,5468,2065,5556">
+<area shape="rect" id="node45" href="st_vw_klaeranlagen_typ.html" target="_top" title="st_vw_klaeranlagen_typ" alt="" coords="1042,5195,1299,5283">
+<area shape="rect" id="node46" href="aw_pkt_klaertank.html" target="_top" title="aw_pkt_klaertank" alt="" coords="1850,7680,2057,7768">
+<area shape="rect" id="node47" href="st_vw_struckturbedingung.html" target="_top" title="st_vw_struckturbedingung" alt="" coords="641,8813,919,8901">
+<area shape="rect" id="node48" href="st_vw_tankverwendung.html" target="_top" title="st_vw_tankverwendung" alt="" coords="1044,8672,1297,8760">
+<area shape="rect" id="node49" href="aw_pkt_koaleszenzabscheider.html" target="_top" title="aw_pkt_koaleszenzabscheider" alt="" coords="1801,3361,2106,3449">
+<area shape="rect" id="node50" href="aw_pkt_label.html" target="_top" title="aw_pkt_label" alt="" coords="1085,3309,1257,3397">
+<area shape="rect" id="node51" href="st_vw_label_definition.html" target="_top" title="st_vw_label_definition" alt="" coords="658,3527,902,3615">
+<area shape="rect" id="node52" href="st_vw_objektbezeichnung.html" target="_top" title="st_vw_objektbezeichnung" alt="" coords="252,3629,523,3717">
+<area shape="rect" id="node94" href="st_vw_labeltyp.html" target="_top" title="st_vw_labeltyp" alt="" coords="294,3524,481,3612">
+<area shape="rect" id="node53" href="aw_pkt_label_alt.html" target="_top" title="aw_pkt_label_alt" alt="" coords="287,3383,487,3471">
+<area shape="rect" id="node54" href="aw_pkt_leichtfluessigkeitsabscheider.html" target="_top" title="aw_pkt_leichtfluessigkeitsabscheider" alt="" coords="1774,3572,2133,3660">
+<area shape="rect" id="node55" href="aw_pkt_loeschwasserentnahmestelle.html" target="_top" title="aw_pkt_loeschwasserentnahmestelle" alt="" coords="1775,5573,2132,5661">
+<area shape="rect" id="node56" href="st_vw_speichereinrichtungstyp.html" target="_top" title="st_vw_speichereinrichtungstyp" alt="" coords="1015,5344,1327,5432">
+<area shape="rect" id="node57" href="aw_pkt_pumpwerk.html" target="_top" title="aw_pkt_pumpwerk" alt="" coords="1845,3783,2061,3871">
+<area shape="rect" id="node58" href="aw_pkt_richtungspfeil.html" target="_top" title="aw_pkt_richtungspfeil" alt="" coords="267,3771,508,3859">
+<area shape="rect" id="node59" href="aw_pkt_schacht.html" target="_top" title="aw_pkt_schacht" alt="" coords="1855,8523,2051,8611">
+<area shape="rect" id="node60" href="st_vw_beschichtung.html" target="_top" title="st_vw_beschichtung" alt="" coords="665,9456,895,9544">
+<area shape="rect" id="node61" href="st_vw_einstiegshilfe.html" target="_top" title="st_vw_einstiegshilfe" alt="" coords="1057,9279,1285,9367">
+<area shape="rect" id="node62" href="st_vw_schacht_typ.html" target="_top" title="st_vw_schacht_typ" alt="" coords="1421,8567,1641,8655">
+<area shape="rect" id="node63" href="st_vw_schachtform.html" target="_top" title="st_vw_schachtform" alt="" coords="669,9315,891,9403">
+<area shape="rect" id="node64" href="aw_pkt_schachtdeckel.html" target="_top" title="aw_pkt_schachtdeckel" alt="" coords="1830,9049,2077,9137">
+<area shape="rect" id="node65" href="st_vw_abdeckungsform.html" target="_top" title="st_vw_abdeckungsform" alt="" coords="1043,10063,1298,10151">
+<area shape="rect" id="node66" href="st_vw_belueftung.html" target="_top" title="st_vw_belueftung" alt="" coords="676,10132,884,10220">
+<area shape="rect" id="node67" href="st_vw_deckel_herst_typ.html" target="_top" title="st_vw_deckel_herst_typ" alt="" coords="1042,9849,1299,9937">
+<area shape="rect" id="node68" href="st_vw_lastklassen.html" target="_top" title="st_vw_lastklassen" alt="" coords="674,9849,886,9937">
+<area shape="rect" id="node69" href="st_vw_verschluss.html" target="_top" title="st_vw_verschluss" alt="" coords="675,9955,885,10043">
+<area shape="rect" id="node70" href="aw_pkt_schieber.html" target="_top" title="aw_pkt_schieber" alt="" coords="1853,3993,2054,4081">
+<area shape="rect" id="node71" href="aw_pkt_schlammfang.html" target="_top" title="aw_pkt_schlammfang" alt="" coords="1834,4204,2073,4292">
+<area shape="rect" id="node72" href="aw_pkt_schutzrohr.html" target="_top" title="aw_pkt_schutzrohr" alt="" coords="1844,4415,2063,4503">
+<area shape="rect" id="node73" href="aw_pkt_sonstige_anlage.html" target="_top" title="aw_pkt_sonstige_anlage" alt="" coords="1823,4520,2084,4608">
+<area shape="rect" id="node74" href="aw_pkt_spuehlhydrant.html" target="_top" title="aw_pkt_spuehlhydrant" alt="" coords="1830,4309,2077,4397">
+<area shape="rect" id="node75" href="aw_pkt_staerkeabscheider.html" target="_top" title="aw_pkt_staerkeabscheider" alt="" coords="1815,4099,2091,4187">
+<area shape="rect" id="node76" href="aw_pkt_topologie.html" target="_top" title="aw_pkt_topologie" alt="" coords="283,4627,491,4715">
+<area shape="rect" id="node77" href="aw_pkt_topologie_default.html" target="_top" title="aw_pkt_topologie_default" alt="" coords="1819,6311,2088,6399">
+<area shape="rect" id="node78" href="st_vw_topologie.html" target="_top" title="st_vw_topologie" alt="" coords="1432,6296,1631,6384">
+<area shape="rect" id="node79" href="aw_pkt_topologie_v_mv.html" target="_top" title="aw_pkt_topologie_v_mv" alt="" coords="259,4804,516,4892">
+<area shape="rect" id="node80" href="aw_pkt_verbindungen.html" target="_top" title="aw_pkt_verbindungen" alt="" coords="1833,5995,2074,6083">
+<area shape="rect" id="node81" href="st_vw_verbindungstyp.html" target="_top" title="st_vw_verbindungstyp" alt="" coords="1408,5867,1655,5955">
+<area shape="rect" id="node82" href="aw_pkt_wehr.html" target="_top" title="aw_pkt_wehr" alt="" coords="1867,3888,2040,3976">
+<area shape="rect" id="node83" href="aw_pkt_zwischenpunkt.html" target="_top" title="aw_pkt_zwischenpunkt" alt="" coords="1828,3677,2079,3765">
+<area shape="rect" id="node84" href="dokument.html" target="_top" title="dokument" alt="" coords="313,5053,462,5141">
+<area shape="rect" id="node85" href="dokument_objekt.html" target="_top" title="dokument_objekt" alt="" coords="677,5076,883,5164">
+<area shape="rect" id="node86" href="ka_lin_kabelnetz.html" target="_top" title="ka_lin_kabelnetz" alt="" coords="1853,8417,2053,8505">
+<area shape="rect" id="node87" href="st_vw_dimension.html" target="_top" title="st_vw_dimension" alt="" coords="1428,9564,1635,9652">
+<area shape="rect" id="node88" href="st_vw_kabeltyp.html" target="_top" title="st_vw_kabeltyp" alt="" coords="1436,9459,1627,9547">
+<area shape="rect" id="node89" href="st_vw_verwendung.html" target="_top" title="st_vw_verwendung" alt="" coords="1421,9101,1641,9189">
+<area shape="rect" id="node90" href="ka_lin_schutzrohr.html" target="_top" title="ka_lin_schutzrohr" alt="" coords="1849,8312,2058,8400">
+<area shape="rect" id="node91" href="ka_pkt_kabelnetzknoten.html" target="_top" title="ka_pkt_kabelnetzknoten" alt="" coords="1825,7785,2082,7873">
+<area shape="rect" id="node92" href="st_vw_bauteil.html" target="_top" title="st_vw_bauteil" alt="" coords="1443,8960,1620,9048">
+<area shape="rect" id="node93" href="ka_pkt_label.html" target="_top" title="ka_pkt_label" alt="" coords="1086,3415,1255,3503">
+<area shape="rect" id="node95" href="ka_pkt_label_alt.html" target="_top" title="ka_pkt_label_alt" alt="" coords="289,5519,485,5607">
+<area shape="rect" id="node96" href="ka_pkt_schutzrohr.html" target="_top" title="ka_pkt_schutzrohr" alt="" coords="1846,7996,2061,8084">
+<area shape="rect" id="node97" href="ka_pkt_topologie_default.html" target="_top" title="ka_pkt_topologie_default" alt="" coords="1821,6521,2086,6609">
+<area shape="rect" id="node98" href="so_lin_netz.html" target="_top" title="so_lin_netz" alt="" coords="1873,8628,2033,8716">
+<area shape="rect" id="node99" href="st_vw_netztyp.html" target="_top" title="st_vw_netztyp" alt="" coords="1440,9705,1623,9793">
+<area shape="rect" id="node100" href="so_pkt_label.html" target="_top" title="so_pkt_label" alt="" coords="1086,3521,1255,3609">
+<area shape="rect" id="node101" href="so_pkt_label_alt.html" target="_top" title="so_pkt_label_alt" alt="" coords="289,5804,486,5892">
+<area shape="rect" id="node102" href="so_pkt_netzknoten.html" target="_top" title="so_pkt_netzknoten" alt="" coords="1845,8101,2062,8189">
+<area shape="rect" id="node103" href="st_amt.html" target="_top" title="st_amt" alt="" coords="319,4485,456,4573">
+<area shape="rect" id="node104" href="st_dokument.html" target="_top" title="st_dokument" alt="" coords="693,4133,867,4221">
+<area shape="rect" id="node105" href="st_vw_dokumenttyp.html" target="_top" title="st_vw_dokumenttyp" alt="" coords="274,4056,501,4144">
+<area shape="rect" id="node106" href="st_dokument2objekt.html" target="_top" title="st_dokument2objekt" alt="" coords="1057,4096,1285,4184">
+<area shape="rect" id="node107" href="st_fla_filtergebiet.html" target="_top" title="st_fla_filtergebiet" alt="" coords="285,6089,490,6177">
+<area shape="rect" id="node108" href="st_fla_koordinatenraster.html" target="_top" title="st_fla_koordinatenraster" alt="" coords="257,6195,517,6283">
+<area shape="rect" id="node109" href="st_gemeinde.html" target="_top" title="st_gemeinde" alt="" coords="695,4527,865,4615">
+<area shape="rect" id="node110" href="st_konstruktion_fla.html" target="_top" title="st_konstruktion_fla" alt="" coords="277,6336,497,6424">
+<area shape="rect" id="node111" href="st_konstruktion_lin.html" target="_top" title="st_konstruktion_lin" alt="" coords="277,6441,497,6529">
+<area shape="rect" id="node112" href="st_konstruktion_mfla.html" target="_top" title="st_konstruktion_mfla" alt="" coords="270,6547,505,6635">
+<area shape="rect" id="node113" href="st_konstruktion_mlin.html" target="_top" title="st_konstruktion_mlin" alt="" coords="270,6652,505,6740">
+<area shape="rect" id="node114" href="st_konstruktion_mpkt.html" target="_top" title="st_konstruktion_mpkt" alt="" coords="267,6757,507,6845">
+<area shape="rect" id="node115" href="st_konstruktion_pkt.html" target="_top" title="st_konstruktion_pkt" alt="" coords="275,6863,500,6951">
+<area shape="rect" id="node116" href="st_label.html" target="_top" title="st_label" alt="" coords="1105,3735,1237,3823">
+<area shape="rect" id="node118" href="st_suche__nach_name_number.html" target="_top" title="st_suche__nach_name_number" alt="" coords="229,7040,545,7128">
+<area shape="rect" id="node119" href="st_vw_abrechnung.html" target="_top" title="st_vw_abrechnung" alt="" coords="279,7145,496,7233">
+<area shape="rect" id="node120" href="st_vw_armatur.html" target="_top" title="st_vw_armatur" alt="" coords="1078,7924,1263,8012">
+<area shape="rect" id="node121" href="st_vw_baumassnahme.html" target="_top" title="st_vw_baumassnahme" alt="" coords="264,7287,511,7375">
+<area shape="rect" id="node122" href="st_vw_behaelter.html" target="_top" title="st_vw_behaelter" alt="" coords="1072,8353,1269,8441">
+<area shape="rect" id="node123" href="st_vw_beitrags_medium.html" target="_top" title="st_vw_beitrags_medium" alt="" coords="258,7428,517,7516">
+<area shape="rect" id="node124" href="st_vw_beprobung.html" target="_top" title="st_vw_beprobung" alt="" coords="1066,8459,1275,8547">
+<area shape="rect" id="node125" href="st_vw_brunnentyp.html" target="_top" title="st_vw_brunnentyp" alt="" coords="673,5411,887,5499">
+<area shape="rect" id="node126" href="st_vw_druckminderertyp.html" target="_top" title="st_vw_druckminderertyp" alt="" coords="1039,5603,1302,5691">
+<area shape="rect" id="node127" href="st_vw_druckstationtyp.html" target="_top" title="st_vw_druckstationtyp" alt="" coords="657,5679,903,5767">
+<area shape="rect" id="node128" href="st_vw_druckstufe.html" target="_top" title="st_vw_druckstufe" alt="" coords="283,7677,491,7765">
+<area shape="rect" id="node129" href="st_vw_entlueftungstyp.html" target="_top" title="st_vw_entlueftungstyp" alt="" coords="264,7783,511,7871">
+<area shape="rect" id="node130" href="st_vw_hausanschluss_typ.html" target="_top" title="st_vw_hausanschluss_typ" alt="" coords="1033,5924,1308,6012">
+<area shape="rect" id="node131" href="st_vw_hersteller.html" target="_top" title="st_vw_hersteller" alt="" coords="1432,10171,1631,10259">
+<area shape="rect" id="node132" href="st_vw_hilfsfilter.html" target="_top" title="st_vw_hilfsfilter" alt="" coords="291,7960,484,8048">
+<area shape="rect" id="node133" href="st_vw_hydranttyp.html" target="_top" title="st_vw_hydranttyp" alt="" coords="283,8065,492,8153">
+<area shape="rect" id="node134" href="st_vw_kartenlayout.html" target="_top" title="st_vw_kartenlayout" alt="" coords="1843,6837,2064,6925">
+<area shape="rect" id="node135" href="st_vw_layout_spalten.html" target="_top" title="st_vw_layout_spalten" alt="" coords="268,8207,507,8295">
+<area shape="rect" id="node136" href="st_vw_linienmarkierungen.html" target="_top" title="st_vw_linienmarkierungen" alt="" coords="251,8312,524,8400">
+<area shape="rect" id="node137" href="st_vw_model_design.html" target="_top" title="st_vw_model_design" alt="" coords="1415,10276,1648,10364">
+<area shape="rect" id="node138" href="st_vw_nennweite_dn_tw_leitung.html" target="_top" title="st_vw_nennweite_dn_tw_leitung" alt="" coords="1371,10381,1692,10469">
+<area shape="rect" id="node139" href="st_vw_nennweite_hydrant.html" target="_top" title="st_vw_nennweite_hydrant" alt="" coords="1395,10487,1667,10575">
+<area shape="rect" id="node140" href="st_vw_projektfilter.html" target="_top" title="st_vw_projektfilter" alt="" coords="280,8525,495,8613">
+<area shape="rect" id="node141" href="st_vw_schadenstyp.html" target="_top" title="st_vw_schadenstyp" alt="" coords="668,7500,892,7588">
+<area shape="rect" id="node142" href="st_vw_schaltzustand.html" target="_top" title="st_vw_schaltzustand" alt="" coords="1054,8885,1287,8973">
+<area shape="rect" id="node143" href="st_vw_typ2objektklasse.html" target="_top" title="st_vw_typ2objektklasse" alt="" coords="260,8703,515,8791">
+<area shape="rect" id="node144" href="st_vw_verschiedenes.html" target="_top" title="st_vw_verschiedenes" alt="" coords="1413,7321,1650,7409">
+<area shape="rect" id="node145" href="st_vw_versiegelung.html" target="_top" title="st_vw_versiegelung" alt="" coords="275,8844,500,8932">
+<area shape="rect" id="node146" href="st_vw_vorgangart.html" target="_top" title="st_vw_vorgangart" alt="" coords="675,3920,885,4008">
+<area shape="rect" id="node147" href="st_vw_zaehlertyp.html" target="_top" title="st_vw_zaehlertyp" alt="" coords="677,7641,883,7729">
+<area shape="rect" id="node148" href="ta_fla_anlagenflaechen.html" target="_top" title="ta_fla_anlagenflaechen" alt="" coords="1829,7575,2078,7663">
+<area shape="rect" id="node149" href="ta_lin_leitung.html" target="_top" title="ta_lin_leitung" alt="" coords="1865,3467,2041,3555">
+<area shape="rect" id="node150" href="ta_lin_netz.html" target="_top" title="ta_lin_netz" alt="" coords="1875,8733,2031,8821">
+<area shape="rect" id="node151" href="ta_lin_schutzrohr.html" target="_top" title="ta_lin_schutzrohr" alt="" coords="1850,8839,2057,8927">
+<area shape="rect" id="node152" href="ta_pkt_knoten.html" target="_top" title="ta_pkt_knoten" alt="" coords="1863,5363,2044,5451">
+<area shape="rect" id="node153" href="ta_pkt_label.html" target="_top" title="ta_pkt_label" alt="" coords="1088,3840,1253,3928">
+<area shape="rect" id="node154" href="ta_pkt_netzknoten.html" target="_top" title="ta_pkt_netzknoten" alt="" coords="1847,8207,2060,8295">
+<area shape="rect" id="node155" href="ta_pkt_schutzrohr.html" target="_top" title="ta_pkt_schutzrohr" alt="" coords="1847,8944,2059,9032">
+<area shape="rect" id="node156" href="ta_pkt_topologie_default.html" target="_top" title="ta_pkt_topologie_default" alt="" coords="1822,6627,2085,6715">
+<area shape="rect" id="node157" href="wa_lin_bauwerkskante.html" target="_top" title="wa_lin_bauwerkskante" alt="" coords="1830,5257,2077,5345">
+<area shape="rect" id="node158" href="wa_lin_schutzrohr.html" target="_top" title="wa_lin_schutzrohr" alt="" coords="1847,5152,2060,5240">
+<area shape="rect" id="node159" href="wa_lin_wasserleitung.html" target="_top" title="wa_lin_wasserleitung" alt="" coords="1835,1887,2072,1975">
+<area shape="rect" id="node160" href="wa_pkt_armatur.html" target="_top" title="wa_pkt_armatur" alt="" coords="1855,7259,2051,7347">
+<area shape="rect" id="node161" href="wa_pkt_behaelter.html" target="_top" title="wa_pkt_behaelter" alt="" coords="1850,7364,2057,7452">
+<area shape="rect" id="node162" href="wa_pkt_beprobungspunkt.html" target="_top" title="wa_pkt_beprobungspunkt" alt="" coords="1817,7469,2089,7557">
+<area shape="rect" id="node163" href="wa_pkt_brunnen.html" target="_top" title="wa_pkt_brunnen" alt="" coords="1853,5679,2053,5767">
+<area shape="rect" id="node164" href="wa_pkt_druckminderer.html" target="_top" title="wa_pkt_druckminderer" alt="" coords="1829,5784,2077,5872">
+<area shape="rect" id="node165" href="wa_pkt_druckstation.html" target="_top" title="wa_pkt_druckstation" alt="" coords="1837,5889,2069,5977">
+<area shape="rect" id="node166" href="wa_pkt_entlueftung.html" target="_top" title="wa_pkt_entlueftung" alt="" coords="1842,5047,2065,5135">
+<area shape="rect" id="node167" href="wa_pkt_hausanschlusspunkt.html" target="_top" title="wa_pkt_hausanschlusspunkt" alt="" coords="1806,6205,2101,6293">
+<area shape="rect" id="node168" href="wa_pkt_hydrant.html" target="_top" title="wa_pkt_hydrant" alt="" coords="1856,9155,2051,9243">
+<area shape="rect" id="node169" href="wa_pkt_hydrant_messwerte.html" target="_top" title="wa_pkt_hydrant_messwerte" alt="" coords="1810,9260,2097,9348">
+<area shape="rect" id="node170" href="wa_pkt_label.html" target="_top" title="wa_pkt_label" alt="" coords="1085,3629,1257,3717">
+<area shape="rect" id="node171" href="wa_pkt_label_alt.html" target="_top" title="wa_pkt_label_alt" alt="" coords="287,9849,487,9937">
+<area shape="rect" id="node172" href="wa_pkt_pumpwerk.html" target="_top" title="wa_pkt_pumpwerk" alt="" coords="1845,4941,2061,5029">
+<area shape="rect" id="node173" href="wa_pkt_schacht.html" target="_top" title="wa_pkt_schacht" alt="" coords="1855,6732,2051,6820">
+<area shape="rect" id="node174" href="wa_pkt_schachtdeckel.html" target="_top" title="wa_pkt_schachtdeckel" alt="" coords="1830,4836,2077,4924">
+<area shape="rect" id="node175" href="wa_pkt_schieber.html" target="_top" title="wa_pkt_schieber" alt="" coords="1853,7891,2054,7979">
+<area shape="rect" id="node176" href="wa_pkt_schutzrohr.html" target="_top" title="wa_pkt_schutzrohr" alt="" coords="1844,4731,2063,4819">
+<area shape="rect" id="node177" href="wa_pkt_topologie_default.html" target="_top" title="wa_pkt_topologie_default" alt="" coords="1819,6416,2088,6504">
+<area shape="rect" id="node178" href="wa_pkt_topologie_v_mv.html" target="_top" title="wa_pkt_topologie_v_mv" alt="" coords="259,10204,516,10292">
+<area shape="rect" id="node179" href="wa_pkt_verbindungen.html" target="_top" title="wa_pkt_verbindungen" alt="" coords="1833,6100,2074,6188">
+<area shape="rect" id="node180" href="wa_pkt_verschiedenes.html" target="_top" title="wa_pkt_verschiedenes" alt="" coords="1830,6943,2077,7031">
+<area shape="rect" id="node181" href="wa_pkt_wasserschaden.html" target="_top" title="wa_pkt_wasserschaden" alt="" coords="1826,7048,2081,7136">
+<area shape="rect" id="node182" href="wa_pkt_wasserwerk.html" target="_top" title="wa_pkt_wasserwerk" alt="" coords="1840,4625,2067,4713">
+<area shape="rect" id="node183" href="wa_pkt_wasserzaehler.html" target="_top" title="wa_pkt_wasserzaehler" alt="" coords="1831,7153,2076,7241">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/aw_lin_haltung.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

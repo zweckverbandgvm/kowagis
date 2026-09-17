@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 2000 2000" version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     stroke-linecap="butt" stroke-linejoin="crop"
+     fill-rule="evenodd" xml:space="preserve">
+  <defs>
+    <clipPath id="clipId0">
+      <path d="M0,2000 2000,2000 2000,0 0,0 z" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clipId0)" fill="none" stroke="none" stroke-width="1">
+    <circle cx="1000" cy="1000" r="2" />
+  </g>
+
+  <!-- gedrehter Pfeil: zeigt jetzt nach Norden -->
+  <g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="10"
+     transform="rotate(-90 1000 1000)">
+    <polyline points=" 761,1103  984,1000  766,899   766,1099.6" />
+    <polyline points=" 802,1043  880,1000  805,968   805,1043.6" />
+    <polyline points=" 812,1033  860,1000  812,980   812,1033.6" />
+    <polyline points=" 820,1017  842,1002  820,993   820,1024" />
+  </g>
+
+  <g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="2"
+     transform="rotate(-90 1000 1000)">
+    <polyline points=" 760,1110  998,1000  760,890   760,1110.4" />
+  </g>
+
+  <g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="6"
+     transform="rotate(-90 1000 1000)">
+    <polyline points=" 763,1080 763,1105 818,1080" />
+  </g>
+
+  <g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="2"
+     transform="rotate(-90 1000 1000)">
+    <polyline points=" 800,1050  890,1000  800,960   800,1050.6" />
+    <polyline points=" 802,1038 802,1047 818,1038" />
+  </g>
+</svg>

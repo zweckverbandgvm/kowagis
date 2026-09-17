@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 2000 2000"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- center reference is (1000,1000) -->
+
+  <!-- rotated square -->
+  <rect
+      x="975.668"
+      y="977.346"
+      width="48.664"
+      height="45.308"
+      transform="rotate(45 1000 1000)"
+      fill="none"
+      stroke="param(outline)"
+      stroke-width="6"/>
+
+  <!-- horizontal bar (centered) -->
+  <rect
+      x="935.261"
+      y="997.473"
+      width="129.477"
+      height="5.055"
+      fill="param(outline)"
+      stroke="param(outline)"
+      stroke-width="6"/>
+
+  <!-- vertical bar (centered) -->
+  <rect
+      x="996.214"
+      y="934.722"
+      width="6.572"
+      height="130.556"
+      fill="param(outline)"
+      stroke="param(outline)"
+      stroke-width="6"/>
+
+</svg>

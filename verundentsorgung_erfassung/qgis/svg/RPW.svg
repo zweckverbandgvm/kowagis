@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-linecap="butt" stroke-linejoin="crop" fill-rule="evenodd" xml:space="preserve" >
+<defs >
+<clipPath id="clipId0" >
+<path d="M0,2000 2000,2000 2000,0 0,0 z" />
+</clipPath>
+</defs>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"      stroke-width="9" >
+<circle cx="1000" cy="1000" r="101" />
+</g>
+
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"   stroke-width="6" >
+<polyline points="967,1038    1053,1000      967,962      967,1039 " />
+<polyline points="963,1043    1057,1000      963,958      963,1044 " />
+<polyline points="959,1047    1061,1000      959,954      959,1048 " />
+<polyline points="955,1051    1065,1000      955,950      955,1052 " />
+<polyline points="950,1056    1070,1000      950,945      950,1057 " />
+<polyline points="945,1061    1075,1000      945,940      945,1062 " />
+<polyline points="940,1066    1080,1000      940,935      940,1067 " />
+</g>
+<g clip-path="url(#clipId0)" fill="none"  stroke="param(outline)"  stroke-width="2" >
+<polyline points="970,1035    1050,1000      970,965      970,1035 " />
+<polyline points="972,1033    1048,1000      972,967      972,1033.200 " />
+<polyline points="973,1031    1046,1000      972,969      972,1031 " />
+<polyline points="974,1030    1044,1000      974,971      974,1031 " />
+<polyline points="975,1029    1043,1000      976,973      975,1030 " />
+<polyline points="977,1028    1041,1000      977,975      977,1029 " />
+<polyline points="979,1026    1039,1000      979,977      979,1027 " />
+<polyline points="981,1024    1037,1000      981,979      981,1025 " />
+<polyline points="983,1022    1035,1000      983,981      983,1023 " />
+<polyline points="985,1020    1033,1000      985,983      985,1021 " />
+<polyline points="987,1018    1031,1000      987,985      987,1019 " />
+<polyline points="989,1016    1029,1000      989,987      989,1017 " />
+<polyline points="991,1014    1027,1000      991,989      991,1015 " />
+<polyline points="993,1012    1025,1000      993,991      993,1013 " />
+<polyline points="995,1010    1023,1000      995,993      995,1011 " />
+<polyline points="997,1008    1021,1000      997,995      997,1009 " />
+<polyline points="999,1006    1019,1000      999,997      999,1007 " />
+<polyline points="1000,1004    1017,1000      1000,999    999,1007 " />
+<polyline points="1000,1002    1017,1000      1000,999    999,1007 " />
+<polyline points="937,1070    1084,1000      937,931      937,1070.600 " />
+</g>
+<g clip-path="url(#clipId0)" fill="rgb(265,265,265)" stroke="param(outline)"   stroke-width="1" >
+<circle cx="1000" cy="1000" r="4" />
+</g>
+
+</svg>

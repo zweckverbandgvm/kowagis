@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-linecap="butt" stroke-linejoin="crop" fill-rule="evenodd" xml:space="preserve" >
+<defs >
+<clipPath id="clipId0" >
+<path d="M0,2000 2000,2000 2000,0 0,0 z" />
+</clipPath>
+</defs>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"     stroke-width="2" />
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)"   stroke-width="8" >
+<circle cx="1000" cy="1000" r="12" />
+<circle cx="1000" cy="1000" r="20" />
+<circle cx="1000" cy="1000" r="28" />
+<circle cx="1000" cy="1000" r="36" />
+<circle cx="1000" cy="1000" r="44" />
+<circle cx="1000" cy="1000" r="52" />
+<circle cx="1000" cy="1000" r="60" />
+<circle cx="1000" cy="1000" r="68" />
+<circle cx="1000" cy="1000" r="76" />
+<circle cx="1000" cy="1000" r="84" />
+<circle cx="1000" cy="1000" r="92" />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="2" >
+<polyline points="930,870 1070,870 1000,730 931,869 " />
+</g>
+<g  clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="4" >
+<polyline points="933,867 1065,867 1000,737 935,867 " />
+<polyline points="939,863 1060,863 1000,743 940,863 " />
+<polyline points="944,859 1056,859 1000,749 944,860 " />
+<polyline points="949,855 1052,855 1000,755 949,857 " />
+<polyline points="953,851 1048,851 1000,760 953,853 " />
+<polyline points="957,847 1043,847 1000,765 957,849 " />
+<polyline points="961,843 1039,843 1000,770 961,845 " />
+<polyline points="965,839 1034,839 1000,775 965,840 " />
+<polyline points="969,835 1029,835 1000,780 969,836 " />
+<polyline points="973,831 1025,831 1000,785 973,832 " />
+<polyline points="977,827 1021,827 1000,790 977,828 " />
+<polyline points="981,823 1017,823 1000,795 981,824 " />
+<polyline points="985,819 1013,819 1000,800 985,820 " />
+<polyline points="989,815 1009,815 1000,805 989,816 " />
+</g>
+<g  clip-path="url(#clipId0)" fill="none" stroke="param(outline)" stroke-width="30" >
+<polyline points="1000,800 1000,930 " />
+</g>
+</svg>

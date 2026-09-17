@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>st_vw_medium - gis.verundentsorgung</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>gis</b></a><span class="navbar-brand" style="padding-left: 0">.verundentsorgung</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>st_vw_medium</h1><p><span id="recordNumber">162</span> rows</p><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>Stammdaten Medium</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>gen_random_uuid()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="al_fla_koordinatenraster.id_st_vw_medium references st_vw_medium.id via fk_al_fla_koordinatenraster_st_vw_medium"><a href='al_fla_koordinatenraster.html'>al_fla_koordinatenraster</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_al_fla_koordinatenraster_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_fla_beitragflaechen.id_st_vw_medium references st_vw_medium.id via fk_aw_fla_beitragflaechen_st_vw_medium"><a href='aw_fla_beitragflaechen.html'>aw_fla_beitragflaechen</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_fla_beitragflaechen_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_fla_umlageflaeche.id_st_vw_medium references st_vw_medium.id via fk_aw_fla_umlageflaeche_st_vw_medium"><a href='aw_fla_umlageflaeche.html'>aw_fla_umlageflaeche</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_fla_umlageflaeche_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_lin_haltung.id_st_vw_medium references st_vw_medium.id via fk_aw_lin_haltung_st_vw_medium"><a href='aw_lin_haltung.html'>aw_lin_haltung</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_lin_haltung_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_lin_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_aw_lin_schutzrohr_st_vw_medium"><a href='aw_lin_schutzrohr.html'>aw_lin_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_lin_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_abscheider.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_abscheider_st_vw_medium"><a href='aw_pkt_abscheider.html'>aw_pkt_abscheider</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_abscheider_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_abwasserschaden.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_abwasserschaden_st_vw_medium"><a href='aw_pkt_abwasserschaden.html'>aw_pkt_abwasserschaden</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_abwasserschaden_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_auslauf.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_auslauf_st_vw_medium"><a href='aw_pkt_auslauf.html'>aw_pkt_auslauf</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_auslauf_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_becken.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_becken_st_vw_medium"><a href='aw_pkt_becken.html'>aw_pkt_becken</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_becken_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_benzinabscheider.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_benzinabscheider_st_vw_medium"><a href='aw_pkt_benzinabscheider.html'>aw_pkt_benzinabscheider</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_benzinabscheider_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_beobachtungspunkt.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_beobachtungspunkt_st_vw_medium"><a href='aw_pkt_beobachtungspunkt.html'>aw_pkt_beobachtungspunkt</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_beobachtungspunkt_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_dueker.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_dueker_st_vw_medium"><a href='aw_pkt_dueker.html'>aw_pkt_dueker</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_dueker_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_einleit_auslauf_stellen.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_einleit_auslauf_stellen_st_vw_medium"><a href='aw_pkt_einleit_auslauf_stellen.html'>aw_pkt_einleit_auslauf_stellen</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_einleit_auslauf_stellen_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_einleitungsstellen.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_einleitungsstellen_st_vw_medium"><a href='aw_pkt_einleitungsstellen.html'>aw_pkt_einleitungsstellen</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_einleitungsstellen_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_fettabscheider.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_fettabscheider_st_vw_medium"><a href='aw_pkt_fettabscheider.html'>aw_pkt_fettabscheider</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_fettabscheider_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_fliessrichtungspfeil.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_fließrichtungspfeil_st_vw_medium"><a href='aw_pkt_fliessrichtungspfeil.html'>aw_pkt_fliessrichtungspfeil</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_fließrichtungspfeil_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_klaeranlage.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_klaeranlage_st_vw_medium"><a href='aw_pkt_klaeranlage.html'>aw_pkt_klaeranlage</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_klaeranlage_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_klaertank.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_klaertank_st_vw_medium"><a href='aw_pkt_klaertank.html'>aw_pkt_klaertank</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_klaertank_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_koaleszenzabscheider.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_koaleszenzabscheider_st_vw_medium"><a href='aw_pkt_koaleszenzabscheider.html'>aw_pkt_koaleszenzabscheider</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_koaleszenzabscheider_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_leichtfluessigkeitsabscheider.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_leichtfluessigkeitsabscheider_st_vw_medium"><a href='aw_pkt_leichtfluessigkeitsabscheider.html'>aw_pkt_leichtfluessigkeitsabscheider</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_leichtfluessigkeitsabscheider_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_loeschwasserentnahmestelle.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_loeschwasserentnahmestelle_st_vw_medium"><a href='aw_pkt_loeschwasserentnahmestelle.html'>aw_pkt_loeschwasserentnahmestelle</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_loeschwasserentnahmestelle_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_pumpwerk.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_pumpwerk_st_vw_medium"><a href='aw_pkt_pumpwerk.html'>aw_pkt_pumpwerk</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_pumpwerk_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_schacht.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_schacht_st_vw_medium"><a href='aw_pkt_schacht.html'>aw_pkt_schacht</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_schacht_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_schachtdeckel.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_schachtdeckel_st_vw_medium"><a href='aw_pkt_schachtdeckel.html'>aw_pkt_schachtdeckel</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_schachtdeckel_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_schieber.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_schieber_st_vw_medium"><a href='aw_pkt_schieber.html'>aw_pkt_schieber</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_schieber_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_schlammfang.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_schlammfang_st_vw_medium"><a href='aw_pkt_schlammfang.html'>aw_pkt_schlammfang</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_schlammfang_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_schutzrohr_st_vw_medium"><a href='aw_pkt_schutzrohr.html'>aw_pkt_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_sonstige_anlage.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_sonstige_anlage_st_vw_medium"><a href='aw_pkt_sonstige_anlage.html'>aw_pkt_sonstige_anlage</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_sonstige_anlage_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_spuehlhydrant.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_spuehlhydrant_st_vw_medium"><a href='aw_pkt_spuehlhydrant.html'>aw_pkt_spuehlhydrant</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_spuehlhydrant_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_staerkeabscheider.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_staerkeabscheider_st_vw_medium"><a href='aw_pkt_staerkeabscheider.html'>aw_pkt_staerkeabscheider</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_staerkeabscheider_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_topologie_default.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_topologie_default_st_vw_medium"><a href='aw_pkt_topologie_default.html'>aw_pkt_topologie_default</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_topologie_default_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_verbindungen.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_verbindungen_st_vw_medium"><a href='aw_pkt_verbindungen.html'>aw_pkt_verbindungen</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_verbindungen_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_wehr.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_wehr_st_vw_medium"><a href='aw_pkt_wehr.html'>aw_pkt_wehr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_wehr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aw_pkt_zwischenpunkt.id_st_vw_medium references st_vw_medium.id via fk_aw_pkt_zwischenpunkt_st_vw_medium"><a href='aw_pkt_zwischenpunkt.html'>aw_pkt_zwischenpunkt</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_aw_pkt_zwischenpunkt_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ka_lin_kabelnetz.id_st_vw_medium references st_vw_medium.id via fk_ka_lin_kabelnetz_st_vw_medium"><a href='ka_lin_kabelnetz.html'>ka_lin_kabelnetz</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ka_lin_kabelnetz_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ka_lin_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_ka_lin_schutzrohr_st_vw_medium"><a href='ka_lin_schutzrohr.html'>ka_lin_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ka_lin_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ka_pkt_kabelnetzknoten.id_st_vw_medium references st_vw_medium.id via fk_ka_pkt_kabelnetzknoten_st_vw_medium"><a href='ka_pkt_kabelnetzknoten.html'>ka_pkt_kabelnetzknoten</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ka_pkt_kabelnetzknoten_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ka_pkt_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_ka_pkt_schutzrohr_st_vw_medium"><a href='ka_pkt_schutzrohr.html'>ka_pkt_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ka_pkt_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ka_pkt_topologie_default.id_st_vw_medium references st_vw_medium.id via fk_ka_pkt_topologie_default_st_vw_medium"><a href='ka_pkt_topologie_default.html'>ka_pkt_topologie_default</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ka_pkt_topologie_default_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="so_lin_netz.id_st_vw_medium references st_vw_medium.id via fk_so_lin_netz_st_vw_medium"><a href='so_lin_netz.html'>so_lin_netz</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_so_lin_netz_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="so_pkt_netzknoten.id_st_vw_medium references st_vw_medium.id via fk_so_pkt_netzknoten_st_vw_medium"><a href='so_pkt_netzknoten.html'>so_pkt_netzknoten</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_so_pkt_netzknoten_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="st_vw_kartenlayout.id_st_vw_medium references st_vw_medium.id via fk_st_vw_kartenlayout_st_vw_medium"><a href='st_vw_kartenlayout.html'>st_vw_kartenlayout</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_st_vw_kartenlayout_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_fla_anlagenflaechen.id_st_vw_medium references st_vw_medium.id via fk_ta_fla_anlagenflaechen_st_vw_medium"><a href='ta_fla_anlagenflaechen.html'>ta_fla_anlagenflaechen</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_fla_anlagenflaechen_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_lin_leitung.id_st_vw_medium references st_vw_medium.id via fk_ta_lin_leitung_st_vw_medium"><a href='ta_lin_leitung.html'>ta_lin_leitung</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_lin_leitung_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_lin_netz.id_st_vw_medium references st_vw_medium.id via fk_ta_lin_netz_st_vw_medium"><a href='ta_lin_netz.html'>ta_lin_netz</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_lin_netz_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_lin_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_ta_lin_schutzrohr_st_vw_medium"><a href='ta_lin_schutzrohr.html'>ta_lin_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_lin_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_pkt_knoten.id_st_vw_medium references st_vw_medium.id via fk_ta_pkt_knoten_st_vw_medium"><a href='ta_pkt_knoten.html'>ta_pkt_knoten</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_pkt_knoten_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_pkt_netzknoten.id_st_vw_medium references st_vw_medium.id via fk_ta_pkt_netzknoten_st_vw_medium"><a href='ta_pkt_netzknoten.html'>ta_pkt_netzknoten</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_pkt_netzknoten_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_pkt_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_ta_pkt_schutzrohr_st_vw_medium"><a href='ta_pkt_schutzrohr.html'>ta_pkt_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_pkt_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="ta_pkt_topologie_default.id_st_vw_medium references st_vw_medium.id via fk_ta_pkt_topologie_default_st_vw_medium"><a href='ta_pkt_topologie_default.html'>ta_pkt_topologie_default</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_ta_pkt_topologie_default_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_lin_bauwerkskante.id_st_vw_medium references st_vw_medium.id via fk_wa_lin_bauwerkskante_st_vw_medium"><a href='wa_lin_bauwerkskante.html'>wa_lin_bauwerkskante</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_lin_bauwerkskante_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_lin_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_wa_lin_schutzrohr_st_vw_medium"><a href='wa_lin_schutzrohr.html'>wa_lin_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_lin_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_lin_wasserleitung.id_st_vw_medium references st_vw_medium.id via fk_wa_lin_wasserleitung_st_vw_medium"><a href='wa_lin_wasserleitung.html'>wa_lin_wasserleitung</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_lin_wasserleitung_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_armatur.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_armatur_st_vw_medium"><a href='wa_pkt_armatur.html'>wa_pkt_armatur</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_armatur_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_behaelter.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_behaelter_st_vw_medium"><a href='wa_pkt_behaelter.html'>wa_pkt_behaelter</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_behaelter_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_beprobungspunkt.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_beprobungspunkt_st_vw_medium"><a href='wa_pkt_beprobungspunkt.html'>wa_pkt_beprobungspunkt</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_beprobungspunkt_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_brunnen.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_brunnen_st_vw_medium"><a href='wa_pkt_brunnen.html'>wa_pkt_brunnen</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_brunnen_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_druckminderer.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_druckminderer_st_vw_medium"><a href='wa_pkt_druckminderer.html'>wa_pkt_druckminderer</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_druckminderer_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_druckstation.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_druckstation_st_vw_medium"><a href='wa_pkt_druckstation.html'>wa_pkt_druckstation</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_druckstation_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_entlueftung.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_entlueftung_st_vw_medium"><a href='wa_pkt_entlueftung.html'>wa_pkt_entlueftung</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_entlueftung_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_hausanschlusspunkt.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_hausanschlusspunkt_st_vw_medium"><a href='wa_pkt_hausanschlusspunkt.html'>wa_pkt_hausanschlusspunkt</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_hausanschlusspunkt_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_hydrant.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_hydrant_st_vw_medium"><a href='wa_pkt_hydrant.html'>wa_pkt_hydrant</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_hydrant_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_hydrant_messwerte.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_hydrant_messwerte_st_vw_medium"><a href='wa_pkt_hydrant_messwerte.html'>wa_pkt_hydrant_messwerte</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_hydrant_messwerte_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_pumpwerk.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_pumpwerk_st_vw_medium"><a href='wa_pkt_pumpwerk.html'>wa_pkt_pumpwerk</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_pumpwerk_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_schacht.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_schacht_st_vw_medium"><a href='wa_pkt_schacht.html'>wa_pkt_schacht</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_schacht_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_schachtdeckel.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_schachtdeckel_st_vw_medium"><a href='wa_pkt_schachtdeckel.html'>wa_pkt_schachtdeckel</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_schachtdeckel_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_schieber.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_schieber_st_vw_medium"><a href='wa_pkt_schieber.html'>wa_pkt_schieber</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_schieber_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_schutzrohr.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_schutzrohr_st_vw_medium"><a href='wa_pkt_schutzrohr.html'>wa_pkt_schutzrohr</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_schutzrohr_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_topologie_default.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_topologie_default_st_vw_medium"><a href='wa_pkt_topologie_default.html'>wa_pkt_topologie_default</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_topologie_default_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_verbindungen.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_verbindungen_st_vw_medium"><a href='wa_pkt_verbindungen.html'>wa_pkt_verbindungen</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_verbindungen_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_verschiedenes.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_verschiedenes_st_vw_medium"><a href='wa_pkt_verschiedenes.html'>wa_pkt_verschiedenes</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_verschiedenes_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_wasserschaden.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_wasserschaden_st_vw_medium"><a href='wa_pkt_wasserschaden.html'>wa_pkt_wasserschaden</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_wasserschaden_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_wasserwerk.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_wasserwerk_st_vw_medium"><a href='wa_pkt_wasserwerk.html'>wa_pkt_wasserwerk</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_wasserwerk_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="wa_pkt_wasserzaehler.id_st_vw_medium references st_vw_medium.id via fk_wa_pkt_wasserzaehler_st_vw_medium"><a href='wa_pkt_wasserzaehler.html'>wa_pkt_wasserzaehler</a><span class='relatedKey'>.id_st_vw_medium</span></td>
+                                                <td class="constraint detail">fk_wa_pkt_wasserzaehler_st_vw_medium</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ident_hist">ident_hist</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>historische ID</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="kurztext">kurztext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Kurztext</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="langtext">langtext</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Langtext</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="bemerkung">bemerkung</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Bemerkung</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sortierreihenfolge">sortierreihenfolge</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;001&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Sortierreihenfolge</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gueltig_von">gueltig_von</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>gueltig von</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="gueltig_bis">gueltig_bis</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;2100-01-01 00:00:00+01&#39;::timestamp with time zone</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>gueltig_bis</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="angelegt_am">angelegt_am</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Erfassungsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="angelegt_von">angelegt_von</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Erfasser</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geaendert_am">geaendert_am</span></td>
+                                    <td>timestamptz</td>
+                                    <td>35,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>now()</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Aenderungsdatum</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="geaendert_von">geaendert_von</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;unbekannt&#39;::text</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Änderungsnutzer</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id_st_vw_projekt">id_st_vw_projekt</span></td>
+                                    <td>uuid</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;00000000-0000-0000-0000-000000000000&#39;::uuid</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="st_vw_medium.id_st_vw_projekt references st_vw_projekt.id via fk_st_vw_medium_st_vw_projekt"><a href='st_vw_projekt.html'>st_vw_projekt</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">fk_st_vw_medium_st_vw_projekt</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>ID st vw Projekt</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="richtungspfeil">richtungspfeil</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="richtungspfeil_abstand">richtungspfeil_abstand</span></td>
+                                    <td>numeric</td>
+                                    <td>131089</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name_number_kennung">name_number_kennung</span></td>
+                                    <td>text</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> pk_st_vw_medium</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uk3_st_vw_medium_kurztext</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_projekt + kurztext</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uk4_st_vw_medium_langtext</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>id_st_vw_projekt + langtext</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="al_fla_koordinatenraster.html" target="_top" title="al_fla_koordinatenraster" alt="" coords="691,5,950,387">
+<area shape="rect" id="node2" href="st_vw_medium.html" target="_top" title="st_vw_medium" alt="" coords="235,16023,597,16561">
+<area shape="rect" id="node3" href="st_vw_projekt.html" target="_top" title="st_vw_projekt" alt="" coords="5,16377,191,16553">
+<area shape="rect" id="node4" href="aw_fla_beitragflaechen.html" target="_top" title="aw_fla_beitragflaechen" alt="" coords="692,404,949,756">
+<area shape="rect" id="node5" href="aw_fla_umlageflaeche.html" target="_top" title="aw_fla_umlageflaeche" alt="" coords="700,773,941,1213">
+<area shape="rect" id="node6" href="aw_lin_haltung.html" target="_top" title="aw_lin_haltung" alt="" coords="684,1231,957,1847">
+<area shape="rect" id="node7" href="aw_lin_schutzrohr.html" target="_top" title="aw_lin_schutzrohr" alt="" coords="703,1864,938,2275">
+<area shape="rect" id="node8" href="aw_pkt_abscheider.html" target="_top" title="aw_pkt_abscheider" alt="" coords="703,2292,938,2703">
+<area shape="rect" id="node9" href="aw_pkt_abwasserschaden.html" target="_top" title="aw_pkt_abwasserschaden" alt="" coords="684,2720,957,3131">
+<area shape="rect" id="node10" href="aw_pkt_auslauf.html" target="_top" title="aw_pkt_auslauf" alt="" coords="703,3148,938,3559">
+<area shape="rect" id="node11" href="aw_pkt_becken.html" target="_top" title="aw_pkt_becken" alt="" coords="682,3576,959,4133">
+<area shape="rect" id="node12" href="aw_pkt_benzinabscheider.html" target="_top" title="aw_pkt_benzinabscheider" alt="" coords="685,4151,956,4532">
+<area shape="rect" id="node13" href="aw_pkt_beobachtungspunkt.html" target="_top" title="aw_pkt_beobachtungspunkt" alt="" coords="676,4549,965,4931">
+<area shape="rect" id="node14" href="aw_pkt_dueker.html" target="_top" title="aw_pkt_dueker" alt="" coords="703,4948,938,5329">
+<area shape="rect" id="node15" href="aw_pkt_einleit_auslauf_stellen.html" target="_top" title="aw_pkt_einleit_auslauf_stellen" alt="" coords="667,5347,974,5728">
+<area shape="rect" id="node16" href="aw_pkt_einleitungsstellen.html" target="_top" title="aw_pkt_einleitungsstellen" alt="" coords="685,5745,956,6127">
+<area shape="rect" id="node17" href="aw_pkt_fettabscheider.html" target="_top" title="aw_pkt_fettabscheider" alt="" coords="698,6144,943,6525">
+<area shape="rect" id="node18" href="aw_pkt_fliessrichtungspfeil.html" target="_top" title="aw_pkt_fliessrichtungspfeil" alt="" coords="672,6543,969,6953">
+<area shape="rect" id="node19" href="aw_pkt_klaeranlage.html" target="_top" title="aw_pkt_klaeranlage" alt="" coords="693,6971,949,7381">
+<area shape="rect" id="node20" href="aw_pkt_klaertank.html" target="_top" title="aw_pkt_klaertank" alt="" coords="683,7399,959,7839">
+<area shape="rect" id="node21" href="aw_pkt_koaleszenzabscheider.html" target="_top" title="aw_pkt_koaleszenzabscheider" alt="" coords="668,7856,973,8237">
+<area shape="rect" id="node22" href="aw_pkt_leichtfluessigkeitsabscheider.html" target="_top" title="aw_pkt_leichtfluessigkeitsabscheider" alt="" coords="641,8255,1000,8636">
+<area shape="rect" id="node23" href="aw_pkt_loeschwasserentnahmestelle.html" target="_top" title="aw_pkt_loeschwasserentnahmestelle" alt="" coords="642,8653,999,9064">
+<area shape="rect" id="node24" href="aw_pkt_pumpwerk.html" target="_top" title="aw_pkt_pumpwerk" alt="" coords="701,9081,940,9492">
+<area shape="rect" id="node25" href="aw_pkt_schacht.html" target="_top" title="aw_pkt_schacht" alt="" coords="691,9509,951,10067">
+<area shape="rect" id="node26" href="aw_pkt_schachtdeckel.html" target="_top" title="aw_pkt_schachtdeckel" alt="" coords="691,10084,951,10700">
+<area shape="rect" id="node27" href="aw_pkt_schieber.html" target="_top" title="aw_pkt_schieber" alt="" coords="703,10717,938,11128">
+<area shape="rect" id="node28" href="aw_pkt_schlammfang.html" target="_top" title="aw_pkt_schlammfang" alt="" coords="701,11145,940,11527">
+<area shape="rect" id="node29" href="aw_pkt_schutzrohr.html" target="_top" title="aw_pkt_schutzrohr" alt="" coords="698,11544,943,11925">
+<area shape="rect" id="node30" href="aw_pkt_sonstige_anlage.html" target="_top" title="aw_pkt_sonstige_anlage" alt="" coords="679,11943,963,12353">
+<area shape="rect" id="node31" href="aw_pkt_spuehlhydrant.html" target="_top" title="aw_pkt_spuehlhydrant" alt="" coords="697,12371,944,12752">
+<area shape="rect" id="node32" href="aw_pkt_staerkeabscheider.html" target="_top" title="aw_pkt_staerkeabscheider" alt="" coords="683,12769,959,13151">
+<area shape="rect" id="node33" href="aw_pkt_topologie_default.html" target="_top" title="aw_pkt_topologie_default" alt="" coords="686,13168,955,13579">
+<area shape="rect" id="node34" href="aw_pkt_verbindungen.html" target="_top" title="aw_pkt_verbindungen" alt="" coords="698,13596,943,14036">
+<area shape="rect" id="node35" href="aw_pkt_wehr.html" target="_top" title="aw_pkt_wehr" alt="" coords="703,14053,938,14435">
+<area shape="rect" id="node36" href="aw_pkt_zwischenpunkt.html" target="_top" title="aw_pkt_zwischenpunkt" alt="" coords="695,14452,946,14833">
+<area shape="rect" id="node37" href="ka_lin_kabelnetz.html" target="_top" title="ka_lin_kabelnetz" alt="" coords="703,14851,938,15349">
+<area shape="rect" id="node38" href="ka_lin_schutzrohr.html" target="_top" title="ka_lin_schutzrohr" alt="" coords="703,15367,938,15807">
+<area shape="rect" id="node39" href="ka_pkt_kabelnetzknoten.html" target="_top" title="ka_pkt_kabelnetzknoten" alt="" coords="692,15824,949,16264">
+<area shape="rect" id="node40" href="ka_pkt_schutzrohr.html" target="_top" title="ka_pkt_schutzrohr" alt="" coords="703,16281,938,16721">
+<area shape="rect" id="node41" href="ka_pkt_topologie_default.html" target="_top" title="ka_pkt_topologie_default" alt="" coords="688,16739,953,17149">
+<area shape="rect" id="node42" href="so_lin_netz.html" target="_top" title="so_lin_netz" alt="" coords="703,17167,938,17665">
+<area shape="rect" id="node43" href="so_pkt_netzknoten.html" target="_top" title="so_pkt_netzknoten" alt="" coords="703,17683,938,18123">
+<area shape="rect" id="node44" href="st_vw_kartenlayout.html" target="_top" title="st_vw_kartenlayout" alt="" coords="703,18140,938,18551">
+<area shape="rect" id="node45" href="ta_fla_anlagenflaechen.html" target="_top" title="ta_fla_anlagenflaechen" alt="" coords="696,18568,945,18979">
+<area shape="rect" id="node46" href="ta_lin_leitung.html" target="_top" title="ta_lin_leitung" alt="" coords="703,18996,938,19377">
+<area shape="rect" id="node47" href="ta_lin_netz.html" target="_top" title="ta_lin_netz" alt="" coords="703,19395,938,19923">
+<area shape="rect" id="node48" href="ta_lin_schutzrohr.html" target="_top" title="ta_lin_schutzrohr" alt="" coords="703,19940,938,20468">
+<area shape="rect" id="node49" href="ta_pkt_knoten.html" target="_top" title="ta_pkt_knoten" alt="" coords="703,20485,938,20867">
+<area shape="rect" id="node50" href="ta_pkt_netzknoten.html" target="_top" title="ta_pkt_netzknoten" alt="" coords="703,20884,938,21324">
+<area shape="rect" id="node51" href="ta_pkt_schutzrohr.html" target="_top" title="ta_pkt_schutzrohr" alt="" coords="703,21341,938,21869">
+<area shape="rect" id="node52" href="ta_pkt_topologie_default.html" target="_top" title="ta_pkt_topologie_default" alt="" coords="689,21887,952,22297">
+<area shape="rect" id="node53" href="wa_lin_bauwerkskante.html" target="_top" title="wa_lin_bauwerkskante" alt="" coords="697,22315,944,22696">
+<area shape="rect" id="node54" href="wa_lin_schutzrohr.html" target="_top" title="wa_lin_schutzrohr" alt="" coords="703,22713,938,23095">
+<area shape="rect" id="node55" href="wa_lin_wasserleitung.html" target="_top" title="wa_lin_wasserleitung" alt="" coords="659,23112,982,23552">
+<area shape="rect" id="node56" href="wa_pkt_armatur.html" target="_top" title="wa_pkt_armatur" alt="" coords="703,23569,938,23980">
+<area shape="rect" id="node57" href="wa_pkt_behaelter.html" target="_top" title="wa_pkt_behaelter" alt="" coords="703,23997,938,24408">
+<area shape="rect" id="node58" href="wa_pkt_beprobungspunkt.html" target="_top" title="wa_pkt_beprobungspunkt" alt="" coords="685,24425,957,24836">
+<area shape="rect" id="node59" href="wa_pkt_brunnen.html" target="_top" title="wa_pkt_brunnen" alt="" coords="703,24853,938,25264">
+<area shape="rect" id="node60" href="wa_pkt_druckminderer.html" target="_top" title="wa_pkt_druckminderer" alt="" coords="690,25281,951,25692">
+<area shape="rect" id="node61" href="wa_pkt_druckstation.html" target="_top" title="wa_pkt_druckstation" alt="" coords="698,25709,943,26120">
+<area shape="rect" id="node62" href="wa_pkt_entlueftung.html" target="_top" title="wa_pkt_entlueftung" alt="" coords="698,26137,943,26519">
+<area shape="rect" id="node63" href="wa_pkt_hausanschlusspunkt.html" target="_top" title="wa_pkt_hausanschlusspunkt" alt="" coords="673,26536,968,26947">
+<area shape="rect" id="node64" href="wa_pkt_hydrant.html" target="_top" title="wa_pkt_hydrant" alt="" coords="661,26964,981,27463">
+<area shape="rect" id="node65" href="wa_pkt_hydrant_messwerte.html" target="_top" title="wa_pkt_hydrant_messwerte" alt="" coords="661,27480,981,27979">
+<area shape="rect" id="node66" href="wa_pkt_pumpwerk.html" target="_top" title="wa_pkt_pumpwerk" alt="" coords="703,27996,938,28377">
+<area shape="rect" id="node67" href="wa_pkt_schacht.html" target="_top" title="wa_pkt_schacht" alt="" coords="703,28395,938,28805">
+<area shape="rect" id="node68" href="wa_pkt_schachtdeckel.html" target="_top" title="wa_pkt_schachtdeckel" alt="" coords="691,28823,951,29233">
+<area shape="rect" id="node69" href="wa_pkt_schieber.html" target="_top" title="wa_pkt_schieber" alt="" coords="703,29251,938,29720">
+<area shape="rect" id="node70" href="wa_pkt_schutzrohr.html" target="_top" title="wa_pkt_schutzrohr" alt="" coords="698,29737,943,30119">
+<area shape="rect" id="node71" href="wa_pkt_topologie_default.html" target="_top" title="wa_pkt_topologie_default" alt="" coords="686,30136,955,30547">
+<area shape="rect" id="node72" href="wa_pkt_verbindungen.html" target="_top" title="wa_pkt_verbindungen" alt="" coords="698,30564,943,30975">
+<area shape="rect" id="node73" href="wa_pkt_verschiedenes.html" target="_top" title="wa_pkt_verschiedenes" alt="" coords="697,30992,944,31403">
+<area shape="rect" id="node74" href="wa_pkt_wasserschaden.html" target="_top" title="wa_pkt_wasserschaden" alt="" coords="693,31420,948,31831">
+<area shape="rect" id="node75" href="wa_pkt_wasserwerk.html" target="_top" title="wa_pkt_wasserwerk" alt="" coords="703,31848,938,32229">
+<area shape="rect" id="node76" href="wa_pkt_wasserzaehler.html" target="_top" title="wa_pkt_wasserzaehler" alt="" coords="698,32247,943,32657">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/st_vw_medium.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="admin_benutzer.html" target="_top" title="admin_benutzer" alt="" coords="289,5,485,93">
+<area shape="rect" id="node2" href="st_vw_projekt.html" target="_top" title="st_vw_projekt" alt="" coords="5,4547,185,4635">
+<area shape="rect" id="node3" href="admin_benutzer2admin_benutzergruppe.html" target="_top" title="admin_benutzer2admin_benutzergruppe" alt="" coords="589,73,971,161">
+<area shape="rect" id="node4" href="admin_benutzergruppe.html" target="_top" title="admin_benutzergruppe" alt="" coords="263,147,512,235">
+<area shape="rect" id="node5" href="admin_projekt_parameter.html" target="_top" title="admin_projekt_parameter" alt="" coords="253,252,521,340">
+<area shape="rect" id="node6" href="al_fla_koordinatenraster.html" target="_top" title="al_fla_koordinatenraster" alt="" coords="1827,2019,2086,2107">
+<area shape="rect" id="node7" href="st_strasse.html" target="_top" title="st_strasse" alt="" coords="1469,3711,1635,3799">
+<area shape="rect" id="node8" href="st_vw_betreiber.html" target="_top" title="st_vw_betreiber" alt="" coords="1455,4477,1649,4565">
+<area shape="rect" id="node9" href="st_vw_betriebsstatus.html" target="_top" title="st_vw_betriebsstatus" alt="" coords="1434,4583,1670,4671">
+<area shape="rect" id="node10" href="st_vw_eigentuemer.html" target="_top" title="st_vw_eigentuemer" alt="" coords="1441,4688,1663,4776">
+<area shape="rect" id="node11" href="st_vw_lagestatus.html" target="_top" title="st_vw_lagestatus" alt="" coords="1449,4793,1655,4881">
+<area shape="rect" id="node12" href="st_vw_material.html" target="_top" title="st_vw_material" alt="" coords="1458,3816,1646,3904">
+<area shape="rect" id="node13" href="st_vw_medium.html" target="_top" title="st_vw_medium" alt="" coords="1371,3921,1733,4460">
+<area shape="rect" id="node121" href="st_ort.html" target="_top" title="st_ort" alt="" coords="1098,3777,1243,3865">
+<area shape="rect" id="node14" href="aw_fla_beitragflaechen.html" target="_top" title="aw_fla_beitragflaechen" alt="" coords="1832,2124,2081,2212">
+<area shape="rect" id="node15" href="aw_fla_umlageflaeche.html" target="_top" title="aw_fla_umlageflaeche" alt="" coords="1836,2229,2077,2317">
+<area shape="rect" id="node16" href="aw_lin_haltung.html" target="_top" title="aw_lin_haltung" alt="" coords="1863,860,2051,948">
+<area shape="rect" id="node17" href="st_vw_auslaufnummer.html" target="_top" title="st_vw_auslaufnummer" alt="" coords="657,784,903,872">
+<area shape="rect" id="node18" href="st_vw_einlaufnummer.html" target="_top" title="st_vw_einlaufnummer" alt="" coords="1050,788,1291,876">
+<area shape="rect" id="node19" href="st_vw_verlegetyp.html" target="_top" title="st_vw_verlegetyp" alt="" coords="1449,892,1655,980">
+<area shape="rect" id="node20" href="aw_lin_schutzrohr.html" target="_top" title="aw_lin_schutzrohr" alt="" coords="1850,965,2063,1053">
+<area shape="rect" id="node21" href="aw_lin_topologie.html" target="_top" title="aw_lin_topologie" alt="" coords="286,1105,489,1193">
+<area shape="rect" id="node22" href="aw_pkt_abscheider.html" target="_top" title="aw_pkt_abscheider" alt="" coords="1847,1281,2067,1369">
+<area shape="rect" id="node23" href="st_vw_abscheidertyp.html" target="_top" title="st_vw_abscheidertyp" alt="" coords="1053,1073,1288,1161">
+<area shape="rect" id="node24" href="aw_pkt_abwasserschaden.html" target="_top" title="aw_pkt_abwasserschaden" alt="" coords="1820,1387,2093,1475">
+<area shape="rect" id="node25" href="st_vw_schadenreparatur.html" target="_top" title="st_vw_schadenreparatur" alt="" coords="1040,1215,1301,1303">
+<area shape="rect" id="node26" href="aw_pkt_auslauf.html" target="_top" title="aw_pkt_auslauf" alt="" coords="1861,1492,2053,1580">
+<area shape="rect" id="node27" href="st_vw_auslauftyp.html" target="_top" title="st_vw_auslauftyp" alt="" coords="1067,1356,1274,1444">
+<area shape="rect" id="node28" href="aw_pkt_becken.html" target="_top" title="aw_pkt_becken" alt="" coords="1861,691,2052,779">
+<area shape="rect" id="node29" href="st_vw_beckenform.html" target="_top" title="st_vw_beckenform" alt="" coords="671,501,889,589">
+<area shape="rect" id="node30" href="st_vw_beckenfunktion.html" target="_top" title="st_vw_beckenfunktion" alt="" coords="1049,575,1293,663">
+<area shape="rect" id="node31" href="st_vw_beckenkonstruktion.html" target="_top" title="st_vw_beckenkonstruktion" alt="" coords="641,643,919,731">
+<area shape="rect" id="node32" href="st_vw_beckentyp.html" target="_top" title="st_vw_beckentyp" alt="" coords="1068,251,1273,339">
+<area shape="rect" id="node33" href="st_vw_bepflanzung.html" target="_top" title="st_vw_bepflanzung" alt="" coords="670,324,890,412">
+<area shape="rect" id="node34" href="st_vw_filtermaterial.html" target="_top" title="st_vw_filtermaterial" alt="" coords="1059,392,1282,480">
+<area shape="rect" id="node35" href="aw_pkt_benzinabscheider.html" target="_top" title="aw_pkt_benzinabscheider" alt="" coords="1821,2335,2092,2423">
+<area shape="rect" id="node36" href="aw_pkt_beobachtungspunkt.html" target="_top" title="aw_pkt_beobachtungspunkt" alt="" coords="1812,2440,2101,2528">
+<area shape="rect" id="node37" href="aw_pkt_dueker.html" target="_top" title="aw_pkt_dueker" alt="" coords="1863,2545,2051,2633">
+<area shape="rect" id="node38" href="aw_pkt_einleit_auslauf_stellen.html" target="_top" title="aw_pkt_einleit_auslauf_stellen" alt="" coords="1803,2651,2110,2739">
+<area shape="rect" id="node39" href="aw_pkt_einleitungsstellen.html" target="_top" title="aw_pkt_einleitungsstellen" alt="" coords="1821,1597,2092,1685">
+<area shape="rect" id="node40" href="st_vw_abwassereinleittyp.html" target="_top" title="st_vw_abwassereinleittyp" alt="" coords="645,1533,915,1621">
+<area shape="rect" id="node41" href="aw_pkt_fettabscheider.html" target="_top" title="aw_pkt_fettabscheider" alt="" coords="1834,2756,2079,2844">
+<area shape="rect" id="node42" href="aw_pkt_fliessrichtungspfeil.html" target="_top" title="aw_pkt_fliessrichtungspfeil" alt="" coords="1815,1703,2098,1791">
+<area shape="rect" id="node43" href="st_vw_fliessrichtungspfeil_typ.html" target="_top" title="st_vw_fliessrichtungspfeil_typ" alt="" coords="1018,1605,1323,1693">
+<area shape="rect" id="node44" href="aw_pkt_klaeranlage.html" target="_top" title="aw_pkt_klaeranlage" alt="" coords="1845,1176,2069,1264">
+<area shape="rect" id="node45" href="st_vw_klaeranlagen_typ.html" target="_top" title="st_vw_klaeranlagen_typ" alt="" coords="651,1069,909,1157">
+<area shape="rect" id="node46" href="aw_pkt_klaertank.html" target="_top" title="aw_pkt_klaertank" alt="" coords="1853,6864,2060,6952">
+<area shape="rect" id="node47" href="st_vw_struckturbedingung.html" target="_top" title="st_vw_struckturbedingung" alt="" coords="1032,7719,1309,7807">
+<area shape="rect" id="node48" href="st_vw_tankverwendung.html" target="_top" title="st_vw_tankverwendung" alt="" coords="653,7827,907,7915">
+<area shape="rect" id="node49" href="aw_pkt_koaleszenzabscheider.html" target="_top" title="aw_pkt_koaleszenzabscheider" alt="" coords="1804,2861,2109,2949">
+<area shape="rect" id="node50" href="aw_pkt_label.html" target="_top" title="aw_pkt_label" alt="" coords="1085,2428,1257,2516">
+<area shape="rect" id="node51" href="st_vw_label_definition.html" target="_top" title="st_vw_label_definition" alt="" coords="658,2639,902,2727">
+<area shape="rect" id="node52" href="st_vw_objektbezeichnung.html" target="_top" title="st_vw_objektbezeichnung" alt="" coords="252,2781,523,2869">
+<area shape="rect" id="node98" href="st_vw_labeltyp.html" target="_top" title="st_vw_labeltyp" alt="" coords="294,2676,481,2764">
+<area shape="rect" id="node53" href="aw_pkt_label_alt.html" target="_top" title="aw_pkt_label_alt" alt="" coords="287,2535,487,2623">
+<area shape="rect" id="node54" href="aw_pkt_leichtfluessigkeitsabscheider.html" target="_top" title="aw_pkt_leichtfluessigkeitsabscheider" alt="" coords="1777,2967,2136,3055">
+<area shape="rect" id="node55" href="aw_pkt_loeschwasserentnahmestelle.html" target="_top" title="aw_pkt_loeschwasserentnahmestelle" alt="" coords="1778,1808,2135,1896">
+<area shape="rect" id="node56" href="st_vw_speichereinrichtungstyp.html" target="_top" title="st_vw_speichereinrichtungstyp" alt="" coords="1015,1711,1327,1799">
+<area shape="rect" id="node57" href="aw_pkt_pumpwerk.html" target="_top" title="aw_pkt_pumpwerk" alt="" coords="1849,1913,2065,2001">
+<area shape="rect" id="node58" href="st_vw_pumpwerkstyp.html" target="_top" title="st_vw_pumpwerkstyp" alt="" coords="1433,1747,1671,1835">
+<area shape="rect" id="node59" href="aw_pkt_richtungspfeil.html" target="_top" title="aw_pkt_richtungspfeil" alt="" coords="267,2923,508,3011">
+<area shape="rect" id="node60" href="aw_pkt_schacht.html" target="_top" title="aw_pkt_schacht" alt="" coords="1859,7707,2055,7795">
+<area shape="rect" id="node61" href="st_vw_beschichtung.html" target="_top" title="st_vw_beschichtung" alt="" coords="665,8397,895,8485">
+<area shape="rect" id="node62" href="st_vw_einstiegshilfe.html" target="_top" title="st_vw_einstiegshilfe" alt="" coords="666,8503,894,8591">
+<area shape="rect" id="node63" href="st_vw_schacht_typ.html" target="_top" title="st_vw_schacht_typ" alt="" coords="1442,7508,1662,7596">
+<area shape="rect" id="node64" href="st_vw_schachtdeckeltyp.html" target="_top" title="st_vw_schachtdeckeltyp" alt="" coords="1422,8256,1682,8344">
+<area shape="rect" id="node65" href="st_vw_schachtform.html" target="_top" title="st_vw_schachtform" alt="" coords="669,8608,891,8696">
+<area shape="rect" id="node66" href="aw_pkt_schachtdeckel.html" target="_top" title="aw_pkt_schachtdeckel" alt="" coords="1833,8444,2080,8532">
+<area shape="rect" id="node67" href="st_vw_abdeckungsform.html" target="_top" title="st_vw_abdeckungsform" alt="" coords="1043,9287,1298,9375">
+<area shape="rect" id="node68" href="st_vw_belueftung.html" target="_top" title="st_vw_belueftung" alt="" coords="676,9500,884,9588">
+<area shape="rect" id="node69" href="st_vw_deckel_herst_typ.html" target="_top" title="st_vw_deckel_herst_typ" alt="" coords="1042,9497,1299,9585">
+<area shape="rect" id="node70" href="st_vw_lastklassen.html" target="_top" title="st_vw_lastklassen" alt="" coords="674,9605,886,9693">
+<area shape="rect" id="node71" href="st_vw_verschluss.html" target="_top" title="st_vw_verschluss" alt="" coords="1066,9392,1275,9480">
+<area shape="rect" id="node72" href="aw_pkt_schieber.html" target="_top" title="aw_pkt_schieber" alt="" coords="1856,4547,2057,4635">
+<area shape="rect" id="node73" href="st_vw_schiebertyp.html" target="_top" title="st_vw_schiebertyp" alt="" coords="1444,6793,1660,6881">
+<area shape="rect" id="node74" href="aw_pkt_schlammfang.html" target="_top" title="aw_pkt_schlammfang" alt="" coords="1837,3388,2076,3476">
+<area shape="rect" id="node75" href="aw_pkt_schutzrohr.html" target="_top" title="aw_pkt_schutzrohr" alt="" coords="1847,3283,2066,3371">
+<area shape="rect" id="node76" href="aw_pkt_sonstige_anlage.html" target="_top" title="aw_pkt_sonstige_anlage" alt="" coords="1826,4652,2087,4740">
+<area shape="rect" id="node77" href="st_vw_sonstige_anlage_typ.html" target="_top" title="st_vw_sonstige_anlage_typ" alt="" coords="1410,4899,1694,4987">
+<area shape="rect" id="node78" href="aw_pkt_spuehlhydrant.html" target="_top" title="aw_pkt_spuehlhydrant" alt="" coords="1833,3072,2080,3160">
+<area shape="rect" id="node79" href="aw_pkt_staerkeabscheider.html" target="_top" title="aw_pkt_staerkeabscheider" alt="" coords="1819,3493,2095,3581">
+<area shape="rect" id="node80" href="aw_pkt_topologie.html" target="_top" title="aw_pkt_topologie" alt="" coords="283,3709,491,3797">
+<area shape="rect" id="node81" href="aw_pkt_topologie_default.html" target="_top" title="aw_pkt_topologie_default" alt="" coords="1822,5284,2091,5372">
+<area shape="rect" id="node82" href="st_vw_topologie.html" target="_top" title="st_vw_topologie" alt="" coords="1453,5505,1651,5593">
+<area shape="rect" id="node83" href="aw_pkt_topologie_v_mv.html" target="_top" title="aw_pkt_topologie_v_mv" alt="" coords="259,3887,516,3975">
+<area shape="rect" id="node84" href="aw_pkt_verbindungen.html" target="_top" title="aw_pkt_verbindungen" alt="" coords="1836,5073,2077,5161">
+<area shape="rect" id="node85" href="st_vw_verbindungstyp.html" target="_top" title="st_vw_verbindungstyp" alt="" coords="1429,5292,1675,5380">
+<area shape="rect" id="node86" href="aw_pkt_wehr.html" target="_top" title="aw_pkt_wehr" alt="" coords="1870,3177,2043,3265">
+<area shape="rect" id="node87" href="aw_pkt_zwischenpunkt.html" target="_top" title="aw_pkt_zwischenpunkt" alt="" coords="1831,3599,2082,3687">
+<area shape="rect" id="node88" href="dokument.html" target="_top" title="dokument" alt="" coords="313,4205,462,4293">
+<area shape="rect" id="node89" href="dokument_objekt.html" target="_top" title="dokument_objekt" alt="" coords="677,4223,883,4311">
+<area shape="rect" id="node90" href="ka_lin_kabelnetz.html" target="_top" title="ka_lin_kabelnetz" alt="" coords="1857,7496,2057,7584">
+<area shape="rect" id="node91" href="st_vw_dimension.html" target="_top" title="st_vw_dimension" alt="" coords="1449,8647,1655,8735">
+<area shape="rect" id="node92" href="st_vw_kabeltyp.html" target="_top" title="st_vw_kabeltyp" alt="" coords="1457,8541,1647,8629">
+<area shape="rect" id="node93" href="st_vw_verwendung.html" target="_top" title="st_vw_verwendung" alt="" coords="1442,8007,1662,8095">
+<area shape="rect" id="node94" href="ka_lin_schutzrohr.html" target="_top" title="ka_lin_schutzrohr" alt="" coords="1852,7391,2061,7479">
+<area shape="rect" id="node95" href="ka_pkt_kabelnetzknoten.html" target="_top" title="ka_pkt_kabelnetzknoten" alt="" coords="1828,6969,2085,7057">
+<area shape="rect" id="node96" href="st_vw_bauteil.html" target="_top" title="st_vw_bauteil" alt="" coords="1463,7865,1641,7953">
+<area shape="rect" id="node97" href="ka_pkt_label.html" target="_top" title="ka_pkt_label" alt="" coords="1086,2533,1255,2621">
+<area shape="rect" id="node99" href="ka_pkt_label_alt.html" target="_top" title="ka_pkt_label_alt" alt="" coords="289,4671,485,4759">
+<area shape="rect" id="node100" href="ka_pkt_schutzrohr.html" target="_top" title="ka_pkt_schutzrohr" alt="" coords="1849,7180,2064,7268">
+<area shape="rect" id="node101" href="ka_pkt_topologie_default.html" target="_top" title="ka_pkt_topologie_default" alt="" coords="1824,5495,2089,5583">
+<area shape="rect" id="node102" href="so_lin_netz.html" target="_top" title="so_lin_netz" alt="" coords="1877,7812,2037,7900">
+<area shape="rect" id="node103" href="st_vw_netztyp.html" target="_top" title="st_vw_netztyp" alt="" coords="1461,8788,1643,8876">
+<area shape="rect" id="node104" href="so_pkt_label.html" target="_top" title="so_pkt_label" alt="" coords="1086,2639,1255,2727">
+<area shape="rect" id="node105" href="so_pkt_label_alt.html" target="_top" title="so_pkt_label_alt" alt="" coords="289,4956,486,5044">
+<area shape="rect" id="node106" href="so_pkt_netzknoten.html" target="_top" title="so_pkt_netzknoten" alt="" coords="1848,7285,2065,7373">
+<area shape="rect" id="node107" href="st_amt.html" target="_top" title="st_amt" alt="" coords="319,3992,456,4080">
+<area shape="rect" id="node108" href="st_dokument.html" target="_top" title="st_dokument" alt="" coords="693,3245,867,3333">
+<area shape="rect" id="node109" href="st_vw_dokumenttyp.html" target="_top" title="st_vw_dokumenttyp" alt="" coords="274,3172,501,3260">
+<area shape="rect" id="node110" href="st_dokument2objekt.html" target="_top" title="st_dokument2objekt" alt="" coords="1057,3208,1285,3296">
+<area shape="rect" id="node111" href="st_fla_filtergebiet.html" target="_top" title="st_fla_filtergebiet" alt="" coords="285,5241,490,5329">
+<area shape="rect" id="node112" href="st_fla_koordinatenraster.html" target="_top" title="st_fla_koordinatenraster" alt="" coords="257,5347,517,5435">
+<area shape="rect" id="node113" href="st_gemeinde.html" target="_top" title="st_gemeinde" alt="" coords="695,3851,865,3939">
+<area shape="rect" id="node114" href="st_konstruktion_fla.html" target="_top" title="st_konstruktion_fla" alt="" coords="277,5488,497,5576">
+<area shape="rect" id="node115" href="st_konstruktion_lin.html" target="_top" title="st_konstruktion_lin" alt="" coords="277,5593,497,5681">
+<area shape="rect" id="node116" href="st_konstruktion_mfla.html" target="_top" title="st_konstruktion_mfla" alt="" coords="270,5699,505,5787">
+<area shape="rect" id="node117" href="st_konstruktion_mlin.html" target="_top" title="st_konstruktion_mlin" alt="" coords="270,5804,505,5892">
+<area shape="rect" id="node118" href="st_konstruktion_mpkt.html" target="_top" title="st_konstruktion_mpkt" alt="" coords="267,5909,507,5997">
+<area shape="rect" id="node119" href="st_konstruktion_pkt.html" target="_top" title="st_konstruktion_pkt" alt="" coords="275,6015,500,6103">
+<area shape="rect" id="node120" href="st_label.html" target="_top" title="st_label" alt="" coords="1105,2955,1237,3043">
+<area shape="rect" id="node122" href="st_suche__nach_name_number.html" target="_top" title="st_suche__nach_name_number" alt="" coords="229,6192,545,6280">
+<area shape="rect" id="node123" href="st_vw_abrechnung.html" target="_top" title="st_vw_abrechnung" alt="" coords="279,6297,496,6385">
+<area shape="rect" id="node124" href="st_vw_armatur.html" target="_top" title="st_vw_armatur" alt="" coords="687,6828,873,6916">
+<area shape="rect" id="node125" href="st_vw_baumassnahme.html" target="_top" title="st_vw_baumassnahme" alt="" coords="264,6439,511,6527">
+<area shape="rect" id="node126" href="st_vw_behaelter.html" target="_top" title="st_vw_behaelter" alt="" coords="1072,7148,1269,7236">
+<area shape="rect" id="node127" href="st_vw_beitrags_medium.html" target="_top" title="st_vw_beitrags_medium" alt="" coords="258,6580,517,6668">
+<area shape="rect" id="node128" href="st_vw_beprobung.html" target="_top" title="st_vw_beprobung" alt="" coords="675,7413,885,7501">
+<area shape="rect" id="node129" href="st_vw_brunnentyp.html" target="_top" title="st_vw_brunnentyp" alt="" coords="1063,7456,1278,7544">
+<area shape="rect" id="node130" href="st_vw_druckminderertyp.html" target="_top" title="st_vw_druckminderertyp" alt="" coords="649,4491,911,4579">
+<area shape="rect" id="node131" href="st_vw_druckstationtyp.html" target="_top" title="st_vw_druckstationtyp" alt="" coords="1047,5013,1294,5101">
+<area shape="rect" id="node132" href="st_vw_druckstufe.html" target="_top" title="st_vw_druckstufe" alt="" coords="283,6829,491,6917">
+<area shape="rect" id="node133" href="st_vw_entlueftungstyp.html" target="_top" title="st_vw_entlueftungstyp" alt="" coords="264,6935,511,7023">
+<area shape="rect" id="node134" href="st_vw_hausanschluss_typ.html" target="_top" title="st_vw_hausanschluss_typ" alt="" coords="643,4705,917,4793">
+<area shape="rect" id="node135" href="st_vw_hersteller.html" target="_top" title="st_vw_hersteller" alt="" coords="1453,9001,1651,9089">
+<area shape="rect" id="node136" href="st_vw_hilfsfilter.html" target="_top" title="st_vw_hilfsfilter" alt="" coords="291,7112,484,7200">
+<area shape="rect" id="node137" href="st_vw_hydranttyp.html" target="_top" title="st_vw_hydranttyp" alt="" coords="283,7217,492,7305">
+<area shape="rect" id="node138" href="st_vw_kartenlayout.html" target="_top" title="st_vw_kartenlayout" alt="" coords="1846,5916,2067,6004">
+<area shape="rect" id="node139" href="st_vw_layout_spalten.html" target="_top" title="st_vw_layout_spalten" alt="" coords="268,7359,507,7447">
+<area shape="rect" id="node140" href="st_vw_linienmarkierungen.html" target="_top" title="st_vw_linienmarkierungen" alt="" coords="251,7464,524,7552">
+<area shape="rect" id="node141" href="st_vw_model_design.html" target="_top" title="st_vw_model_design" alt="" coords="1435,9317,1669,9405">
+<area shape="rect" id="node142" href="st_vw_nennweite_dn_tw_leitung.html" target="_top" title="st_vw_nennweite_dn_tw_leitung" alt="" coords="1391,9107,1713,9195">
+<area shape="rect" id="node143" href="st_vw_nennweite_hydrant.html" target="_top" title="st_vw_nennweite_hydrant" alt="" coords="1416,9212,1688,9300">
+<area shape="rect" id="node144" href="st_vw_projektfilter.html" target="_top" title="st_vw_projektfilter" alt="" coords="280,7677,495,7765">
+<area shape="rect" id="node145" href="st_vw_schadenstyp.html" target="_top" title="st_vw_schadenstyp" alt="" coords="668,6472,892,6560">
+<area shape="rect" id="node146" href="st_vw_schaltzustand.html" target="_top" title="st_vw_schaltzustand" alt="" coords="663,8256,897,8344">
+<area shape="rect" id="node147" href="st_vw_typ2objektklasse.html" target="_top" title="st_vw_typ2objektklasse" alt="" coords="260,7855,515,7943">
+<area shape="rect" id="node148" href="st_vw_verschiedenes.html" target="_top" title="st_vw_verschiedenes" alt="" coords="1052,6156,1289,6244">
+<area shape="rect" id="node149" href="st_vw_versiegelung.html" target="_top" title="st_vw_versiegelung" alt="" coords="275,7996,500,8084">
+<area shape="rect" id="node150" href="st_vw_vorgangart.html" target="_top" title="st_vw_vorgangart" alt="" coords="675,3032,885,3120">
+<area shape="rect" id="node151" href="st_vw_zaehlertyp.html" target="_top" title="st_vw_zaehlertyp" alt="" coords="677,6652,883,6740">
+<area shape="rect" id="node152" href="ta_fla_anlagenflaechen.html" target="_top" title="ta_fla_anlagenflaechen" alt="" coords="1832,6759,2081,6847">
+<area shape="rect" id="node153" href="ta_lin_leitung.html" target="_top" title="ta_lin_leitung" alt="" coords="1869,3704,2045,3792">
+<area shape="rect" id="node154" href="ta_lin_netz.html" target="_top" title="ta_lin_netz" alt="" coords="1879,7917,2035,8005">
+<area shape="rect" id="node155" href="ta_lin_schutzrohr.html" target="_top" title="ta_lin_schutzrohr" alt="" coords="1853,8023,2060,8111">
+<area shape="rect" id="node156" href="ta_pkt_knoten.html" target="_top" title="ta_pkt_knoten" alt="" coords="1866,3809,2047,3897">
+<area shape="rect" id="node157" href="ta_pkt_label.html" target="_top" title="ta_pkt_label" alt="" coords="1088,2744,1253,2832">
+<area shape="rect" id="node158" href="ta_pkt_netzknoten.html" target="_top" title="ta_pkt_netzknoten" alt="" coords="1850,7075,2063,7163">
+<area shape="rect" id="node159" href="ta_pkt_schutzrohr.html" target="_top" title="ta_pkt_schutzrohr" alt="" coords="1851,8128,2063,8216">
+<area shape="rect" id="node160" href="ta_pkt_topologie_default.html" target="_top" title="ta_pkt_topologie_default" alt="" coords="1825,5600,2088,5688">
+<area shape="rect" id="node161" href="wa_lin_bauwerkskante.html" target="_top" title="wa_lin_bauwerkskante" alt="" coords="1833,3915,2080,4003">
+<area shape="rect" id="node162" href="wa_lin_schutzrohr.html" target="_top" title="wa_lin_schutzrohr" alt="" coords="1850,4020,2063,4108">
+<area shape="rect" id="node163" href="wa_lin_wasserleitung.html" target="_top" title="wa_lin_wasserleitung" alt="" coords="1838,1071,2075,1159">
+<area shape="rect" id="node164" href="wa_pkt_armatur.html" target="_top" title="wa_pkt_armatur" alt="" coords="1859,6337,2055,6425">
+<area shape="rect" id="node165" href="wa_pkt_behaelter.html" target="_top" title="wa_pkt_behaelter" alt="" coords="1853,6443,2060,6531">
+<area shape="rect" id="node166" href="wa_pkt_beprobungspunkt.html" target="_top" title="wa_pkt_beprobungspunkt" alt="" coords="1821,6548,2093,6636">
+<area shape="rect" id="node167" href="wa_pkt_brunnen.html" target="_top" title="wa_pkt_brunnen" alt="" coords="1857,6653,2057,6741">
+<area shape="rect" id="node168" href="wa_pkt_druckminderer.html" target="_top" title="wa_pkt_druckminderer" alt="" coords="1833,4757,2081,4845">
+<area shape="rect" id="node169" href="wa_pkt_druckstation.html" target="_top" title="wa_pkt_druckstation" alt="" coords="1841,4863,2073,4951">
+<area shape="rect" id="node170" href="wa_pkt_entlueftung.html" target="_top" title="wa_pkt_entlueftung" alt="" coords="1845,4125,2068,4213">
+<area shape="rect" id="node171" href="wa_pkt_hausanschlusspunkt.html" target="_top" title="wa_pkt_hausanschlusspunkt" alt="" coords="1809,4968,2104,5056">
+<area shape="rect" id="node172" href="wa_pkt_hydrant.html" target="_top" title="wa_pkt_hydrant" alt="" coords="1859,8233,2054,8321">
+<area shape="rect" id="node173" href="wa_pkt_hydrant_messwerte.html" target="_top" title="wa_pkt_hydrant_messwerte" alt="" coords="1813,8339,2100,8427">
+<area shape="rect" id="node174" href="wa_pkt_label.html" target="_top" title="wa_pkt_label" alt="" coords="1085,2849,1257,2937">
+<area shape="rect" id="node175" href="wa_pkt_label_alt.html" target="_top" title="wa_pkt_label_alt" alt="" coords="287,9001,487,9089">
+<area shape="rect" id="node176" href="wa_pkt_pumpwerk.html" target="_top" title="wa_pkt_pumpwerk" alt="" coords="1849,4231,2065,4319">
+<area shape="rect" id="node177" href="wa_pkt_schacht.html" target="_top" title="wa_pkt_schacht" alt="" coords="1859,5705,2055,5793">
+<area shape="rect" id="node178" href="wa_pkt_schachtdeckel.html" target="_top" title="wa_pkt_schachtdeckel" alt="" coords="1833,5811,2080,5899">
+<area shape="rect" id="node179" href="wa_pkt_schieber.html" target="_top" title="wa_pkt_schieber" alt="" coords="1856,7601,2057,7689">
+<area shape="rect" id="node180" href="wa_pkt_schutzrohr.html" target="_top" title="wa_pkt_schutzrohr" alt="" coords="1847,4336,2066,4424">
+<area shape="rect" id="node181" href="wa_pkt_topologie_default.html" target="_top" title="wa_pkt_topologie_default" alt="" coords="1822,5389,2091,5477">
+<area shape="rect" id="node182" href="wa_pkt_topologie_v_mv.html" target="_top" title="wa_pkt_topologie_v_mv" alt="" coords="259,9323,516,9411">
+<area shape="rect" id="node183" href="wa_pkt_verbindungen.html" target="_top" title="wa_pkt_verbindungen" alt="" coords="1836,5179,2077,5267">
+<area shape="rect" id="node184" href="wa_pkt_verschiedenes.html" target="_top" title="wa_pkt_verschiedenes" alt="" coords="1833,6021,2080,6109">
+<area shape="rect" id="node185" href="wa_pkt_wasserschaden.html" target="_top" title="wa_pkt_wasserschaden" alt="" coords="1829,6127,2084,6215">
+<area shape="rect" id="node186" href="wa_pkt_wasserwerk.html" target="_top" title="wa_pkt_wasserwerk" alt="" coords="1843,4441,2070,4529">
+<area shape="rect" id="node187" href="wa_pkt_wasserzaehler.html" target="_top" title="wa_pkt_wasserzaehler" alt="" coords="1834,6232,2079,6320">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/st_vw_medium.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
